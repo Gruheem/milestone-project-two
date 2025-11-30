@@ -28,8 +28,14 @@ design choices
 - colours to be picked from pokemon logos, artworks and other pokemon themed items or ideas.
 - font: something clean and clear
 - simplistic, minimalist design for the board and scoreboard to keep things easy to understand
-wireframes
 
+wireframes
+Mobile:
+![mobile wireframes](assets/images/mobile-wreframes.png)
+Tablet:
+![tablet wirefframes](assets/images/tablet-wireframes.png)
+Desktop:
+![desktop wirefframes](assets/images/desktop-wireframe.png)
 
 strategy 
 scope 
