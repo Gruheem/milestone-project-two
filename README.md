@@ -3,12 +3,33 @@
 Title
 
 # UX
-Project goals: 
+Project goals: The goal of the project is to build an initeractive front end site. This site will take the form of a pokemon themed pairs game. The game should be fun, ineractive and visually appealing. 
+
 player goals
+- to play a fun pairs game
+- to play the game on different devices
+- to play a simple, easy to understand, but challenging game
+
 developer and business goals
+- create an engaging game 
+- create a visually appealing game with sound
+- create an appeal to pokemon fans with a pokemon theme
+
 user stories
+- as a user, i want the game to start quickly to keep my interest
+- as a user, i want to be able to increase the difficulty to add more challenge to the game
+- as a user, i want to be able to rest the game if i have chosen a difficulty that is too hard
+- as a user, i want to be able to see the time/move count in order to see how well i am doing
+- as a user, i want a visually appealing game that inspires nostalgia with the pokemon theme
+- as a user, i want to able to play the game on different devices so that i can play it anywhere
+
 design choices 
+- pictures for the front and the bakc of the crads will be pokemon themed
+- colours to be picked from pokemon logos, artworks and other pokemon themed items or ideas.
+- font: something clean and clear
+- simplistic, minimalist design for the board and scoreboard to keep things easy to understand
 wireframes
+
 
 strategy 
 scope 
