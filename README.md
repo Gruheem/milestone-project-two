@@ -32,10 +32,15 @@ design choices
 wireframes
 Mobile:
 ![mobile wireframes](assets/images/mobile-wreframes.png)
+
 Tablet:
 ![tablet wirefframes](assets/images/tablet-wireframes.png)
+
 Desktop:
 ![desktop wirefframes](assets/images/desktop-wireframe.png)
+
+Victory Modal:
+![victory modal](assets/images/modal-wireframes.png)
 
 strategy 
 scope 
