@@ -27,7 +27,7 @@ user stories
 design choices 
 - pictures for the front and the bakc of the crads will be pokemon themed
 - colours to be picked from pokemon logos, artworks and other pokemon themed items or ideas.
-- font: something clean and clear
+- font: primary: the 'pokemon' title font. secondary: something clean and clear, 'Open Sans' sans serif.
 - simplistic, minimalist design for the board and scoreboard to keep things easy to understand
 
 wireframes

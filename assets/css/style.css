@@ -8,4 +8,12 @@
 body {
     background-color: var(--background-color);
     font-family: var(--secondary-font);
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
