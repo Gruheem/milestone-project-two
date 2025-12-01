@@ -20,6 +20,7 @@ user stories
 - as a user, i want to be able to increase the difficulty to add more challenge to the game
 - as a user, i want to be able to rest the game if i have chosen a difficulty that is too hard
 - as a user, i want to be able to see the time/move count in order to see how well i am doing
+- as a user, i want feedback from the game as i make correct pairs to keep me motivated to finish
 - as a user, i want a visually appealing game that inspires nostalgia with the pokemon theme
 - as a user, i want to able to play the game on different devices so that i can play it anywhere
 
