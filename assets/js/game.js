@@ -1,3 +1,5 @@
+const difficulty = 4; // to be set by user selection
+
 async function getPokemonData(id) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await response.json();
@@ -15,7 +17,7 @@ async function getPokemonData(id) {
 async function createGameArray() {
     const pokemonArray = [];
 
-    for (let i = 1; i <= 4; i++) { // true numnber to be taken from difficulty setting
+    for (let i = 1; i <= difficulty; i++) { // true numnber to be taken from difficulty setting
         const pokemon = await getPokemonData(Math.ceil(Math.random() * 151));
         pokemonArray.push(pokemon);
     }
