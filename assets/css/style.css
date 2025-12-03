@@ -27,3 +27,8 @@ body {
     margin: 0 auto;
 }
 
+.card {
+    height: 128px;
+    width: 90px;
+    margin: 2.5px;
+}

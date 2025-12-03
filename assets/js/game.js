@@ -39,5 +39,31 @@ function shuffle(array) { // Fisher-Yates Shuffle
     }
 };
 
-createGameArray();
+// createGameArray();
 
+function startGameEasy() {
+    createGameArray().then((gameArray) => {
+    let rows = 2;
+    let cols = 4;
+    
+    const board = document.getElementById("game-board");
+    board.innerHTML = "";
+
+    for (let r = 0; r < rows; r++) {
+        let row = [];
+        for (let c = 0; c < cols; c++) {
+            let cardImg = gameArray.pop();
+            row.push(cardImg);
+
+            let card = document.createElement("img");
+            card.id = r.toString() + "-" + c.toString();
+            card.src = cardImg.image;
+            card.alt = cardImg.name;
+            card.classList.add("card");
+            board.appendChild(card);
+        }
+    }
+});
+}
+
+startGameEasy();
