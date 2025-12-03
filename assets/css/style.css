@@ -28,15 +28,16 @@ body {
 }
 
 #game-board {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin: 1rem auto;
   gap: 10px;
   justify-content: center;
 }
 
 .card {
-  height: 128px;
-  width: 90px;
+  height: auto;
+  width: 8.5rem;
   margin: 2.5px;
-  flex: auto;
+  display: block;
 }
