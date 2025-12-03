@@ -12,15 +12,32 @@ async function getPokemonData(id) {
 
 // getPokemonData(1)
 
-async function createPokemonArray() {
+async function createGameArray() {
     const pokemonArray = [];
 
     for (let i = 1; i <= 4; i++) { // true numnber to be taken from difficulty setting
         const pokemon = await getPokemonData(Math.ceil(Math.random() * 151));
         pokemonArray.push(pokemon);
     }
-    console.log("pokemon Array:", pokemonArray);
-    return pokemonArray;
+    // console.log("pokemon array:", pokemonArray);
+
+    const gameArray = pokemonArray.concat(pokemonArray);
+    // console.log("game array:", gameArray);
+
+    shuffle(gameArray);
+    console.log("game array:", gameArray);
+
+    return gameArray;
 }
 
-createPokemonArray();
+function shuffle(array) { // Fisher-Yates Shuffle
+    for (let i = 0; i < array.length; i++) {
+        let temp = array[i];
+        let r = Math.floor(Math.random() * array.length);
+        array[i] = array[r];
+        array[r] = temp;
+    }
+};
+
+createGameArray();
+
