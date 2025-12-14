@@ -1,4 +1,4 @@
-let difficultyChoice = "easy"; //btn.dataset.diff  Accessed from button click event listener
+let difficultyChoice = "hard"; //btn.dataset.diff  Accessed from button click event listener
 let difficulty; // create variable to be assigned later 
 if (difficultyChoice === "easy") {
     difficulty = [4, 2];
@@ -8,9 +8,9 @@ if (difficultyChoice === "easy") {
     difficulty = [4, 8];
 }
 
-console.log("difficulty set to:", difficultyChoice, difficulty);
+// console.log("difficulty set to:", difficultyChoice, difficulty);
 
-async function getPokemonData(id) {
+async function getPokemonData(id) { // fetches pokemon data from pokeapi
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
   const data = await response.json();
   // console.log(data);
@@ -24,11 +24,10 @@ async function getPokemonData(id) {
 
 // getPokemonData(1)
 
-async function createGameArray() {
+async function createGameArray() { // creates array of pokemon objects based on difficulty setting
   const pokemonArray = [];
   let cardCount = (difficulty[0] * difficulty[1]) / 2;
   for (let i = 1; i <= cardCount; i++) {
-    // true numnber to be taken from difficulty setting
     const pokemon = await getPokemonData(Math.ceil(Math.random() * 151));
     pokemonArray.push(pokemon);
   }
@@ -38,7 +37,7 @@ async function createGameArray() {
   // console.log("game array:", gameArray);
 
   shuffle(gameArray);
-  console.log("game array:", gameArray);
+  // console.log("game array:", gameArray);
 
   return gameArray;
 }
