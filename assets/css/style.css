@@ -29,7 +29,6 @@ body {
 
 #game-board {
   width : 80%;
-  
   display: grid;
   margin: 1rem auto;
   gap: 10px;
@@ -40,17 +39,16 @@ body {
   grid-template-columns: repeat(2, auto);
 }
 
-.columns-3 {
-  grid-template-columns: repeat(3, auto);
-}
-
 .columns-4 {
   grid-template-columns: repeat(4, auto);
 }
 
+.columns-8 {
+  grid-template-columns: repeat(8, auto);
+}
+
 .card {
-  height: auto;
-  width: 8.5rem;
-  margin: 2.5px;
-  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }

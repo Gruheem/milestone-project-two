@@ -1,14 +1,14 @@
-let difficultyChoice = "hard"; //btn.dataset.diff  Accessed from button click event listener
+let difficultyChoice = "medium"; //btn.dataset.diff  Accessed from button click event listener
 let difficulty; // create variable to be assigned later 
 if (difficultyChoice === "easy") {
     difficulty = [4, 2];
     document.getElementById("game-board").classList.add("columns-2");
 } else if (difficultyChoice === "medium") {
     difficulty = [4, 4];
-    document.getElementById("game-board").classList.add("columns-3");
+    document.getElementById("game-board").classList.add("columns-4");
 } else if (difficultyChoice === "hard") {
     difficulty = [4, 8];
-    document.getElementById("game-board").classList.add("columns-4");
+    document.getElementById("game-board").classList.add("columns-8");
 }
 
 // console.log("difficulty set to:", difficultyChoice, difficulty);
@@ -63,7 +63,8 @@ function startGame() {
     let rows = difficulty[0];
     let cols = difficulty[1];
 
-    const board = document.getElementById("game-board");
+    const boardArray = [] // create board as javascript array
+    const board = document.getElementById("game-board"); // create board as DOM Element
     board.innerHTML = "";
 
     for (let r = 0; r < rows; r++) {
@@ -79,7 +80,9 @@ function startGame() {
         card.classList.add("card");
         board.appendChild(card);
       }
+      boardArray.push(row)
     }
+    console.log(boardArray)
   });
 }
 
