@@ -11,6 +11,10 @@ if (difficultyChoice === "easy") {
   document.getElementById("game-board").classList.add("columns-8");
 }
 
+let boardArray = []; // create board as javascript array
+var cardOne; // for selectCard function
+var cardTwo;
+
 // console.log("difficulty set to:", difficultyChoice, difficulty);
 
 async function getPokemonData(id) {
@@ -63,8 +67,8 @@ function startGame() {
   createGameArray().then((gameArray) => {
     let rows = difficulty[0];
     let cols = difficulty[1];
-
-    const boardArray = []; // create board as javascript array
+    boardArray = []
+    
     const board = document.getElementById("game-board"); // create board as DOM Element
     board.innerHTML = "";
 
@@ -79,24 +83,40 @@ function startGame() {
         card.src = cardImg.image;
         card.alt = cardImg.name;
         card.classList.add("card");
-        board.appendChild(card); // Add to DOM
+        card.addEventListener("click", selectCard) // calls function 'selectCard()' on click
+        board.appendChild(card); // Add to DOM to appear to be there
       }
-      boardArray.push(row); // Add to JS Array
+      boardArray.push(row); // Add to JS Array to be interacted with later
     }
     console.log(boardArray);
     setTimeout(() => hideCards(rows, cols), 1000);
-    
   });
-  
 }
 
 function hideCards(rows, cols) {
-      for (let r = 0; r < rows; r++) {
-        for (let c = 0; c < cols; c++) {
-      let card = document.getElementById(r.toString() + "-" + c.toString())
-      card.src = "assets/images/pokeball.png"
-        }
-      }
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      let card = document.getElementById(r.toString() + "-" + c.toString());
+      card.src = "assets/images/pokeball.png";
     }
+  }
+}
+
+function selectCard() {
+  if (this.src.includes("pokeball")) {
+    if (!cardOne) { 
+      cardOne = this; // assign cardOne
+      console.log(cardOne);
+
+      let imageLocation = cardOne.id.split("-");
+      console.log(imageLocation);
+      let r = imageLocation[0];
+      let c = imageLocation[1];
+
+      cardOne.src = boardArray[r][c].image
+
+    }
+  }
+}
 
 startGame();
