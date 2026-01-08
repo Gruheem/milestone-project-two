@@ -11,10 +11,6 @@ if (difficultyChoice === "easy") {
   document.getElementById("game-board").classList.add("columns-8");
 }
 
-let boardArray = []; // create board as javascript array
-var cardOne; // for selectCard function
-var cardTwo;
-
 // console.log("difficulty set to:", difficultyChoice, difficulty);
 
 async function getPokemonData(id) {
@@ -67,8 +63,8 @@ function startGame() {
   createGameArray().then((gameArray) => {
     let rows = difficulty[0];
     let cols = difficulty[1];
-    boardArray = [];
 
+    const boardArray = []; // create board as javascript array
     const board = document.getElementById("game-board"); // create board as DOM Element
     board.innerHTML = "";
 
@@ -83,51 +79,24 @@ function startGame() {
         card.src = cardImg.image;
         card.alt = cardImg.name;
         card.classList.add("card");
-        card.addEventListener("click", selectCard); // calls function 'selectCard()' on click
-        board.appendChild(card); // Add to DOM to appear to be there
+        board.appendChild(card); // Add to DOM
       }
-      // console.log(row);
-      boardArray.push(row); // Add to JS Array to be interacted with later
+      boardArray.push(row); // Add to JS Array
     }
-    // console.log(boardArray);
-    setTimeout(() => hideCards(rows, cols), 1000); // arrow function allows us to pass paramiters after the delay
+    console.log(boardArray);
+    setTimeout(() => hideCards(rows, cols), 1000);
+    
   });
+  
 }
 
 function hideCards(rows, cols) {
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      let card = document.getElementById(r.toString() + "-" + c.toString());
-      card.src = "assets/images/pokeball.png";
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+      let card = document.getElementById(r.toString() + "-" + c.toString())
+      card.src = "assets/images/pokeball.png"
+        }
+      }
     }
-  }
-}
-
-function selectCard() {
-  if (this.src.includes("pokeball")) {
-    if (!cardOne) {
-      cardOne = this; // assign cardOne to an img element we created earlier
-      // console.log(cardOne);
-
-      let imageLocation = cardOne.id.split("-"); // turns id into coordinates for boardArray
-      // console.log(imageLocation);
-      let r = imageLocation[0];
-      let c = imageLocation[1];
-
-      cardOne.src = boardArray[r][c].image; // retrieves image from boardArray using coordinates from the id
-    }
-    else if (!cardTwo && this != cardOne) {
-      cardTwo = this;
-      // console.log(cardTwo);
-
-      let imageLocation = cardOne.id.split("-"); // turns id into coordinates for boardArray
-      // console.log(imageLocation);
-      let r = imageLocation[0];
-      let c = imageLocation[1];
-
-      cardTwo.src = boardArray[r][c].image
-    }
-  }
-}
 
 startGame();
