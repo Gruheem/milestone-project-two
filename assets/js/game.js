@@ -1,19 +1,20 @@
 let difficultyChoice = "medium"; //btn.dataset.diff  Accessed from button click event listener
-let difficulty; // create variable to be assigned later 
+let difficulty; // create variable to be assigned later
 if (difficultyChoice === "easy") {
-    difficulty = [4, 2];
-    document.getElementById("game-board").classList.add("columns-2");
+  difficulty = [4, 2];
+  document.getElementById("game-board").classList.add("columns-2");
 } else if (difficultyChoice === "medium") {
-    difficulty = [4, 4];
-    document.getElementById("game-board").classList.add("columns-4");
+  difficulty = [4, 4];
+  document.getElementById("game-board").classList.add("columns-4");
 } else if (difficultyChoice === "hard") {
-    difficulty = [4, 8];
-    document.getElementById("game-board").classList.add("columns-8");
+  difficulty = [4, 8];
+  document.getElementById("game-board").classList.add("columns-8");
 }
 
 // console.log("difficulty set to:", difficultyChoice, difficulty);
 
-async function getPokemonData(id) { // fetches pokemon data from pokeapi
+async function getPokemonData(id) {
+  // fetches pokemon data from pokeapi
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
   const data = await response.json();
   // console.log(data);
@@ -27,7 +28,8 @@ async function getPokemonData(id) { // fetches pokemon data from pokeapi
 
 // getPokemonData(1)
 
-async function createGameArray() { // creates array of pokemon objects based on difficulty setting
+async function createGameArray() {
+  // creates array of pokemon objects based on difficulty setting
   const pokemonArray = [];
   let cardCount = (difficulty[0] * difficulty[1]) / 2;
   for (let i = 1; i <= cardCount; i++) {
@@ -58,12 +60,11 @@ function shuffle(array) {
 // createGameArray();
 
 function startGame() {
-
   createGameArray().then((gameArray) => {
     let rows = difficulty[0];
     let cols = difficulty[1];
 
-    const boardArray = [] // create board as javascript array
+    const boardArray = []; // create board as javascript array
     const board = document.getElementById("game-board"); // create board as DOM Element
     board.innerHTML = "";
 
@@ -80,9 +81,9 @@ function startGame() {
         card.classList.add("card");
         board.appendChild(card);
       }
-      boardArray.push(row)
+      boardArray.push(row);
     }
-    console.log(boardArray)
+    console.log(boardArray);
   });
 }
 
