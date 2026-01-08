@@ -79,12 +79,24 @@ function startGame() {
         card.src = cardImg.image;
         card.alt = cardImg.name;
         card.classList.add("card");
-        board.appendChild(card);
+        board.appendChild(card); // Add to DOM
       }
-      boardArray.push(row);
+      boardArray.push(row); // Add to JS Array
     }
     console.log(boardArray);
+    setTimeout(() => hideCards(rows, cols), 1000);
+    
   });
+  
 }
+
+function hideCards(rows, cols) {
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+      let card = document.getElementById(r.toString() + "-" + c.toString())
+      card.src = "assets/images/pokeball.png"
+        }
+      }
+    }
 
 startGame();
