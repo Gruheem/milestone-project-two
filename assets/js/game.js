@@ -90,11 +90,11 @@ function startGame() {
       boardArray.push(row); // Add to JS Array to be interacted with later
     }
     // console.log(boardArray);
-    setTimeout(() => hideCards(rows, cols), 1000); // arrow function allows us to pass paramiters after the delay
+    setTimeout(() => hideCards(rows, cols), 1000); // arrow syntax allows us to pass paramiters after the delay
   });
 }
 
-function hideCards(rows, cols) {
+function hideCards(rows, cols) { // Hides all Pokemon in their pokeballs 
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       let card = document.getElementById(r.toString() + "-" + c.toString());
@@ -120,14 +120,25 @@ function selectCard() {
       cardTwo = this;
       // console.log(cardTwo);
 
-      let imageLocation = cardOne.id.split("-"); // turns id into coordinates for boardArray
+      let imageLocation = cardTwo.id.split("-"); // turns id into coordinates for boardArray
       // console.log(imageLocation);
       let r = imageLocation[0];
       let c = imageLocation[1];
 
       cardTwo.src = boardArray[r][c].image
+      setTimeout(update, 1000) //no parameters to pass the update function so no arrow syntax
     }
   }
 }
+
+function update() {
+  if (cardOne.src != cardTwo.src) {
+    cardOne.src = "assets/images/pokeball.png";
+    cardTwo.src = "assets/images/pokeball.png";
+  }
+  cardOne = null; // reset so we can select more cards
+  cardTwo = null;
+}
+
 
 startGame();
