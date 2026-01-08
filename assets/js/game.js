@@ -2,10 +2,13 @@ let difficultyChoice = "hard"; //btn.dataset.diff  Accessed from button click ev
 let difficulty; // create variable to be assigned later 
 if (difficultyChoice === "easy") {
     difficulty = [4, 2];
+    document.getElementById("game-board").classList.add("columns-2");
 } else if (difficultyChoice === "medium") {
     difficulty = [4, 4];
+    document.getElementById("game-board").classList.add("columns-3");
 } else if (difficultyChoice === "hard") {
     difficulty = [4, 8];
+    document.getElementById("game-board").classList.add("columns-4");
 }
 
 // console.log("difficulty set to:", difficultyChoice, difficulty);

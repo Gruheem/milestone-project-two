@@ -28,11 +28,24 @@ body {
 }
 
 #game-board {
+  width : 80%;
+  
   display: grid;
-  grid-template-columns: repeat(2, auto);
   margin: 1rem auto;
   gap: 10px;
   justify-content: center;
+}
+
+.columns-2 {
+  grid-template-columns: repeat(2, auto);
+}
+
+.columns-3 {
+  grid-template-columns: repeat(3, auto);
+}
+
+.columns-4 {
+  grid-template-columns: repeat(4, auto);
 }
 
 .card {
