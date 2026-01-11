@@ -8,36 +8,85 @@
   </head>
   <body>
     <div>
-        <h1>Pokemon Pairs</h1>
+      <h1>Pokemon Pairs</h1>
     </div>
+    <!-- Home -->
     <div id="home" class="">
-    <div>
+      <div>
         <h3>Select your difficulty</h3>
-    </div>
-    <div id="difficulty-select" class="buttons">
+      </div>
+      <div id="difficulty-select" class="buttons">
         <button id="easyBtn">Easy</button>
         <button id="mediumBtn">Medium</button>
         <button id="hardBtn">Hard</button>
+      </div>
+      <div class="instructions">
+        <p id="instructions">
+          Match two cards with the same pokemon until you have found all the
+          pairs!
+        </p>
+      </div>
     </div>
-    <div class="instructions">
-        <p id="instructions">Match two cards with the same pokemon until you have found all the pairs!</p>
-    </div>
-    </div>
+    <button id="myBtn">Open Modal</button>
+    <!-- Game Board -->
     <div id="game" class="hidden">
       <div id="stats" class="stats">
-      <p id="time">Time:</p>
-      <p id="noOfMoves">Moves:</p>
-      <p id="difficulty">Difficulty:</p>
+        <p id="time">Time:</p>
+        <p id="noOfMoves">Moves:</p>
+        <p id="difficulty">Difficulty:</p>
+      </div>
+
+      <div id="game-board" class="game-board">
+        <!-- Game cards -->
+      </div>
+      <div class="in-game-buttons">
+        <button id="restartGame">Restart Game</button>
+        <button id="selectDifficulty">Select Difficulty</button>
+      </div>
     </div>
 
-    <div id="game-board" class="game-board">
-      <!-- Game cards -->
-    </div>
-    <div class="in-game-buttons">
-      <button id="restartGame">Restart Game</button>
-      <button id="selectDifficulty">Select Difficulty</button>
-    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p>Congrats</p>
+        </div>
+        <div class="modal-body">
+          <p>here are your stats</p>
+        </div>
+        <div class="modal-footer">
+          <button id="reset">reset</button>
+          <button id="diffSelect">Select Difficulty</button>
+        </div>
+      </div>
     </div>
     <script src="assets/js/game.js"></script>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
