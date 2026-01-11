@@ -1,15 +1,27 @@
-let difficultyChoice = "medium"; //btn.dataset.diff  Accessed from button click event listener
-let difficulty; // create variable to be assigned later
-if (difficultyChoice === "easy") {
+// Start game button event listeners
+let difficulty;
+document.getElementById("easyBtn").addEventListener("click", () => {
   difficulty = [4, 2];
   document.getElementById("game-board").classList.add("columns-2");
-} else if (difficultyChoice === "medium") {
+  startGame();
+});
+
+document.getElementById("mediumBtn").addEventListener("click", () => {
   difficulty = [4, 4];
   document.getElementById("game-board").classList.add("columns-4");
-} else if (difficultyChoice === "hard") {
+  startGame();
+});
+
+document.getElementById("hardBtn").addEventListener("click", () => {
   difficulty = [4, 8];
   document.getElementById("game-board").classList.add("columns-8");
-}
+  startGame();
+});
+
+document.getElementById("hardBtn").addEventListener("click", () => {
+  difficultyChoice = "hard";
+  startGame();
+});
 
 let boardArray = []; // create board as javascript array
 var cardOne; // for selectCard function
@@ -64,6 +76,10 @@ function shuffle(array) {
 // createGameArray();
 
 function startGame() {
+
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("game").classList.remove("hidden");
+
   createGameArray().then((gameArray) => {
     let rows = difficulty[0];
     let cols = difficulty[1];
@@ -90,7 +106,7 @@ function startGame() {
       boardArray.push(row); // Add to JS Array to be interacted with later
     }
     // console.log(boardArray);
-    setTimeout(() => hideCards(rows, cols), 1000); // arrow syntax allows us to pass paramiters after the delay
+    setTimeout(() => hideCards(rows, cols), 2000); // arrow syntax allows us to pass paramiters after the delay
   });
 }
 
@@ -141,4 +157,4 @@ function update() {
 }
 
 
-startGame();
+// startGame();
