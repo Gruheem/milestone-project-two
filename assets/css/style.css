@@ -58,7 +58,6 @@ body {
 }
 
 .modal {
-  display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 20%; /* Location of the box */
@@ -78,4 +77,18 @@ body {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

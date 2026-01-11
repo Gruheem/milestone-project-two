@@ -1,18 +1,21 @@
 // Start game button event listeners
 let difficulty;
-document.getElementById("easyBtn").addEventListener("click", () => { // start easy game
+document.getElementById("easyBtn").addEventListener("click", () => {
+  // start easy game
   difficulty = [4, 2];
   document.getElementById("game-board").classList.add("columns-2");
   startGame();
 });
 
-document.getElementById("mediumBtn").addEventListener("click", () => { // start medium game
+document.getElementById("mediumBtn").addEventListener("click", () => {
+  // start medium game
   difficulty = [4, 4];
   document.getElementById("game-board").classList.add("columns-4");
   startGame();
 });
 
-document.getElementById("hardBtn").addEventListener("click", () => { // start hard game
+document.getElementById("hardBtn").addEventListener("click", () => {
+  // start hard game
   difficulty = [4, 8];
   document.getElementById("game-board").classList.add("columns-8");
   startGame();
@@ -23,6 +26,11 @@ var cardOne; // for selectCard function
 var cardTwo;
 let errors = 0;
 let moves = 0;
+// let cardCount = 0;
+let matchedPairs = 0;
+var modal = document.getElementById("myModal");
+let span = document.getElementsByClassName("close")[0];
+
 
 // console.log("difficulty set to:" difficulty);
 
@@ -73,8 +81,6 @@ function shuffle(array) {
 // createGameArray();
 
 function startGame() {
-
-  
   document.getElementById("errors").innerText = errors;
 
   document.getElementById("home").classList.add("hidden");
@@ -110,7 +116,8 @@ function startGame() {
   });
 }
 
-function hideCards(rows, cols) { // Hides all Pokemon in their pokeballs 
+function hideCards(rows, cols) {
+  // Hides all Pokemon in their pokeballs
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       let card = document.getElementById(r.toString() + "-" + c.toString());
@@ -131,8 +138,7 @@ function selectCard() {
       let c = imageLocation[1];
 
       cardOne.src = boardArray[r][c].image; // retrieves image from boardArray using coordinates from the id
-    }
-    else if (!cardTwo && this != cardOne) {
+    } else if (!cardTwo && this != cardOne) {
       cardTwo = this;
       // console.log(cardTwo);
 
@@ -141,12 +147,11 @@ function selectCard() {
       let r = imageLocation[0];
       let c = imageLocation[1];
 
-      cardTwo.src = boardArray[r][c].image
-      setTimeout(update, 1000) //no parameters to pass the update function so no arrow syntax
+      cardTwo.src = boardArray[r][c].image;
+      setTimeout(update, 1000); //no parameters to pass the update function so no arrow syntax
     }
   }
 }
-
 
 function update() {
   if (cardOne.src != cardTwo.src) {
@@ -159,10 +164,27 @@ function update() {
   } else if (cardOne.src === cardTwo.src) {
     moves++;
     document.getElementById("moves").innerText = moves;
+    matchedPairs++;
   }
+  if (matchedPairs === (difficulty[0] * difficulty[1]) / 2) {
+    displayModal();
+  }
+  
   cardOne = null; // reset so we can select more cards
   cardTwo = null;
 }
 
-
+function displayModal() {
+  document.getElementById("myModal").classList.remove("hidden");
+  span.onclick = function () {
+    // Closes the modal on clicking [X]
+    modal.style.display = "none";
+  };
+  window.onclick = function (event) {
+    // Closes the modal clicking out of it
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+}
 // startGame();
