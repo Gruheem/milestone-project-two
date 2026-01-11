@@ -154,7 +154,11 @@ function update() {
     cardTwo.src = "assets/images/pokeball.png";
     errors++;
     document.getElementById("errors").innerText = errors;
-
+    moves++;
+    document.getElementById("moves").innerText = moves;
+  } else if (cardOne.src === cardTwo.src) {
+    moves++;
+    document.getElementById("moves").innerText = moves;
   }
   cardOne = null; // reset so we can select more cards
   cardTwo = null;
