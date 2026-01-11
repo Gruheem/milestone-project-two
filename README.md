@@ -66,7 +66,9 @@ function tests structured:
     testing:tested the site by doing y
     result:the site did not do as expected because of a, b, c OR site behaved as expected
     fix:i did z to fix this issue
-Bugs
+
+Bugs:
+As i am using random numbers to select the pokemon it is possible for the same pokemon to be picked more than once e.g. bulbasaur is picked 4 times and is every pokemon in an eight card grid
 
 # deployment
 how to run this project locally within a coding environment
