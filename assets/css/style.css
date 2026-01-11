@@ -35,6 +35,10 @@ body {
   justify-content: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .columns-2 {
   grid-template-columns: repeat(2, auto);
 }
