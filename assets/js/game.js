@@ -1,33 +1,30 @@
 // Start game button event listeners
 let difficulty;
-document.getElementById("easyBtn").addEventListener("click", () => {
+document.getElementById("easyBtn").addEventListener("click", () => { // start easy game
   difficulty = [4, 2];
   document.getElementById("game-board").classList.add("columns-2");
   startGame();
 });
 
-document.getElementById("mediumBtn").addEventListener("click", () => {
+document.getElementById("mediumBtn").addEventListener("click", () => { // start medium game
   difficulty = [4, 4];
   document.getElementById("game-board").classList.add("columns-4");
   startGame();
 });
 
-document.getElementById("hardBtn").addEventListener("click", () => {
+document.getElementById("hardBtn").addEventListener("click", () => { // start hard game
   difficulty = [4, 8];
   document.getElementById("game-board").classList.add("columns-8");
-  startGame();
-});
-
-document.getElementById("hardBtn").addEventListener("click", () => {
-  difficultyChoice = "hard";
   startGame();
 });
 
 let boardArray = []; // create board as javascript array
 var cardOne; // for selectCard function
 var cardTwo;
+let errors = 0;
+let moves = 0;
 
-// console.log("difficulty set to:", difficultyChoice, difficulty);
+// console.log("difficulty set to:" difficulty);
 
 async function getPokemonData(id) {
   // fetches pokemon data from pokeapi
@@ -76,6 +73,9 @@ function shuffle(array) {
 // createGameArray();
 
 function startGame() {
+
+  
+  document.getElementById("errors").innerText = errors;
 
   document.getElementById("home").classList.add("hidden");
   document.getElementById("game").classList.remove("hidden");
@@ -147,10 +147,14 @@ function selectCard() {
   }
 }
 
+
 function update() {
   if (cardOne.src != cardTwo.src) {
     cardOne.src = "assets/images/pokeball.png";
     cardTwo.src = "assets/images/pokeball.png";
+    errors++;
+    document.getElementById("errors").innerText = errors;
+
   }
   cardOne = null; // reset so we can select more cards
   cardTwo = null;
