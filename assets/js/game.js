@@ -31,7 +31,6 @@ let matchedPairs = 0;
 var modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
 
-
 // console.log("difficulty set to:" difficulty);
 
 async function getPokemonData(id) {
@@ -169,13 +168,24 @@ function update() {
   if (matchedPairs === (difficulty[0] * difficulty[1]) / 2) {
     displayModal();
   }
-  
+
   cardOne = null; // reset so we can select more cards
   cardTwo = null;
 }
 
 function displayModal() {
   document.getElementById("myModal").classList.remove("hidden");
+  document.getElementById(
+    "modal-time"
+  ).innerText = `You completed the game in: ${
+    document.getElementById("time").innerText
+  }`;
+  document.getElementById(
+    "modal-moves"
+  ).innerText = `With a total of moves: ${moves}`;
+  document.getElementById(
+    "modal-errors"
+  ).innerText = `And total errors: ${errors}`;
   span.onclick = function () {
     // Closes the modal on clicking [X]
     modal.style.display = "none";
