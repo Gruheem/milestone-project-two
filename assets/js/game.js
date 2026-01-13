@@ -120,7 +120,10 @@ function startGame() {
       boardArray.push(row); // Add to JS Array to be interacted with later
     }
     // console.log(boardArray);
-    setTimeout(() => hideCards(rows, cols), 2000); // arrow syntax allows us to pass paramiters after the delay
+    setTimeout(() => {
+      hideCards(rows, cols);
+      startTimer()
+    }, 2000); // arrow syntax allows us to pass arguments after the delay
   });
 }
 
@@ -176,10 +179,31 @@ function update() {
   }
   if (matchedPairs === (difficulty[0] * difficulty[1]) / 2) {
     displayModal();
+    stopTimer();
   }
   
   cardOne = null; // reset so we can select more cards
   cardTwo = null;
+}
+
+// Timer Functions
+
+function startTimer() {
+  startTime = Date.now();
+  timerInterval = setInterval(updateTimer, 1000);
+}
+
+function updateTimer() {
+  const elapsedTime = Math.floor((Date.now() - startTime) / 1000); // gets the elapsed time in seconds
+  const minutes = String(Math.floor(elapsedTime / 60)).padStart(2, "0"); // calculates minutes and pads with leading zero if needed
+  const seconds = String(elapsedTime % 60).padStart(2, "0"); // calculates seconds by finding what is left over from minutes and pads with leading zero if needed
+  document.getElementById("time").innerText = `${minutes}:${seconds}`;
+} 
+
+function stopTimer() {
+  
+  clearInterval(timerInterval);
+  timerInterval = null;
 }
 
 function displayModal() {
