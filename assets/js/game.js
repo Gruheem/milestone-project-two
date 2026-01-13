@@ -1,5 +1,16 @@
-// Start game button event listeners
+// Variables
+let boardArray = []; // create board as javascript array
+var cardOne; // for selectCard function
+var cardTwo;
+let errors = 0;
+let moves = 0;
+// let cardCount = 0;
+let matchedPairs = 0;
+var modal = document.getElementById("myModal");
+let span = document.getElementsByClassName("close")[0];
 let difficulty;
+
+// Start game button event listeners
 document.getElementById("easyBtn").addEventListener("click", () => {
   // start easy game
   difficulty = [4, 2];
@@ -21,15 +32,6 @@ document.getElementById("hardBtn").addEventListener("click", () => {
   startGame();
 });
 
-let boardArray = []; // create board as javascript array
-var cardOne; // for selectCard function
-var cardTwo;
-let errors = 0;
-let moves = 0;
-// let cardCount = 0;
-let matchedPairs = 0;
-var modal = document.getElementById("myModal");
-let span = document.getElementsByClassName("close")[0];
 
 
 // console.log("difficulty set to:" difficulty);
