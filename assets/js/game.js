@@ -1,13 +1,20 @@
 // Variables
-let boardArray = []; // create board as javascript array
-var cardOne; // for selectCard function
+// create board as javascript array
+let boardArray = []; 
+// for selectCard function
+var cardOne; 
 var cardTwo;
+// for game stats
 let errors = 0;
 let moves = 0;
-// let cardCount = 0;
+let startTime;
+let timerInterval;
+// for update() function
 let matchedPairs = 0;
+// for modal
 var modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
+//for difficulty setting
 let difficulty;
 
 // Start game button event listeners
