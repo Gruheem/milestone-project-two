@@ -1,4 +1,25 @@
-// Game variables
+// Start game button event listeners
+let difficulty;
+document.getElementById("easyBtn").addEventListener("click", () => {
+  // start easy game
+  difficulty = [4, 2];
+  document.getElementById("game-board").classList.add("columns-2");
+  startGame();
+});
+
+document.getElementById("mediumBtn").addEventListener("click", () => {
+  // start medium game
+  difficulty = [4, 4];
+  document.getElementById("game-board").classList.add("columns-4");
+  startGame();
+});
+
+document.getElementById("hardBtn").addEventListener("click", () => {
+  // start hard game
+  difficulty = [4, 8];
+  document.getElementById("game-board").classList.add("columns-8");
+  startGame();
+});
 
 let boardArray = []; // create board as javascript array
 var cardOne; // for selectCard function
@@ -9,27 +30,6 @@ let moves = 0;
 let matchedPairs = 0;
 var modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
-
-// Button event listeners
-let difficulty;
-// start easy game
-document.getElementById("easyBtn").addEventListener("click", () => {
-  difficulty = [4, 2];
-  document.getElementById("game-board").classList.add("columns-2");
-  startGame();
-});
-// start medium game
-document.getElementById("mediumBtn").addEventListener("click", () => {
-  difficulty = [4, 4];
-  document.getElementById("game-board").classList.add("columns-4");
-  startGame();
-});
-// start hard game
-document.getElementById("hardBtn").addEventListener("click", () => {
-  difficulty = [4, 8];
-  document.getElementById("game-board").classList.add("columns-8");
-  startGame();
-});
 
 
 // console.log("difficulty set to:" difficulty);
@@ -81,13 +81,7 @@ function shuffle(array) {
 // createGameArray();
 
 function startGame() {
-  cardOne = null;
-  cardTwo = null;
-  errors = 0;
-  moves = 0;
-  matchedPairs = 0;
   document.getElementById("errors").innerText = errors;
-  document.getElementById("moves").innerText = moves;
 
   document.getElementById("home").classList.add("hidden");
   document.getElementById("game").classList.remove("hidden");
@@ -175,35 +169,22 @@ function update() {
   if (matchedPairs === (difficulty[0] * difficulty[1]) / 2) {
     displayModal();
   }
-
+  
   cardOne = null; // reset so we can select more cards
   cardTwo = null;
 }
 
 function displayModal() {
   document.getElementById("myModal").classList.remove("hidden");
-  // stats section
-  document.getElementById("modal-time").innerText = `You completed the game in: ${document.getElementById("time").innerText}`;
-  document.getElementById(
-    "modal-moves"
-  ).innerText = `With a total of moves: ${moves}`;
-  document.getElementById(
-    "modal-errors"
-  ).innerText = `And total errors: ${errors}`;
-  // Closes the modal on clicking [X]
-  document.getElementById("close").addEventListener("click", function () {
-    modal.classList.add("hidden");
-  });
+  span.onclick = function () {
+    // Closes the modal on clicking [X]
+    modal.style.display = "none";
+  };
   window.onclick = function (event) {
     // Closes the modal clicking out of it
     if (event.target == modal) {
-      modal.classList.add("hidden");
+      modal.style.display = "none";
     }
   };
-  // Modal reset
-document.getElementById("reset").addEventListener("click", () => {
-  startGame();
-  modal.classList.add("hidden");
-});
 }
 // startGame();
