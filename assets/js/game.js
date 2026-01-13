@@ -1,14 +1,15 @@
 // Variables
 // create board as javascript array
-let boardArray = []; 
+let boardArray = [];
 // for selectCard function
-var cardOne; 
+var cardOne;
 var cardTwo;
 // for game stats
 let errors = 0;
 let moves = 0;
 let startTime;
 let timerInterval;
+let finalTime;
 // for update() function
 let matchedPairs = 0;
 // for modal
@@ -122,7 +123,7 @@ function startGame() {
     // console.log(boardArray);
     setTimeout(() => {
       hideCards(rows, cols);
-      startTimer()
+      startTimer();
     }, 2000); // arrow syntax allows us to pass arguments after the delay
   });
 }
@@ -181,7 +182,7 @@ function update() {
     displayModal();
     stopTimer();
   }
-  
+
   cardOne = null; // reset so we can select more cards
   cardTwo = null;
 }
@@ -198,25 +199,34 @@ function updateTimer() {
   const minutes = String(Math.floor(elapsedTime / 60)).padStart(2, "0"); // calculates minutes and pads with leading zero if needed
   const seconds = String(elapsedTime % 60).padStart(2, "0"); // calculates seconds by finding what is left over from minutes and pads with leading zero if needed
   document.getElementById("time").innerText = `${minutes}:${seconds}`;
-} 
+}
 
 function stopTimer() {
-  
-  clearInterval(timerInterval);
+  clearInterval(timerInterval); // clears the interval to stop the timer
+  finalTime = document.getElementById("time").innerText;
   timerInterval = null;
 }
 
-function displayModal() {
-  document.getElementById("myModal").classList.remove("hidden");
-  span.onclick = function () {
-    // Closes the modal on clicking [X]
-    modal.style.display = "none";
-  };
-  window.onclick = function (event) {
-    // Closes the modal clicking out of it
-    if (event.target == modal) {
-      modal.style.display = "none";
+// Modal Functions and Event Listeners
+document.getElementById("close").addEventListener("click", () => {
+    closeModal();
+  });
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
     }
-  };
+  });
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+
+function displayModal() {
+  modal.classList.remove("hidden");
+}
+
+function closeModal() {
+  modal.classList.add("hidden");
 }
 // startGame();
