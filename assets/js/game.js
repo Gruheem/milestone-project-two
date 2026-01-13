@@ -32,8 +32,6 @@ document.getElementById("hardBtn").addEventListener("click", () => {
   startGame();
 });
 
-
-
 // console.log("difficulty set to:" difficulty);
 
 async function getPokemonData(id) {
@@ -84,6 +82,7 @@ function shuffle(array) {
 
 function startGame() {
   document.getElementById("errors").innerText = errors;
+  document.getElementById("moves").innerText = moves;
 
   document.getElementById("home").classList.add("hidden");
   document.getElementById("game").classList.remove("hidden");
