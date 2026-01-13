@@ -169,6 +169,10 @@ Function tests structured:
     Fix: I did z to fix this issue
 
 Bugs:
+The game start buttons stopped working. I had placed an event listener that used a variable in a function before i had declared the variable globaly. This was a timing issue as javascript runs top to bottom.
+
+Modal wasnt appearing after reseting game using modal I was of mixing 'modal.classList.add("hidden");' and 'modal.display = "none";' fixed by sticking to adding and removing the hidden class to acheive vanishing and appearing.
+
 Error counter is creating a list of ones rather than adding a up a total. Solution: i wasnt declring the variable errors ona global scal just in the start game function so it couldnt be accessed by the update function
 
 As I am using random numbers to select the Pokemon it is possible for the same Pokemon to be picked more than once, e.g., Bulbasaur is picked 4 times and is every Pokemon in an eight-card grid.
