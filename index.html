@@ -40,7 +40,7 @@
         <!-- Game cards -->
       </div>
       <div class="in-game-buttons">
-        <button id="restartGame">Restart Game</button>
+        <button id="restartGame" class="resetGame">Restart Game</button>
         <button id="selectDifficulty">Select Difficulty</button>
       </div>
     </div>
@@ -53,10 +53,14 @@
 
         </div>
         <div class="modal-body">
-          <p id="modal-stats">here are your stats</p>
+          <div>
+            <p>Total Moves: <span id="modalMoves"></span></p>
+            <p>Total Errors: <span id="modalErrors"></span></p>
+            <p>Time to Complete: <span id="modalTime"></span></p>
+          </div>
         </div>
         <div class="modal-footer">
-          <button id="reset">reset</button>
+          <button id="reset" class="resetGame">reset</button>
           <button id="diffSelect">Select Difficulty</button>
         </div>
       </div>

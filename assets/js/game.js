@@ -40,6 +40,15 @@ document.getElementById("hardBtn").addEventListener("click", () => {
   startGame();
 });
 
+// reset butttons game and modal
+
+document.querySelectorAll(".reset").forEach((button) => {
+  button.addEventListener("click", () => {
+    startGame();
+    modal.classList.add("hidden");
+  });
+})
+
 // console.log("difficulty set to:" difficulty);
 
 async function getPokemonData(id) {
@@ -89,6 +98,10 @@ function shuffle(array) {
 // createGameArray();
 
 function startGame() {
+  // resets game variables
+  errors = 0;
+  moves = 0;
+  matchedPairs = 0;
   document.getElementById("errors").innerText = errors;
   document.getElementById("moves").innerText = moves;
 
@@ -165,6 +178,7 @@ function selectCard() {
   }
 }
 
+// update moves, errors, and check for win condition
 function update() {
   if (cardOne.src != cardTwo.src) {
     cardOne.src = "assets/images/pokeball.png";
@@ -179,8 +193,8 @@ function update() {
     matchedPairs++;
   }
   if (matchedPairs === (difficulty[0] * difficulty[1]) / 2) {
-    displayModal();
     stopTimer();
+    displayModal();
   }
 
   cardOne = null; // reset so we can select more cards
@@ -223,10 +237,14 @@ window.addEventListener("click", (event) => {
   });
 
 function displayModal() {
+  document.getElementById("modalMoves").innerText = `${moves}`;
+  document.getElementById("modalErrors").innerText = `${errors}`;
+  document.getElementById("modalTime").innerText = `${finalTime}`;
   modal.classList.remove("hidden");
 }
 
 function closeModal() {
   modal.classList.add("hidden");
 }
+
 // startGame();
