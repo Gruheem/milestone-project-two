@@ -13,8 +13,7 @@ let finalTime;
 // for update() function
 let matchedPairs = 0;
 // for modal
-var modal = document.getElementById("myModal");
-let span = document.getElementsByClassName("close")[0];
+const modal = document.getElementById("myModal");
 //for difficulty setting
 let difficulty;
 
@@ -47,7 +46,7 @@ document.querySelectorAll(".reset").forEach((button) => {
     startGame();
     modal.classList.add("hidden");
   });
-})
+});
 
 // console.log("difficulty set to:" difficulty);
 
@@ -222,19 +221,24 @@ function stopTimer() {
 }
 
 // Modal Functions and Event Listeners
+document.getElementById("reset").addEventListener("click", () => {
+  startGame();
+  closeModal();
+});
+
 document.getElementById("close").addEventListener("click", () => {
-    closeModal();
-  });
+  closeModal();
+});
 window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
-  window.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeModal();
-    }
-  });
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
 
 function displayModal() {
   document.getElementById("modalMoves").innerText = `${moves}`;
