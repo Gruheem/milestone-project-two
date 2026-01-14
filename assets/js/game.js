@@ -39,13 +39,15 @@ document.getElementById("hardBtn").addEventListener("click", () => {
   startGame();
 });
 
-// reset butttons game and modal
+// game board restart and difficulty select buttons
+document.getElementById("selectDifficulty").addEventListener("click", () => {
+  document.getElementById("game").classList.add("hidden");
+  document.getElementById("home").classList.remove("hidden");
+});
 
-document.querySelectorAll(".reset").forEach((button) => {
-  button.addEventListener("click", () => {
-    startGame();
-    modal.classList.add("hidden");
-  });
+document.getElementById("restartGame").addEventListener("click", () => {
+  stopTimer();
+  startGame();
 });
 
 // console.log("difficulty set to:" difficulty);
@@ -101,6 +103,7 @@ function startGame() {
   errors = 0;
   moves = 0;
   matchedPairs = 0;
+  document.getElementById("time").innerText = "00:00";
   document.getElementById("errors").innerText = errors;
   document.getElementById("moves").innerText = moves;
 
@@ -220,7 +223,15 @@ function stopTimer() {
   timerInterval = null;
 }
 
+
+
 // Modal Functions and Event Listeners
+document.getElementById("diffSelect").addEventListener("click", () => {
+  closeModal();
+  document.getElementById("game").classList.add("hidden");
+  document.getElementById("home").classList.remove("hidden");
+});
+
 document.getElementById("reset").addEventListener("click", () => {
   startGame();
   closeModal();
