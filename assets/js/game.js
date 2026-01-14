@@ -16,33 +16,40 @@ let matchedPairs = 0;
 const modal = document.getElementById("myModal");
 //for difficulty setting
 let difficulty;
+// HTML elements
+const board = document.getElementById("game-board");
+const game = document.getElementById("game");
+const home = document.getElementById("home");
+const errorBox = document.getElementById("errors");
+const movesBox = document.getElementById("moves");
+const timeBox = document.getElementById("time");
 
 // Start game button event listeners
 document.getElementById("easyBtn").addEventListener("click", () => {
   // start easy game
   difficulty = [4, 2];
-  document.getElementById("game-board").classList.add("columns-2");
+  board.classList.add("columns-2");
   startGame();
 });
 
 document.getElementById("mediumBtn").addEventListener("click", () => {
   // start medium game
   difficulty = [4, 4];
-  document.getElementById("game-board").classList.add("columns-4");
+  board.classList.add("columns-4");
   startGame();
 });
 
 document.getElementById("hardBtn").addEventListener("click", () => {
   // start hard game
   difficulty = [4, 8];
-  document.getElementById("game-board").classList.add("columns-8");
+  board.classList.add("columns-8");
   startGame();
 });
 
 // game board restart and difficulty select buttons
 document.getElementById("selectDifficulty").addEventListener("click", () => {
-  document.getElementById("game").classList.add("hidden");
-  document.getElementById("home").classList.remove("hidden");
+  game.classList.add("hidden");
+  home.classList.remove("hidden");
 });
 
 document.getElementById("restartGame").addEventListener("click", () => {
@@ -105,13 +112,13 @@ function startGame() {
   matchedPairs = 0;
 
   // resets stats display
-  document.getElementById("time").innerText = "00:00";
-  document.getElementById("errors").innerText = errors;
-  document.getElementById("moves").innerText = moves;
+  timeBox.innerText = "00:00";
+  errorBox.innerText = errors;
+  movesBox.innerText = moves;
 
   // bring up game board and hide home screen
-  document.getElementById("home").classList.add("hidden");
-  document.getElementById("game").classList.remove("hidden");
+  home.classList.add("hidden");
+  game.classList.remove("hidden");
 
   createGameArray().then((gameArray) => {
     // sets size of board based on difficulty
@@ -122,7 +129,6 @@ function startGame() {
     boardArray = [];
 
     // create board as DOM Element
-    const board = document.getElementById("game-board");
     board.innerHTML = "";
 
     // the card factory
@@ -195,12 +201,12 @@ function update() {
     cardOne.src = "assets/images/pokeball.png";
     cardTwo.src = "assets/images/pokeball.png";
     errors++;
-    document.getElementById("errors").innerText = errors;
+    errorBox.innerText = errors;
     moves++;
-    document.getElementById("moves").innerText = moves;
+    movesBox.innerText = moves;
   } else if (cardOne.src === cardTwo.src) {
     moves++;
-    document.getElementById("moves").innerText = moves;
+    movesBox.innerText = moves;
     matchedPairs++;
   }
   if (matchedPairs === (difficulty[0] * difficulty[1]) / 2) {
@@ -223,20 +229,20 @@ function updateTimer() {
   const elapsedTime = Math.floor((Date.now() - startTime) / 1000); // gets the elapsed time in seconds
   const minutes = String(Math.floor(elapsedTime / 60)).padStart(2, "0"); // calculates minutes and pads with leading zero if needed
   const seconds = String(elapsedTime % 60).padStart(2, "0"); // calculates seconds by finding what is left over from minutes and pads with leading zero if needed
-  document.getElementById("time").innerText = `${minutes}:${seconds}`;
+  timeBox.innerText = `${minutes}:${seconds}`;
 }
 
 function stopTimer() {
   clearInterval(timerInterval); // clears the interval to stop the timer
-  finalTime = document.getElementById("time").innerText;
+  finalTime = timeBox.innerText;
   timerInterval = null;
 }
 
 // Modal Functions and Event Listeners
 document.getElementById("diffSelect").addEventListener("click", () => {
   closeModal();
-  document.getElementById("game").classList.add("hidden");
-  document.getElementById("home").classList.remove("hidden");
+  game.classList.add("hidden");
+  home.classList.remove("hidden");
 });
 
 document.getElementById("reset").addEventListener("click", () => {
