@@ -103,21 +103,29 @@ function startGame() {
   errors = 0;
   moves = 0;
   matchedPairs = 0;
+
+  // resets stats display
   document.getElementById("time").innerText = "00:00";
   document.getElementById("errors").innerText = errors;
   document.getElementById("moves").innerText = moves;
 
+  // bring up game board and hide home screen
   document.getElementById("home").classList.add("hidden");
   document.getElementById("game").classList.remove("hidden");
 
   createGameArray().then((gameArray) => {
+    // sets size of board based on difficulty
     let rows = difficulty[0];
     let cols = difficulty[1];
+
+    // clears boardArray for Javascript game array
     boardArray = [];
 
-    const board = document.getElementById("game-board"); // create board as DOM Element
+    // create board as DOM Element
+    const board = document.getElementById("game-board");
     board.innerHTML = "";
 
+    // the card factory
     for (let r = 0; r < rows; r++) {
       let row = [];
       for (let c = 0; c < cols; c++) {
@@ -130,16 +138,17 @@ function startGame() {
         card.alt = cardImg.name;
         card.classList.add("card");
         card.addEventListener("click", selectCard); // calls function 'selectCard()' on click
-        board.appendChild(card); // Add to DOM to appear to be there
+        board.appendChild(card); // Add to DOM
       }
       // console.log(row);
-      boardArray.push(row); // Add to JS Array to be interacted with later
+      boardArray.push(row); // Add to JS Array
     }
     // console.log(boardArray);
+    // arrow syntax allows us to pass arguments after the delay
     setTimeout(() => {
       hideCards(rows, cols);
       startTimer();
-    }, 2000); // arrow syntax allows us to pass arguments after the delay
+    }, 1000);
   });
 }
 
@@ -156,7 +165,7 @@ function hideCards(rows, cols) {
 function selectCard() {
   if (this.src.includes("pokeball")) {
     if (!cardOne) {
-      cardOne = this; // assign cardOne to an img element we created earlier
+      cardOne = this; // assign cardOne to an img element
       // console.log(cardOne);
 
       let imageLocation = cardOne.id.split("-"); // turns id into coordinates for boardArray
@@ -222,8 +231,6 @@ function stopTimer() {
   finalTime = document.getElementById("time").innerText;
   timerInterval = null;
 }
-
-
 
 // Modal Functions and Event Listeners
 document.getElementById("diffSelect").addEventListener("click", () => {
