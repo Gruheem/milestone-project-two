@@ -138,13 +138,21 @@ function startGame() {
         let cardImg = gameArray.pop();
         row.push(cardImg);
 
-        let card = document.createElement("img");
+        // create wrapper div for card
+        const wrapper = document.createElement("div");
+        wrapper.classList.add("card-wrapper");
+
+        // create card img element
+        const card = document.createElement("img");
         card.id = r.toString() + "-" + c.toString();
         card.src = cardImg.image;
         card.alt = cardImg.name;
         card.classList.add("card");
         card.addEventListener("click", selectCard); // calls function 'selectCard()' on click
-        board.appendChild(card); // Add to DOM
+
+        // append card to wrapper and wrapper to board
+        wrapper.appendChild(card);
+        board.appendChild(wrapper); 
       }
       // console.log(row);
       boardArray.push(row); // Add to JS Array
