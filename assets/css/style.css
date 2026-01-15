@@ -3,6 +3,9 @@
 :root {
   --background-color: #fff;
   --secondary-font: "Open Sans", sans-serif;
+  --easy-color: #006B3D;
+  --medium-color: #E09C3B;
+  --hard-color: #D61F1F;
 }
 
 body {
@@ -17,12 +20,32 @@ body {
   text-align: center;
 }
 
-.buttons {
+.button-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+.button {
+  color: #ffffff;
+  padding: 1.5rem 3rem;
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+.easyBtn {
+  background-color: var(--easy-color);
+}
+
+.mediumBtn {
+  background-color: var(--medium-color);
+}
+
+.hardBtn {
+  background-color: var(--hard-color);
+}
+
 
 .stats {
   display: flex;
