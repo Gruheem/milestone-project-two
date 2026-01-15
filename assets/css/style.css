@@ -6,6 +6,12 @@
 }
 
 body {
+  height: 100%;
+  background-image: url("../images/pokemon-background.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 112vh;
+  background-attachment: fixed;
   background-color: var(--background-color);
   font-family: var(--secondary-font);
   text-align: center;
