@@ -169,6 +169,8 @@ Function tests structured:
     Fix: I did z to fix this issue
 
 Bugs:
+Cards keep overflowing out of the game board. after lots of reading i found i needed to wrap the img elements in wrappers.
+
 The game start buttons stopped working. I had placed an event listener that used a variable in a function before i had declared the variable globaly. This was a timing issue as javascript runs top to bottom.
 
 Modal wasnt appearing after reseting game using modal I was of mixing 'modal.classList.add("hidden");' and 'modal.display = "none";' fixed by sticking to adding and removing the hidden class to acheive vanishing and appearing.
