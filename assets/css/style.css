@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
+@font-face {
+  font-family: pokefont;
+  src: url(../fonts/pokefont.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background-color: #fff;
   --secondary-font: "Open Sans", sans-serif;
@@ -29,21 +36,29 @@ body {
 
 .button {
   color: #ffffff;
+  font-family: pokefont, sans-serif;
+  font-size: 1.5rem;
   padding: 1.5rem 3rem;
-  border-radius: 8px;
+  border-radius: 49%;
   margin: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .easyBtn {
+  /* background-image: linear-gradient(to bottom, #004c2b, var(--easy-color), var(--easy-color), var(--easy-color), var(--easy-color), var(--easy-color), var(--easy-color), var(--easy-color), #004c2b); */
   background-color: var(--easy-color);
+  border-color: #004c2b;
 }
 
 .mediumBtn {
   background-color: var(--medium-color);
+  border-color: #ae711c;
 }
 
 .hardBtn {
   background-color: var(--hard-color);
+  border-color: #811212;
 }
 
 
@@ -64,6 +79,16 @@ body {
   justify-content: center;
 }
 
+.card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.in-game-button {
+  background-color: #f60101;
+}
+
 .hidden {
   display: none;
 }
@@ -78,12 +103,6 @@ body {
 
 .columns-8 {
   grid-template-columns: repeat(8, auto);
-}
-
-.card {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
 }
 
 .modal {
