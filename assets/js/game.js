@@ -28,6 +28,7 @@ const timeBox = document.getElementById("time");
 document.getElementById("easyBtn").addEventListener("click", () => {
   // start easy game
   difficulty = [4, 2];
+  board.classList.remove("columns-2", "columns-4", "columns-8");
   board.classList.add("columns-2");
   startGame();
 });
@@ -35,6 +36,7 @@ document.getElementById("easyBtn").addEventListener("click", () => {
 document.getElementById("mediumBtn").addEventListener("click", () => {
   // start medium game
   difficulty = [4, 4];
+  board.classList.remove("columns-2", "columns-4", "columns-8");
   board.classList.add("columns-4");
   startGame();
 });
@@ -42,6 +44,7 @@ document.getElementById("mediumBtn").addEventListener("click", () => {
 document.getElementById("hardBtn").addEventListener("click", () => {
   // start hard game
   difficulty = [4, 8];
+  board.classList.remove("columns-2", "columns-4", "columns-8");
   board.classList.add("columns-8");
   startGame();
 });
@@ -152,7 +155,7 @@ function startGame() {
 
         // append card to wrapper and wrapper to board
         wrapper.appendChild(card);
-        board.appendChild(wrapper); 
+        board.appendChild(wrapper);
       }
       // console.log(row);
       boardArray.push(row); // Add to JS Array
