@@ -83,6 +83,10 @@ body {
   justify-content: center;
 }
 
+/* .card-wrapper {
+
+} */
+
 .card {
   width: 100%;
   aspect-ratio: 1 / 1;
