@@ -10,9 +10,9 @@
 :root {
   --background-color: #fff;
   --secondary-font: "Open Sans", sans-serif;
-  --easy-color: #006B3D;
-  --medium-color: #E09C3B;
-  --hard-color: #D61F1F;
+  --easy-color: #006b3d;
+  --medium-color: #e09c3b;
+  --hard-color: #d61f1f;
 }
 
 body {
@@ -25,6 +25,10 @@ body {
   background-color: var(--background-color);
   font-family: var(--secondary-font);
   text-align: center;
+}
+
+#poke-pairs {
+  box-shadow: 0px 0px 15px 5px #ffffff;
 }
 
 .button-div {
@@ -41,8 +45,15 @@ body {
   padding: 1.5rem 3rem;
   border-radius: 49%;
   margin: 1rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.4),
+    0 6px 20px 0 rgba(0, 0, 0, 0.7);
   text-shadow: 2px 2px 4px #000000;
+}
+
+.button:hover {
+  filter: brightness(85%);
+  cursor: pointer;
 }
 
 .easyBtn {
@@ -61,10 +72,46 @@ body {
   border-color: #811212;
 }
 
-.instructions {
-  background-color: #fefefe;
+.home-instructions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
+#instructions {
+  margin: 0;
+}
+
+.instructions {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1.2rem;
+  max-width: 650px;
+  background: #ffffff;
+  border: 5px dashed #3374ab; /* dash colour and size */
+  box-shadow:
+    0 0 0 2.5px #22345f,
+    /*  outside line */ /* 0 0 0 12.5px #ffffff, */ inset 0 0 0 2.5px #22345f,
+    /* inside line */ 0 5px 50px 15px rgba(0, 0, 0, 0.5),
+    0 0 0 6px #ffffff;
+  color: #000000;
+  font-family: var(--secondary-font);
+  font-size: 1.5em;
+  /* text-shadow: 2px 2px 4px #000000; */
+  text-align: center;
+}
+
+.border {
+  padding: 1rem;
+  background: #ffffff;
+  border: 5px dashed #3374ab; /* dash colour and size */
+  box-shadow:
+    0 0 0 2.5px #22345f,
+    /*  outside line */ /* 0 0 0 12.5px #ffffff, */ inset 0 0 0 2.5px #22345f,
+    /* inside line */ 0 5px 50px 15px rgba(0, 0, 0, 0.5),
+    0 0 0 6px #ffffff;
+}
 
 .stats {
   display: flex;
@@ -122,8 +169,8 @@ body {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -148,4 +195,3 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-

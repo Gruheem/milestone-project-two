@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,23 +8,32 @@
   </head>
   <body>
     <div>
-      <h1>Pokemon Pairs</h1>
+      <h1 class="hidden">Poke-Pairs a pokemon memory game</h1>
+      <div class="title-image">
+        <img
+        id="poke-pairs"
+          src="assets/images/poke-title.png"
+          alt="Pokemon Pairs Title"
+        />
+      </div>
     </div>
     <!-- Home -->
     <div id="home" class="">
       <div>
-        <h3>Select your difficulty</h3>
+        <h2 class="border">Select your difficulty</h2>
       </div>
       <div id="difficulty-select" class="button-div">
         <button id="easyBtn" class="button easyBtn">Easy</button>
         <button id="mediumBtn" class="button mediumBtn">Medium</button>
         <button id="hardBtn" class="button hardBtn">Hard</button>
       </div>
-      <div class="instructions">
-        <p id="instructions">
-          Match two cards with the same pokemon until you have found all the
-          pairs!
-        </p>
+      <div class="home-instructions">
+        <div class="instructions">
+          <p id="instructions">
+            Match two cards with the same pokemon until you have found all the
+            pairs!
+          </p>
+        </div>
       </div>
     </div>
     <!-- Game Board -->
@@ -39,8 +48,12 @@
         <!-- Game cards -->
       </div>
       <div class="in-game-buttons">
-        <button id="restartGame" class="resetGame in-game-button button">Restart Game</button>
-        <button id="selectDifficulty" class="in-game-button button">Select Difficulty</button>
+        <button id="restartGame" class="resetGame in-game-button button">
+          Restart Game
+        </button>
+        <button id="selectDifficulty" class="in-game-button button">
+          Select Difficulty
+        </button>
       </div>
     </div>
 
@@ -48,8 +61,8 @@
     <div id="myModal" class="modal hidden">
       <div class="modal-content">
         <div class="modal-header">
-          <p>Congrats</p><span id="close" class="close">&times;</span>
-
+          <p>Congrats</p>
+          <span id="close" class="close">&times;</span>
         </div>
         <div class="modal-body">
           <div>

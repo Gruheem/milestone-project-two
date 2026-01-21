@@ -62,6 +62,8 @@ document.getElementById("restartGame").addEventListener("click", () => {
 
 // console.log("difficulty set to:" difficulty);
 
+// API to fetch pokemon data
+
 async function getPokemonData(id) {
   // fetches pokemon data from pokeapi
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
