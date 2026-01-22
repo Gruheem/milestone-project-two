@@ -35,6 +35,7 @@ h2 {
 #seldef {
   margin: 2rem auto;
   font-size: 1.4rem;
+  width: fit-content;
 }
 
 #poke-pairs {
@@ -204,6 +205,26 @@ h2 {
   cursor: pointer;
 }
 
-/* @media screen and {
-  
-} */
+@media screen and (max-width: 576px) {
+
+}
+
+@media screen and (min-width: 577px) {
+
+}
+
+@media screen and (min-width: 769px) {
+
+}
+
+@media screen and (min-width: 993px) {
+
+}
+
+@media screen and (min-width: 1201px) {
+
+}
+
+@media screen and (min-width: 1401px) {
+
+}
