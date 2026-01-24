@@ -20,7 +20,7 @@ body {
   background-image: url("../images/pokemon-background.webp");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: auto 112vh;
+  background-size: clamp(112vw, 112vw, 150vw);
   background-attachment: fixed;
   background-color: var(--background-color);
   font-family: var(--secondary-font);
@@ -44,7 +44,7 @@ P {
   width: 100%;
   max-width: 600px;
   filter: drop-shadow(0 0 5px #000);
-  margin: 2rem auto 1rem auto;
+  margin: 2rem auto 0rem auto;
 }
 
 .button-div {
@@ -61,8 +61,7 @@ P {
   padding: 1.5rem 3rem;
   border-radius: 49%;
   margin: 1rem;
-  box-shadow:
-    0px 0px 5px #000;
+  box-shadow: 0px 0px 5px #000;
   text-shadow: 2px 2px 4px #000000;
 }
 
@@ -139,10 +138,6 @@ P {
   justify-content: center;
 }
 
-/* .card-wrapper {
-
-} */
-
 .card {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -210,7 +205,9 @@ P {
 }
 
 @media screen and (min-width: 577px) {
-
+  p {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -222,9 +219,25 @@ P {
 }
 
 @media screen and (min-width: 1201px) {
-
+  .button-div {
+    flex-direction: row;
+    margin: 5rem auto;
+  }
 }
 
 @media screen and (min-width: 1401px) {
 
 }
+
+/* @media screen and (min-width: 1601px) {
+  body {
+    background-size: auto 125vh;
+  }
+}
+
+@media screen and (min-width:1801px) {
+  body {
+    background-size: auto 140vh;
+  }
+} */
+
