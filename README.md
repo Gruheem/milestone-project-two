@@ -5,12 +5,12 @@ Title
 # UX
 Project goals: The goal of the project is to build an interactive front-end site. This site will take the form of a Pokemon-themed pairs game. The game should be fun, interactive, and visually appealing.
 
-Player goals
+Player goals:
 - To play a fun pairs game.
 - To play the game on different devices.
 - To play a simple, easy-to-understand, but challenging game.
 
-Developer and business goals
+Developer and business goals:
 - Create an engaging game.
 - Create a visually appealing game with sound.
 - Create an appeal to Pokemon fans with a Pokemon theme.
@@ -156,6 +156,7 @@ features to implement
 
 
 # Technologies used
+mobile first developement
 adobe express background remover
 
 # Testing
@@ -182,5 +183,6 @@ Error counter is creating a list of ones rather than adding a up a total. Soluti
 As I am using random numbers to select the Pokemon it is possible for the same Pokemon to be picked more than once, e.g., Bulbasaur is picked 4 times and is every Pokemon in an eight-card grid.
 
 # Deployment
+Early deployment once I have acheived MVP.
 How to run this project locally within a coding environment.
 Document steps on how to clone, install and run code. 

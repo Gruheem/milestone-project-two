@@ -29,12 +29,14 @@ body {
 
 h2 {
   display: inline-block;
-  font-size: 1.3rem;
+}
+
+P {
+  font-size: 1rem;
 }
 
 #seldef {
-  margin: 2rem auto;
-  font-size: 1.4rem;
+  margin: 2rem auto 0rem auto;
   width: fit-content;
 }
 
@@ -50,13 +52,12 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1.5rem auto;
 }
 
 .button {
   color: #ffffff;
   font-family: pokefont, sans-serif;
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 5rem);
   padding: 1.5rem 3rem;
   border-radius: 49%;
   margin: 1rem;
@@ -104,7 +105,6 @@ h2 {
   max-width: 650px;
   color: #000000;
   font-family: var(--secondary-font);
-  font-size: 1.3rem;
   /* text-shadow: 2px 2px 4px #000000; */
   text-align: center;
 }
@@ -206,7 +206,7 @@ h2 {
 }
 
 @media screen and (max-width: 576px) {
-
+  /* default styling */
 }
 
 @media screen and (min-width: 577px) {
