@@ -20,7 +20,7 @@ body {
   background-image: url("../images/pokemon-background.webp");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: clamp(112vw, 112vw, 150vw);
+  background-size: auto 100vh;
   background-attachment: fixed;
   background-color: var(--background-color);
   font-family: var(--secondary-font);
@@ -57,7 +57,7 @@ P {
 .button {
   color: #ffffff;
   font-family: pokefont, sans-serif;
-  font-size: clamp(2rem, 4vw, 5rem);
+  font-size: clamp(2rem, 8vw, 5rem);
   padding: 1.5rem 3rem;
   border-radius: 49%;
   margin: 1rem;
@@ -229,15 +229,16 @@ P {
 
 }
 
-/* @media screen and (min-width: 1601px) {
+@media screen and (min-width: 2201px) {
   body {
     background-size: auto 125vh;
   }
 }
 
+/* 
 @media screen and (min-width:1801px) {
   body {
     background-size: auto 140vh;
   }
 } */
-
+ 
