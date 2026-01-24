@@ -11,7 +11,7 @@
       <h1 class="hidden">Poke-Pairs a pokemon memory game</h1>
       <div class="title-image">
         <img
-        id="poke-pairs"
+          id="poke-pairs"
           src="assets/images/poke-title.png"
           alt="Pokemon Pairs Title"
         />
@@ -39,7 +39,9 @@
     <!-- Game Board -->
     <div id="game" class="hidden">
       <div id="stats" class="stats">
-        <p id="timeCounter" class="border">Time: <span id="time">00:00</span></p>
+        <p id="timeCounter" class="border">
+          Time: <span id="time">00:00</span>
+        </p>
         <p id="noOfMoves" class="border">Moves: <span id="moves"></span></p>
         <p id="errorCount" class="border">Errors: <span id="errors"></span></p>
       </div>
@@ -47,13 +49,15 @@
       <div id="game-board" class="game-board">
         <!-- Game cards -->
       </div>
-      <div class="in-game-buttons">
-        <button id="restartGame" class="resetGame in-game-button button">
-          Restart Game
-        </button>
-        <button id="selectDifficulty" class="in-game-button button">
-          Select Difficulty
-        </button>
+      <div class="flex-centre">
+        <div class="in-game-button-div">
+          <button id="restartGame" class="resetGame game-button">
+            Restart Game
+          </button>
+          <button id="selectDifficulty" class="game-button">
+            Select Difficulty
+          </button>
+        </div>
       </div>
     </div>
 
