@@ -113,12 +113,10 @@ P {
   background: #ffffff;
   border: 3px dashed #3374ab; /* dash colour and size */
   box-shadow:
-    0 0 0 2.5px #22345f, /*  outside line */ 
-    /* 0 0 0 12.5px #ffffff, */ 
-    inset 0 0 0 2.5px #22345f, /* inside line */ 
-    /* 0 5px 50px 15px rgba(0, 0, 0, 0.5), */
-    /* 0 0 0 6px #ffffff, */
-    0px 0px 5px #000;
+    0 0 0 2.5px #22345f,
+    /*  outside line */ /* 0 0 0 12.5px #ffffff, */ inset 0 0 0 2.5px #22345f,
+    /* inside line */ /* 0 5px 50px 15px rgba(0, 0, 0, 0.5), */
+    /* 0 0 0 6px #ffffff, */ 0px 0px 5px #000;
 }
 
 .stats {
@@ -200,6 +198,42 @@ P {
   cursor: pointer;
 }
 
+@media screen and (max-width: 443px) {
+  #timeCounter {
+    font-size: 1rem;
+    border: none;
+    box-shadow: none;
+    background: none;
+    margin: 0;
+  }
+
+  #noOfMoves {
+    font-size: 1rem;
+    border: none;
+    box-shadow: none;
+    background: none;
+    margin: 0;
+  }
+
+  #errorCount {
+    font-size: 1rem;
+    border: none;
+    box-shadow: none;
+    background: none;
+    margin: 0;
+  }
+
+  #stats {
+    background: #ffffff;
+    border: 3px dashed #3374ab; /* dash colour and size */
+    box-shadow:
+      0 0 0 2.5px #22345f,
+      /*  outside line */ /* 0 0 0 12.5px #ffffff, */ inset 0 0 0 2.5px #22345f,
+      /* inside line */ /* 0 5px 50px 15px rgba(0, 0, 0, 0.5), */
+        /* 0 0 0 6px #ffffff, */ 0px 0px 5px #000;
+  }
+}
+
 @media screen and (max-width: 576px) {
   /* default styling */
 }
@@ -211,11 +245,9 @@ P {
 }
 
 @media screen and (min-width: 769px) {
-
 }
 
 @media screen and (min-width: 993px) {
-
 }
 
 @media screen and (min-width: 1201px) {
@@ -226,7 +258,6 @@ P {
 }
 
 @media screen and (min-width: 1401px) {
-
 }
 
 @media screen and (min-width: 2201px) {
@@ -241,4 +272,3 @@ P {
     background-size: auto 140vh;
   }
 } */
- 
