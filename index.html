@@ -66,6 +66,7 @@
     <div id="myModal" class="modal hidden">
       <div class="modal-content border">
         <div class="modal-header">
+          <span id="close" class="close">&times;</span>
           <h3 class="hidden">Congratulations!!!</h3>
           <div>
             <img
@@ -73,10 +74,10 @@
               alt="Congratulations"
             />
           </div>
-          <span id="close" class="close">&times;</span>
+          
         </div>
         <div class="modal-body">
-          <div>
+          <div class="modal-stats">
             <p>Total Moves: <strong><span id="modalMoves"></span></strong></p>
             <p>Total Errors: <strong><span id="modalErrors"></span></strong></p>
             <p>Time to Complete: <strong><span id="modalTime"></span></strong></p>

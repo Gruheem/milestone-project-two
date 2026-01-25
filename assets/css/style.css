@@ -62,7 +62,7 @@ P {
   padding: 1.5rem 3rem;
   border-radius: 49%;
   margin: 1rem;
-  box-shadow: 0px 0px 5px #000;
+  box-shadow: 0px 0px 10px #000, 0px 0px 20px rgba(0, 0, 0, 0.4);
   text-shadow: 2px 2px 4px #000000;
 }
 
@@ -103,7 +103,7 @@ P {
   padding: 0.75rem 1.5rem;
   border-radius: 49%;
   margin: 0.5rem;
-  box-shadow: 0px 0px 5px #000;
+  box-shadow: 0px 0px 10px #000, 0px 0px 20px rgba(0, 0, 0, 0.4);
   text-shadow: 2px 2px 4px #000000;
 }
 
@@ -116,7 +116,7 @@ P {
   padding: 0.75rem 1.5rem;
   border-radius: 49%;
   margin: 0.5rem;
-  box-shadow: 0px 0px 5px #000;
+  box-shadow: 0px 0px 10px #000, 0px 0px 20px rgba(0, 0, 0, 0.4);
   text-shadow: 2px 2px 4px #000000;
 }
 
@@ -153,7 +153,7 @@ P {
   box-shadow:
     /*  outside line */ 0 0 0 2.5px #22345f,
     /* inside line */ inset 0 0 0 2.5px #22345f,
-    0px 0px 5px #000;
+    0px 0px 15px #000;
 }
 
 .stats {
@@ -173,6 +173,10 @@ P {
   gap: 10px;
   justify-content: center;
   grid-auto-rows: 1fr;
+}
+
+#game-board img {
+  filter: drop-shadow(0 0 3px #000);
 }
 
 #game-board.columns-2 {
@@ -201,6 +205,7 @@ P {
   height: 100%;
   object-fit: contain;
   display: block;
+  
 }
 
 .hidden {
@@ -236,8 +241,6 @@ P {
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
   width: 80%;
 }
 
@@ -245,8 +248,19 @@ P {
   height: 100%;
   width: auto;
   max-width: 70vw;
+  filter: drop-shadow(0 0 5px #000);
 }
 
+.modal-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-footer {
+  margin: 2rem;
+}
 .close {
   color: #aaaaaa;
   float: right;
@@ -286,25 +300,11 @@ P {
   }
 }
 
-@media screen and (max-width: 576px) {
-  /* default styling */
-}
-
-@media screen and (min-width: 577px) {
-  p {
-    /* font-size: 1.5rem; */
-  }
-}
-
 @media screen and (min-width: 769px) {
   #game-board.columns-2 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
-}
-
-@media screen and (min-width: 993px) {
-  
 }
 
 @media screen and (min-width: 1201px) {
@@ -314,18 +314,9 @@ P {
   }
 }
 
-@media screen and (min-width: 1401px) {
-}
-
 @media screen and (min-width: 2201px) {
   body {
     background-size: auto 125vh;
   }
 }
 
-/* 
-@media screen and (min-width:1801px) {
-  body {
-    background-size: auto 140vh;
-  }
-} */

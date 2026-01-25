@@ -172,7 +172,7 @@ Function tests structured:
     Fix: I did z to fix this issue
 
 Bugs:
-Cards keep overflowing out of the game board. after lots of reading i found i needed to wrap the img elements in wrappers.
+Cards keep overflowing out of the game board. It was due to the CSS Grid automatically applying min-height: auto; to the grid. I fixed this by setting min-height to 0 on the card wrapper to allow it to shrink.
 
 The game start buttons stopped working. I had placed an event listener that used a variable in a function before i had declared the variable globaly. This was a timing issue as javascript runs top to bottom.
 
