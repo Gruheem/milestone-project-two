@@ -24,6 +24,11 @@ const errorBox = document.getElementById("errors");
 const movesBox = document.getElementById("moves");
 const timeBox = document.getElementById("time");
 
+// modal debug button
+document.getElementById("openModal").addEventListener("click", () => {
+  displayModal();
+});
+
 // Start game button event listeners
 document.getElementById("easyBtn").addEventListener("click", () => {
   // start easy game

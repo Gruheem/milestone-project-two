@@ -19,7 +19,7 @@ body {
   height: 100%;
   background-image: url("../images/pokemon-background.webp");
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: auto 100vh;
   background-attachment: fixed;
   background-color: var(--background-color);
@@ -72,7 +72,6 @@ P {
 }
 
 .easyBtn {
-  /* background-image: linear-gradient(to bottom, #004c2b, var(--easy-color), var(--easy-color), var(--easy-color), var(--easy-color), var(--easy-color), var(--easy-color), var(--easy-color), #004c2b); */
   background-color: var(--easy-color);
   border-color: #004c2b;
 }
@@ -85,6 +84,45 @@ P {
 .hardBtn {
   background-color: var(--hard-color);
   border-color: #811212;
+}
+
+.in-game-button-div {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-button {
+  min-width: 0;
+  color: #ffffff;
+  background-color: #f60101;
+  font-family: pokefont, sans-serif;
+  font-size: clamp(1rem, 4vw, 3rem);
+  padding: 0.75rem 1.5rem;
+  border-radius: 49%;
+  margin: 0.5rem;
+  box-shadow: 0px 0px 5px #000;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.modal-button {
+  min-width: 0;
+  color: #ffffff;
+  background-color: #f60101;
+  font-family: pokefont, sans-serif;
+  font-size: clamp(1rem, 4vw, 3rem);
+  padding: 0.75rem 1.5rem;
+  border-radius: 49%;
+  margin: 0.5rem;
+  box-shadow: 0px 0px 5px #000;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.game-button:hover {
+  filter: brightness(85%);
+  cursor: pointer;
 }
 
 .home-instructions {
@@ -163,32 +201,6 @@ P {
   height: 100%;
   object-fit: contain;
   display: block;
-}
-
-.in-game-button-div {
-  display: flex;
-  flex-direction: row;
-  gap: 0.75rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.game-button {
-  min-width: 0;
-  color: #ffffff;
-  background-color: #f60101;
-  font-family: pokefont, sans-serif;
-  font-size: clamp(1rem, 4vw, 3rem);
-  padding: 0.75rem 1.5rem;
-  border-radius: 49%;
-  margin: 0.5rem;
-  box-shadow: 0px 0px 5px #000;
-  text-shadow: 2px 2px 4px #000000;
-}
-
-.game-button:hover {
-  filter: brightness(85%);
-  cursor: pointer;
 }
 
 .hidden {
