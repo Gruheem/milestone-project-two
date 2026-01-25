@@ -24,7 +24,7 @@ const errorBox = document.getElementById("errors");
 const movesBox = document.getElementById("moves");
 const timeBox = document.getElementById("time");
 
-// modal debug button
+// modal debug
 document.getElementById("openModal").addEventListener("click", () => {
   displayModal();
 });
@@ -252,7 +252,12 @@ function updateTimer() {
 
 function stopTimer() {
   clearInterval(timerInterval); // clears the interval to stop the timer
-  finalTime = timeBox.innerText;
+
+  const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+  const minutes = String(Math.floor(elapsedTime / 60)).padStart(2, "0");
+  const seconds = String(elapsedTime % 60).padStart(2, "0");
+  finalTime = `${minutes}:${seconds}`;
+
   timerInterval = null;
 }
 
