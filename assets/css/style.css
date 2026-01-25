@@ -241,6 +241,12 @@ P {
   width: 80%;
 }
 
+.modal-content img {
+  height: 100%;
+  width: auto;
+  max-width: 70vw;
+}
+
 .close {
   color: #aaaaaa;
   float: right;
