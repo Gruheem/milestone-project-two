@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+/* Fonts */
+
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Figtree:ital,wght@0,300..900;1,300..900&family=Kranky&display=swap");
+
 @font-face {
   font-family: pokefont;
   src: url(../fonts/pokefont.otf) format("opentype");
@@ -13,6 +15,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* Variables */
 
 :root {
   --background-color: #fff;
@@ -31,6 +35,8 @@
   --close-x: #aaaaaa;
   --modal-background-color: #fefefe;
 }
+
+/* Styling */
 
 .error-message {
   text-align: center;
@@ -324,6 +330,29 @@ P {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Keyframes */
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+  
+}
+
+.matched {
+  pointer-events: none;
+  animation: pop 0.4s ease;
+  filter: drop-shadow(0 0 0.75rem gold)
+}
+
+/* Media Queries */
 
 @media screen and (max-width: 405px) {
   #timeCounter,

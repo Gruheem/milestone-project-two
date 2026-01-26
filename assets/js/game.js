@@ -95,11 +95,11 @@ async function createGameArray() {
 
     // checks if picked id has already been picked
     do {
-      randomId = Math.ceil(Math.random() * 151)
+      randomId = Math.ceil(Math.random() * 151);
     } while (usedIds.includes(randomId));
 
     //fetches data and adds to arrays
-    usedIds.push(randomId)
+    usedIds.push(randomId);
     const pokemon = await getPokemonData(randomId);
     pokemonArray.push(pokemon);
   }
@@ -219,31 +219,44 @@ function selectCard() {
       let c = imageLocation[1];
 
       cardTwo.src = boardArray[r][c].image;
-      setTimeout(update, 1000); //no parameters to pass the update function so no arrow syntax
+
+      update();
     }
   }
 }
 
 // update moves, errors, and check for win condition
 function update() {
-  if (cardOne.src != cardTwo.src) {
-    cardOne.src = "assets/images/pokeball.png";
-    cardTwo.src = "assets/images/pokeball.png";
+  // store cards so they are not forgotton after the setTimeout
+  const firstCard = cardOne
+  const secondCard = cardTwo
+
+  if (firstCard.alt != secondCard.alt) {
+    //gives a look at the wrong cards before flipping them back over
+    setTimeout(() => {
+      firstCard.src = "assets/images/pokeball.png";
+      secondCard.src = "assets/images/pokeball.png";
+    }, 1000);
+    //update errors and moves and matched pairs
     errors++;
     errorBox.innerText = errors;
     moves++;
     movesBox.innerText = moves;
-  } else if (cardOne.src === cardTwo.src) {
+  } else if (cardOne.alt === cardTwo.alt) {
     moves++;
     movesBox.innerText = moves;
     matchedPairs++;
+    // Keyframe Animation on correct pair
+    cardOne.classList.add("matched");
+    cardTwo.classList.add("matched");
   }
+  // check for the victory condition
   if (matchedPairs === (difficulty[0] * difficulty[1]) / 2) {
     stopTimer();
-    displayModal();
+    setTimeout(displayModal, 500);
   }
-
-  cardOne = null; // reset so we can select more cards
+  // reset so we can select more cards
+  cardOne = null; 
   cardTwo = null;
 }
 
