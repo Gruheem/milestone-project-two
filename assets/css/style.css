@@ -7,9 +7,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: gamepause;
+  src: url(../fonts/gamepause.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background-color: #fff;
-  --secondary-font: "Open Sans", sans-serif;
+  --secondary-font: "gamepause", sans-serif;
   --easy-color: #006b3d;
   --medium-color: #e09c3b;
   --hard-color: #d61f1f;
@@ -32,7 +39,7 @@ h2 {
 }
 
 P {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 #seldef {
