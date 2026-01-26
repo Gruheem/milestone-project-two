@@ -87,9 +87,20 @@ async function getPokemonData(id) {
 async function createGameArray() {
   // creates array of pokemon objects based on difficulty setting
   const pokemonArray = [];
+  const usedIds = [];
   let cardCount = (difficulty[0] * difficulty[1]) / 2;
+
   for (let i = 1; i <= cardCount; i++) {
-    const pokemon = await getPokemonData(Math.ceil(Math.random() * 151));
+    let randomId;
+
+    // checks if picked id has already been picked
+    do {
+      randomId = Math.ceil(Math.random() * 151)
+    } while (usedIds.includes(randomId));
+
+    //fetches data and adds to arrays
+    usedIds.push(randomId)
+    const pokemon = await getPokemonData(randomId);
     pokemonArray.push(pokemon);
   }
   // console.log("pokemon array:", pokemonArray);
