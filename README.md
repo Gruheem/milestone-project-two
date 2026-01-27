@@ -3,17 +3,54 @@
 Title
 
 # UX
-Project goals: The goal of the project is to build an interactive front-end site. This site will take the form of a Pokemon-themed pairs game. The game should be fun, interactive, and visually appealing.
 
-Player goals:
+## Strategy
+
+### Project goals: 
+
+The goal of the project is to build an interactive front-end site. This site will take the form of a Pokemon-themed pairs game. The game should be fun, interactive, and visually appealing.
+
+### User Personas:
+The Casual Gamer:
+Age: 22
+Occupation: University Student
+Device(s): Mobile Phone, Laptop
+Gaming Experience: Casual
+The casual gamer enjoys quick games inbetween lectures or in the evening to help relax and unwind. They want a simple easy to understand game that loads quickly and is easy and intuative to navigate.
+
+The Nostalgic Pokemon fan:
+Age: 33
+Occupation: Office Worker
+Device(s): Tablet, Laptop
+Gaming Experience: Intermediate
+The nostalgic pokemon fan grew up watching pokemon and playing the original games. They are drawn to nostalgic visuals and sounds, and recognisable pokemon from the origianl generation.
+
+The Competative gamer:
+Age: 26
+Occupation: Software Developement
+Devices: Laptop, Desktop
+Gaming Experience: Experienced
+th ecompetative player enjoys improving their performance and challenging themsleves. They want to track their stats, increase the difficulty and enjoys replaying the game to beat their previous score.
+
+The On-The-Go Player:
+Age: 19
+Occupation: College
+Devices: Mobile, Tablet
+Gaming Experience: Casual
+The on-the-go player plays games whlie commuting, waiting between classes and in the evenings. they expect the gae to work smoothly across different devicese and screen sizes.
+
+
+### Player goals:
 - To play a fun pairs game.
 - To play the game on different devices.
 - To play a simple, easy-to-understand, but challenging game.
 
-Developer and business goals:
-- Create an engaging game.
+### Developer and business goals:
+- Create an interesting and engaging front-end game experience.
 - Create a visually appealing game with sound.
 - Create an appeal to Pokemon fans with a Pokemon theme.
+
+## Scope
 
 User Stories
 
@@ -114,6 +151,8 @@ Tests:
 - Make it contain a summary of the stat trackers.
 - Make restart game and difficulty select buttons.
 
+## Structure
+
 Features
 - Game title
 - Flippable cards
@@ -125,11 +164,7 @@ Features
 - Reset game button
 - Footer with author
 
-Design choices
-- Pictures for the front and the back of the cards will be Pokemon-themed.
-- Colours to be picked from Pokemon logos, artworks and other Pokemon-themed items or ideas.
-- Font: primary: the 'Pokemon' title font. Secondary: something clear and game themed, 'gamepause' sans-serif.
-- Simplistic, minimalist design for the board and scoreboard to keep things easy to understand.
+## Skeleton
 
 Wireframes
 Mobile:
@@ -143,6 +178,14 @@ Desktop:
 
 Victory Modal:
 ![victory modal](assets/images/modal-wireframes.png)
+
+# Surface
+
+Design choices
+- Pictures for the front and the back of the cards will be Pokemon-themed.
+- Colours to be picked from Pokemon logos, artworks and other Pokemon-themed items or ideas.
+- Font: primary: the 'Pokemon' title font. Secondary: something clear and game themed, 'gamepause' sans-serif.
+- Simplistic, minimalist design for the board and scoreboard to keep things easy to understand.
 
 Strategy
 Scope
@@ -178,6 +221,7 @@ Sounds
 HTML
 CSS 
 JavaScript
+PokeAPI
 
 ## Libraries
 Google Fonts
@@ -211,6 +255,6 @@ Error counter is creating a list of ones rather than adding a up a total. Soluti
 As I am using random numbers to select the Pokemon it is possible for the same Pokemon to be picked more than once, e.g., Bulbasaur is picked 4 times and is every Pokemon in an eight-card grid.
 
 # Deployment
-Early deployment once I have acheived MVP.
+Early deployment once I have acheived MVP. ADD STEPS OF DEPLOYMENT
 How to run this project locally within a coding environment.
 Document steps on how to clone, install and run code. 

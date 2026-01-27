@@ -289,10 +289,6 @@ P {
 
 /* Modal Content */
 
-#my-modal {
-  
-}
-
 .modal-content {
   background-color: var(--modal-background-color);
   margin: auto;
