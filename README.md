@@ -128,7 +128,7 @@ Features
 Design choices
 - Pictures for the front and the back of the cards will be Pokemon-themed.
 - Colours to be picked from Pokemon logos, artworks and other Pokemon-themed items or ideas.
-- Font: primary: the 'Pokemon' title font. Secondary: something clean and clear, 'Open Sans' sans-serif.
+- Font: primary: the 'Pokemon' title font. Secondary: something clear and game themed, 'gamepause' sans-serif.
 - Simplistic, minimalist design for the board and scoreboard to keep things easy to understand.
 
 Wireframes
@@ -151,11 +151,39 @@ Skeleton
 Surface
 
 # Features
-existing features
-features to implement
+## existing features:
+
+'Home Page':
+Title
+Instructions
+Difficulty Select from home screen
+
+'Game Page':
+Game Timer
+Move Counter
+Error Counter
+Pokemon cards
+Reset Game Button
+Difficulty Select In-Game
+Victory Mopdal
+Stat Summary in Victory Modal
+Correct Guess Animation
+
+features to implement:
+Sounds
 
 
 # Technologies used
+## Languages
+HTML
+CSS 
+JavaScript
+
+## Libraries
+Google Fonts
+Game Fonts
+Favicon
+
 mobile first developement
 adobe express background remover
 

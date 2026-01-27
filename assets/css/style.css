@@ -288,13 +288,20 @@ P {
 }
 
 /* Modal Content */
+
+#my-modal {
+  
+}
+
 .modal-content {
   background-color: var(--modal-background-color);
   margin: auto;
   width: 80%;
+  max-height: 80vh;
 }
 
 .modal-content img {
+  padding-top: 2rem;
   height: 100%;
   width: auto;
   max-width: 70vw;
