@@ -11,48 +11,51 @@ Title
 The goal of the project is to build an interactive front-end site. This site will take the form of a Pokemon-themed pairs game. The game should be fun, interactive, and visually appealing.
 
 ### User Personas:
-The Casual Gamer:
-Age: 22
-Occupation: University Student
-Device(s): Mobile Phone, Laptop
-Gaming Experience: Casual
+The Casual Gamer:  
+Age: 22  
+Occupation: University Student  
+Device(s): Mobile Phone, Laptop  
+Gaming Experience: Casual  
 The casual gamer enjoys quick games inbetween lectures or in the evening to help relax and unwind. They want a simple easy to understand game that loads quickly and is easy and intuative to navigate.
 
-The Nostalgic Pokemon fan:
-Age: 33
-Occupation: Office Worker
-Device(s): Tablet, Laptop
-Gaming Experience: Intermediate
+The Nostalgic Pokemon fan:  
+Age: 33  
+Occupation: Office Worker  
+Device(s): Tablet, Laptop  
+Gaming Experience: Intermediate  
 The nostalgic pokemon fan grew up watching pokemon and playing the original games. They are drawn to nostalgic visuals and sounds, and recognisable pokemon from the origianl generation.
 
-The Competative gamer:
-Age: 26
-Occupation: Software Developement
-Devices: Laptop, Desktop
-Gaming Experience: Experienced
+The Competative gamer:  
+Age: 26  
+Occupation: Software Developement  
+Devices: Laptop, Desktop  
+Gaming Experience: Experienced  
 th ecompetative player enjoys improving their performance and challenging themsleves. They want to track their stats, increase the difficulty and enjoys replaying the game to beat their previous score.
 
-The On-The-Go Player:
-Age: 19
-Occupation: College
-Devices: Mobile, Tablet
-Gaming Experience: Casual
-The on-the-go player plays games whlie commuting, waiting between classes and in the evenings. they expect the gae to work smoothly across different devicese and screen sizes.
+The On-The-Go Player:  
+Age: 19  
+Occupation: College  
+Devices: Mobile, Tablet  
+Gaming Experience: Casual  
+The on-the-go player plays games whlie commuting, waiting between classes and in the evenings. they expect the game to work smoothly across different devicese and screen sizes.
 
 
 ### Player goals:
-- To play a fun pairs game.
-- To play the game on different devices.
-- To play a simple, easy-to-understand, but challenging game.
+- To play a fun and engaging memory pairs game.
+- To be bale to play the game on different devices.
+- To enjoy a simple, easy-to-understand, game with different difficulties.
+- to feel rewarded and motivated through feedback and progress tracking.
 
 ### Developer and business goals:
 - Create an interesting and engaging front-end game experience.
-- Create a visually appealing game with sound.
-- Create an appeal to Pokemon fans with a Pokemon theme.
+- Create a visually appealing pokemon themed game with animation (and sound).
+- Create an appeal to Pokemon fans with a nostalgic Pokemon theme.
+- Demonstrate front-end developement skills using HTML, CSS and JavaScript.
+- Ensure the game works well across multiple devices and browsers.
 
 ## Scope
 
-User Stories
+### User Stories
 
 User story 1:
 - As someone who enjoys playing games, I want to play a pairs memory game.
