@@ -11,28 +11,28 @@ Title
 The goal of the project is to build an interactive front-end site. This site will take the form of a Pokemon-themed pairs game. The game should be fun, interactive, and visually appealing.
 
 ### User Personas:
-The Casual Gamer:  
+**The Casual Gamer:**  
 Age: 22  
 Occupation: University Student  
 Device(s): Mobile Phone, Laptop  
 Gaming Experience: Casual  
 The casual gamer enjoys quick games inbetween lectures or in the evening to help relax and unwind. They want a simple easy to understand game that loads quickly and is easy and intuative to navigate.
 
-The Nostalgic Pokemon fan:  
+**The Nostalgic Pokemon fan:**  
 Age: 33  
 Occupation: Office Worker  
 Device(s): Tablet, Laptop  
 Gaming Experience: Intermediate  
 The nostalgic pokemon fan grew up watching pokemon and playing the original games. They are drawn to nostalgic visuals and sounds, and recognisable pokemon from the origianl generation.
 
-The Competative gamer:  
+**The Competative gamer:**  
 Age: 26  
 Occupation: Software Developement  
 Devices: Laptop, Desktop  
 Gaming Experience: Experienced  
 th ecompetative player enjoys improving their performance and challenging themsleves. They want to track their stats, increase the difficulty and enjoys replaying the game to beat their previous score.
 
-The On-The-Go Player:  
+**The On-The-Go Player:**  
 Age: 19  
 Occupation: College  
 Devices: Mobile, Tablet  
@@ -201,15 +201,18 @@ Victory Modal:
 
 # Surface
 
-Design choices
+## Design choices
 - Pictures for the front and the back of the cards will be Pokemon-themed.  
-pictures for the pokemon were sourced throughthe pokemon API called PokeAPI.
+pictures for the pokemon were sourced through the pokemon API called PokeAPI.
+
 - Colours to be picked from Pokemon logos, artworks and other Pokemon-themed items or ideas.  
 Colours were captured using image color picker on the main title. All colours have been tested for contrast and suitability.
-- Font:  
-Primary: the 'Pokemon' title font. Created images inspired directly form the pokemon main logo.  
-Secondary: A clear and game themed font to descibe, 'gamepause' sans-serif.  
-Tertiary: A clear font reminiscant of the pokemon banding for the calls to action.  
+
+- Fonts:  
+    1. Primary: the 'Pokemon' title font. Created images inspired directly form the pokemon main logo.  
+    2. Secondary: A clear and game themed font to descibe, 'gamepause' sans-serif.  
+    3. Tertiary: A clear font reminiscant of the pokemon banding for the calls to action. 
+
 - Simplistic, minimalist design for the board and scoreboard to make navigation easy and intuitive. this also keeps the game easy to understand.
 
 # Technologies used
@@ -226,12 +229,14 @@ Favicon
 
 ## Technologies
 PokeAPI  
+Google Gemini Image Creator  
+Adobe Express
 
 ## Practices
 Mobile first developement  
 
 ## Tools
-Adobe Express  
+
 
 # Testing
 Test user stories  
