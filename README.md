@@ -332,21 +332,30 @@ Function tests structured:
 
 # Known Bugs and Fixes:
 
-**Card Overflow Issue:**  
-Cards keep overflowing out of the game board. It was due to the CSS Grid automatically applying `min-height: auto;` to the grid.   
-**Fix:**  
+**1. Card Overflow Issue:**  
+Cards were overflowing out of the game board. It was due to the CSS Grid automatically applying `min-height: auto;` to the grid.   
+**- Fix:**  
 I fixed this by setting `min-height` to `0` on the card wrapper to allow it to shrink.
 
-**Variable Scope Declaration and Timing Issue**  
+**2. Variable Scope Declaration and Timing Issue:**  
 The game start buttons stopped working. I had placed an event listener that used a variable in a function before I had declared the variable globaly. This was a timing issue as javascript runs top to bottom.  
-**Fix:**  
-I delared the variable at the start of the javascript file before any functions are read.
+**- Fix:**  
+I delared the variable `let difficulty;`at the start of the javascript file before any functions are read.
 
-Modal wasnt appearing after reseting game using modal I was of mixing 'modal.classList.add("hidden");' and 'modal.display = "none";' fixed by sticking to adding and removing the hidden class to acheive vanishing and appearing.
+**3. Modal Visibility Issue:**  
+Modal wasnt appearing after reseting game using the victory modal. The source of the problem was that I was mixing two different ways of hiding it when not in use `modal.classList.add("hidden");` and `modal.display = "none";`  
+**- Fix:**  
+I fixed this issue by sticking to one method of achieve adding and removing the `.hidden` class to acheive the desired visability state.  
 
-Error counter is creating a list of ones rather than adding a up a total. Solution: i wasnt declring the variable errors ona global scal just in the start game function so it couldnt be accessed by the update function
+**4. Error Counter Logic Issue:**
+The error counter was creating a list of ones rather than adding a up a total. The problem was that I wasnt declaring the variable errors on a global scale, it was just in the start game function so it couldnt be accessed by the update function.  
+**- Fix:**  
+Declared the errors variable `let errors = 0` at the start of the document before any functions are read.
 
-As I am using random numbers to select the Pokemon it is possible for the same Pokemon to be picked more than once, e.g., Bulbasaur is picked 4 times and is every Pokemon in an eight-card grid.
+**5. Duplicate Pokemon Selection Issue:**  
+As I am using random numbers to select the Pokemon it is possible for the same Pokemon to be picked more than once, e.g., Bulbasaur is picked 4 times and is every Pokemon in an eight-card grid.  
+**- Fix:**  
+I created and array of `usedIds` and a `do while` statement to continue to pick IDs until the proposed ID does not exist in the `usedIds` array.
 
 # Deployment
 
