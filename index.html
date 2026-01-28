@@ -41,10 +41,10 @@
     <div id="game" class="hidden">
       <div id="stats" class="stats">
         <p id="timeCounter" class="border">
-          Time: <span id="time">00:00</span>
+          TIME: <span id="time">00:00</span>
         </p>
-        <p id="noOfMoves" class="border">Moves: <span id="moves"></span></p>
-        <p id="errorCount" class="border">Errors: <span id="errors"></span></p>
+        <p id="noOfMoves" class="border">MOVES: <span id="moves"></span></p>
+        <p id="errorCount" class="border">ERRORS: <span id="errors"></span></p>
       </div>
 
       <div id="game-board" class="game-board">
@@ -74,17 +74,18 @@
               alt="Congratulations"
             />
           </div>
-          
         </div>
         <div class="modal-body">
           <div class="modal-stats">
-            <p class="nudge-right">Total Moves: <span id="modalMoves"></span></p>
-            <p>Total Errors: <span id="modalErrors"></span></p>
-            <p>Time to Complete: <span id="modalTime"></span></p>
+            <p class="nudge-right">
+              TOTAL MOVES: <span id="modalMoves"></span>
+            </p>
+            <p>TOTAL ERRORS: <span id="modalErrors"></span></p>
+            <p>TIME TO COMPLETE: <span id="modalTime"></span></p>
           </div>
         </div>
         <div class="modal-footer">
-          <button id="reset" class="resetGame modal-button">reset</button>
+          <button id="reset" class="resetGame modal-button">restart game</button>
           <button id="diffSelect" class="modal-button">
             Select Difficulty
           </button>
