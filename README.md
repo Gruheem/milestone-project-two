@@ -201,7 +201,7 @@ Tests:
 
 ## Structure
 
-### Features:
+### Implemented Features:
 
 **'Home Page':**
 
@@ -330,11 +330,17 @@ Function tests structured:
  Result: the site did not do as expected because of a, b, c OR site behaved as expected  
  Fix: I did z to fix this issue
 
-# Bugs:
+# Known Bugs and Fixes:
 
-Cards keep overflowing out of the game board. It was due to the CSS Grid automatically applying min-height: auto; to the grid. I fixed this by setting min-height to 0 on the card wrapper to allow it to shrink.
+**Card Overflow Issue:**  
+Cards keep overflowing out of the game board. It was due to the CSS Grid automatically applying `min-height: auto;` to the grid.   
+**Fix:**  
+I fixed this by setting `min-height` to `0` on the card wrapper to allow it to shrink.
 
-The game start buttons stopped working. I had placed an event listener that used a variable in a function before i had declared the variable globaly. This was a timing issue as javascript runs top to bottom.
+**Variable Scope Declaration and Timing Issue**  
+The game start buttons stopped working. I had placed an event listener that used a variable in a function before I had declared the variable globaly. This was a timing issue as javascript runs top to bottom.  
+**Fix:**  
+I delared the variable at the start of the javascript file before any functions are read.
 
 Modal wasnt appearing after reseting game using modal I was of mixing 'modal.classList.add("hidden");' and 'modal.display = "none";' fixed by sticking to adding and removing the hidden class to acheive vanishing and appearing.
 
@@ -344,6 +350,23 @@ As I am using random numbers to select the Pokemon it is possible for the same P
 
 # Deployment
 
-Early deployment once I have acheived MVP. ADD STEPS OF DEPLOYMENT  
-How to run this project locally within a coding environment.  
-Document steps on how to clone, install and run code.
+This project was deployed using GitHub Pages.  
+
+I took the approach of using **early deployment** so I can start observing the desired and undesired outcomes of my code across different devices as soon as possible.
+  
+## Steps to Deploy
+1. Navigate to the repository on GitHub
+2. Open **settings** got to **pages**  
+3. Select the 'main' branch and root directory
+4. Save changes
+5. The live site link appears after deployment ([Deployed Site](https://gruheem.github.io/milestone-project-two/)) 
+
+## How to run Locally
+1. Clone the repository, replacing 'your-username' with your GitHub username and 'your-repo-name' with the name of your repository.  
+Bash: `git clone https://github.com/your-username/your-repo-name.git`  
+2. Navigate to the directory, obnce again replacing 'your-repo-name' with the name of your repository.  
+Bash: `cd your-repo-name`  
+3. Launch the project.
+    - Open the project folder in your preffered IDE (e.g. VS Code)
+    - Open `index.html` directly in your browser, or use an extension like **Live Server** to open the page
+
