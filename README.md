@@ -83,8 +83,8 @@ The on-the-go player plays games while commuting, waiting between classes and in
 
 ### User Stories
 
-**User story 1:**  
-As someone who enjoys playing games, I want to play a pairs memory game.
+**User Story 1 - Core Gameplay**  
+As a player, I want to play a pairs memory game so thqat I can enjoy a fun and engaging challange.
 
 Acceptance criteria:
 
@@ -100,8 +100,8 @@ Tasks:
 - Create victory modal.
 - Quick and simple game reset in victory modal.
 
-**User story 2:**  
-As a user, I want the game to start quickly to keep my interest.  
+**User Story 2 - Fast Game Start**  
+As a player, I want the game to load quickly so I can start the game without loosing interest. 
 Acceptance criteria:
 
 - Ensure game loads quickly.
@@ -115,8 +115,8 @@ Tasks:
 - Test page load on different devices.
 - Create start game button on the home screen.
 
-**User story 3:**  
-As a user, I want to be able to increase and decrease the difficulty to add more or less challenge to the game.  
+**User story 3 - Difficulty Selection**  
+As a player I want to chnage the game difficulty so that I can adjust the challange to match my skill.
 Acceptance criteria:
 
 - Have different difficulties available to the user.
@@ -129,9 +129,8 @@ Tasks:
 - Create difficulty select button on game page.
 - Create difficulty select button on victory modal.
 
-**User story 4:**  
-As a user, I want to be able to see the time/move/error counters in order to see how well I am doing.  
-Acceptance criteria:
+**User story 4 - Performance Tracking**  
+As a player, I want to see my time, moves and errors so i can track my performance during the game.
 
 - Have a functioning move counter always visible during the game and on all difficulties.
 - Have a functioning timer counting how long the player has spent on that particular round.
@@ -145,11 +144,9 @@ Tasks:
 - Create error counter.
 - Have error counter update after every turn.
 
-**User story 5:**  
-As a user, I want feedback from the game as I make correct pairs to keep me motivated to finish.  
-Acceptance criteria:
+**User story 5 - Player Feedback**  
+As aplayer, I want visual feedback for correct matches so that I feel motivated to complete the game.
 
-- Have audio feedback for a correct pair match (Pokemon cry?).
 - Have visual feedback for a correct guess (pop and jiggle animation?).
 
 Tasks:
@@ -158,9 +155,8 @@ Tasks:
 - Have local sound play on correct guess.
 - Have animation play on correct guess.
 
-**User story 6:**  
-As a user, I want a visually appealing game that inspires nostalgia with the Pokemon theme.  
-Acceptance criteria:
+**User story 6 - Visual Theme**  
+As a player, I want pokemon themed visual design so that the game feels nostalgic and engaging.
 
 - Have original Pokemon artwork.
 - Select Pokemon from the original 151 (Generation One).
@@ -172,9 +168,8 @@ Tasks:
 - Select Pokemon numbers 1-151.
 - Ensure colours, images and font styles used are taken from Pokemon branding.
 
-**User story 7:**  
-As a user, I want to be able to play the game on different devices so that I can play it anywhere.  
-Acceptance criteria:
+**User story 7 - Cross Device Compatibility**  
+As a player, I want the game to work on different devices so I can play where ever I am.
 
 - Ensure the game is responsive.
 - Ensure the game works on different browsers.
@@ -189,9 +184,8 @@ Tasks:
 - Test game on different operating systems.
 - Test game on different browsers.
 
-**User story 8:**  
-As a user, I want to be congratulated when I complete the game and presented with a summary of the round.  
-Acceptance criteria:
+**User story 8 - Completion Feedback**  
+As a player, I want to recieve a completion message and game summary so that I feel rewarded for finishing the game.
 
 - Have a victory modal appear on completion with a nice message.
 - Have a round summary in the victory modal.
