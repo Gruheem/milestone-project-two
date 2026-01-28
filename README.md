@@ -1,56 +1,82 @@
 # Milestone Project Two
 
-Title
+# Poke-PAIRS
+
+Poke-PAIRS is a pokemon themed pairs memory game built using HTML, CSS and JavaScript.  
+The game is designed to be fun, nostalgic and fully responsive across devices, allowing users to test their memory skills across various difficulties.
+
+[**Live Site**](https://gruheem.github.io/milestone-project-two/)  
+[**GitHub Repository**](https://github.com/Gruheem/milestone-project-two)
+
+## Key Features
+
+- Pokemon-themed memory pairs game using Generation One Pokemon
+- Multiple difficulty levels with varying grid sizes
+- Timer, move counter and error counter to track performance
+- Responsive design for mobile, tablet and desktop devices
+- Visual Feedback for correct matches
+- Victory modal displaying round statistics and replay options
+
+## Home Page
+![Home Page](assets/images/home-page.webp)
+
+## Game Page
+![Game Page](assets/images/game-page.webp)
 
 # UX
 
 ## Strategy
 
-### Project goals: 
+### Project goals:
 
-The goal of the project is to build an interactive front-end site. This site will take the form of a Pokemon-themed pairs game. The game should be fun, interactive, and visually appealing.
+- Build and interactive pokemon themed pairs memory game.  
+- Provide multiple levels of difficulty to suit player skill levels.
+- Ensure the game is responsive and accessible across different devices.
+- Demonstrate front-end developemnt skills using HTML, CSS and JavaScript.
 
 ### User Personas:
-**The Casual Gamer:**  
-Age: 22  
-Occupation: University Student  
-Device(s): Mobile Phone, Laptop  
-Gaming Experience: Casual  
-The casual gamer enjoys quick games inbetween lectures or in the evening to help relax and unwind. They want a simple easy to understand game that loads quickly and is easy and intuative to navigate.
 
-**The Nostalgic Pokemon fan:**  
-Age: 33  
-Occupation: Office Worker  
-Device(s): Tablet, Laptop  
+#### The Casual Gamer:  
+**Age:** 22  
+**Occupation:** University Student  
+**Device(s):** Mobile Phone, Laptop  
+**Gaming Experience:** Casual  
+The casual gamer enjoys quick games between lectures or in the evening to help relax and unwind. They want a simple easy to understand game that loads quickly and is easy and intuitive to navigate.
+
+#### The Nostalgic Pokemon fan:  
+**Age:** 33  
+**Occupation:** Office Worker  
+**Device(s):** Tablet, Laptop  
 Gaming Experience: Intermediate  
-The nostalgic pokemon fan grew up watching pokemon and playing the original games. They are drawn to nostalgic visuals and sounds, and recognisable pokemon from the origianl generation.
+The nostalgic pokemon fan grew up watching pokemon and playing the original games. They are drawn to nostalgic visuals and sounds, and recognisable pokemon from the original generation.
 
-**The Competative gamer:**  
-Age: 26  
-Occupation: Software Developement  
-Devices: Laptop, Desktop  
-Gaming Experience: Experienced  
-th ecompetative player enjoys improving their performance and challenging themsleves. They want to track their stats, increase the difficulty and enjoys replaying the game to beat their previous score.
+#### The Competitive gamer:  
+**Age:** 26  
+**Occupation:** Software Development  
+**Devices:** Laptop, Desktop  
+**Gaming Experience:** Experienced  
+The competitive player enjoys improving their performance and challenging themselves. They want to track their stats, increase the difficulty and enjoys replaying the game to beat their previous score.
 
-**The On-The-Go Player:**  
-Age: 19  
-Occupation: College  
-Devices: Mobile, Tablet  
-Gaming Experience: Casual  
-The on-the-go player plays games whlie commuting, waiting between classes and in the evenings. they expect the game to work smoothly across different devicese and screen sizes.
-
+#### The On-The-Go Player:  
+**Age:** 19  
+**Occupation:** College  
+**Devices:** Mobile, Tablet  
+**Gaming Experience:** Casual  
+The on-the-go player plays games while commuting, waiting between classes and in the evenings. They expect the game to work smoothly across different devices and screen sizes.
 
 ### Player goals:
+
 - To play a fun and engaging memory pairs game.
-- To be bale to play the game on different devices.
+- To be able to play the game on different devices.
 - To enjoy a simple, easy-to-understand, game with different difficulties.
 - to feel rewarded and motivated through feedback and progress tracking.
 
 ### Developer and business goals:
+
 - Create an interesting and engaging front-end game experience.
 - Create a visually appealing pokemon themed game with animation (and sound).
 - Create an appeal to Pokemon fans with a nostalgic Pokemon theme.
-- Demonstrate front-end developement skills using HTML, CSS and JavaScript.
+- Demonstrate front-end development skills using HTML, CSS and JavaScript.
 - Ensure the game works well across multiple devices and browsers.
 
 ## Scope
@@ -58,15 +84,17 @@ The on-the-go player plays games whlie commuting, waiting between classes and in
 ### User Stories
 
 **User story 1:**  
-As someone who enjoys playing games, I want to play a pairs memory game.  
+As someone who enjoys playing games, I want to play a pairs memory game.
 
 Acceptance criteria:
+
 - Have a game board populated with cards.
 - The user can flip two cards at a time; matching cards will stay flipped over while non-matching pairs will flip back after a short delay.
 - When the round is finished, display a victory message.
-- Readily available reset game button to play again.  
+- Readily available reset game button to play again.
 
-Tasks:  
+Tasks:
+
 - Create game board using HTML and CSS and populate with Pokemon cards using JavaScript.
 - Create card flipping and matching logic using JavaScript.
 - Create victory modal.
@@ -74,12 +102,14 @@ Tasks:
 
 **User story 2:**  
 As a user, I want the game to start quickly to keep my interest.  
-Acceptance criteria:  
+Acceptance criteria:
+
 - Ensure game loads quickly.
 - Ensure game loads correctly.
-- Have an appealing call to action to start the game easily and quickly.  
+- Have an appealing call to action to start the game easily and quickly.
 
-Tasks:  
+Tasks:
+
 - Use Lighthouse testing for page load.
 - Optimise image file sizes and formats.
 - Test page load on different devices.
@@ -87,24 +117,28 @@ Tasks:
 
 **User story 3:**  
 As a user, I want to be able to increase and decrease the difficulty to add more or less challenge to the game.  
-Acceptance criteria:  
+Acceptance criteria:
+
 - Have different difficulties available to the user.
 - Have these difficulties readily available and easily accessible at any point during the game.
-- Be able to reset the game if I have chosen a difficulty that is too hard.  
+- Be able to reset the game if I have chosen a difficulty that is too hard.
 
-Tasks:  
+Tasks:
+
 - Create difficulty buttons on the starting page.
 - Create difficulty select button on game page.
 - Create difficulty select button on victory modal.
 
 **User story 4:**  
 As a user, I want to be able to see the time/move/error counters in order to see how well I am doing.  
-Acceptance criteria:  
+Acceptance criteria:
+
 - Have a functioning move counter always visible during the game and on all difficulties.
 - Have a functioning timer counting how long the player has spent on that particular round.
-- Have an error counter which shows the player's error count during the game.  
+- Have an error counter which shows the player's error count during the game.
 
-Tasks:  
+Tasks:
+
 - Create move tracker.
 - Have move tracker update after every turn.
 - Create a timer that starts when the game starts and finishes when the game is complete.
@@ -113,36 +147,42 @@ Tasks:
 
 **User story 5:**  
 As a user, I want feedback from the game as I make correct pairs to keep me motivated to finish.  
-Acceptance criteria:  
-- Have audio feedback for a correct pair match (Pokemon cry?).
-- Have visual feedback for a correct guess (pop and jiggle animation?).  
+Acceptance criteria:
 
-Tasks:  
+- Have audio feedback for a correct pair match (Pokemon cry?).
+- Have visual feedback for a correct guess (pop and jiggle animation?).
+
+Tasks:
+
 - Create API to gather sounds to play on a correct guess, or
 - Have local sound play on correct guess.
 - Have animation play on correct guess.
 
 **User story 6:**  
 As a user, I want a visually appealing game that inspires nostalgia with the Pokemon theme.  
-Acceptance criteria:    
+Acceptance criteria:
+
 - Have original Pokemon artwork.
 - Select Pokemon from the original 151 (Generation One).
-- Have colours and themes which are in keeping with the Pokemon branding.  
+- Have colours and themes which are in keeping with the Pokemon branding.
 
-Tasks:  
+Tasks:
+
 - Create an API to get Pokemon data.
 - Select Pokemon numbers 1-151.
 - Ensure colours, images and font styles used are taken from Pokemon branding.
 
-**User story 7:**   
+**User story 7:**  
 As a user, I want to be able to play the game on different devices so that I can play it anywhere.  
-Acceptance criteria:  
+Acceptance criteria:
+
 - Ensure the game is responsive.
 - Ensure the game works on different browsers.
 - Ensure the game works on different devices.
-- Ensure the game works on different operating systems.  
+- Ensure the game works on different operating systems.
 
-Tasks:  
+Tasks:
+
 - Make the game responsive using media queries across a range of different screen sizes.
 - Test responsiveness with Chrome DevTools.
 - Test game on different devices.
@@ -151,13 +191,15 @@ Tasks:
 
 **User story 8:**  
 As a user, I want to be congratulated when I complete the game and presented with a summary of the round.  
-Acceptance criteria:  
+Acceptance criteria:
+
 - Have a victory modal appear on completion with a nice message.
 - Have a round summary in the victory modal.
 - Easily restart the game from the modal.
-- Easily change the difficulty from the modal.  
+- Easily change the difficulty from the modal.
 
-Tests:  
+Tests:
+
 - Create victory modal.
 - Make it contain a victory message.
 - Make it contain a summary of the stat trackers.
@@ -167,22 +209,58 @@ Tests:
 
 ### Features:
 
-'Home Page':
-- Title
-- Instructions
-- Difficulty Select from home screen
+**'Home Page':**
 
-'Game Page':  
-- Game Timer
-- Move Counter
-- Error Counter
-- Pokemon cards
-- Reset Game Button
-- Difficulty Select In-Game
-- Victory Mopdal
-- Stat Summary in Victory Modal
-- Correct Guess Animation
-- Author information
+- Title: The title is in a pokemon theme, stating the name of the game.  
+  ![Game Title](assets/images/title.webp)
+
+- Instructions: These tell the player exactly how to play the game in one simple short sentence.  
+  ![Game Instructions](assets/images/instructions.webp)
+
+- Call to action: This invites the player to start the game instructing them what they must do.  
+  ![Call to action](assets/images/call-to-action.webp)
+
+- Difficulty Select section: This allows the player to choose their desired level of challenge.  
+  ![Difficulty select section](assets/images/difficulty-select-section.webp)
+
+**'Game Page':**
+
+- Game Timer: This lets the player know how long their current game has lasted so far. It updates in real-time.  
+  ![Game Timer](assets/images/timer.webp)
+
+- Move Counter: This lets the player how many moves they have spent on the game so far. It updates in real-time.  
+  ![Move Counter](assets/images/move-counter.webp)
+
+- Error Counter: This lets the player know how many errors they have made in their current game.  
+  ![Error Counter](assets/images/error-counter.webp)
+
+- Pokemon cards: These are the cards the player will select to progress the game. The back is a pokeball and the front is a randomly selected pokemon from generation 1.  
+  Back: ![Back of Game Card](assets/images/card-back.webp)  
+  Front: ![Front of Game Card](assets/images/card-front-example.webp)
+
+- Reset Game Button: This allows the player to reset the game at any time during their existing game.
+  ![Reset Game Button](assets/images/restart-game-button.webp)
+
+- Difficulty Select In-Game: This allows the player to increase or decrease their difficulty at any time incase they get stuck or want more of a challange.
+  ![Difficulty Select Button](assets/images/difficulty-select-button.webp)
+
+- Victory Modal: This congratulates the player on completing the game and presents information and new call to action buttons.  
+  ![Victory Modal](assets/images/victory-modal.webp)
+
+- Stat Summary in Victory Modal: This lets the player know how well they have done in the round they have just played by presenting their game statistics, their game time, move count and error count.  
+  ![Game Stats Summary](assets/images/modal-stat-summary.webp)
+
+- Reset from Modal: this allows the player to play again on their current level of difficulty with a new set of cards.  
+  ![Modal Reset Button](assets/images/modal-restart.webp)
+
+- Difficulty select from modal: this allows the player to change their difficulty after completing the game allowing them to increase or decrease the challange.  
+  ![Modal Difficulty Select Button](assets/images/modal-difficulty-select.webp)
+
+- Show Cards at Start: Players get a one second look at the cards face up before they flip and the game timer starts. This adds an element of skill to game that allows players to get better without relying on chance to get them started.
+
+- Correct Guess Animation: This animation provides visual feedback on a correct guess to reward and stimulate the player into making more guesses.
+
+- Author information: This Provides information on who wrote the game and a link to their Github page.
 
 ## Skeleton
 
@@ -202,55 +280,64 @@ Victory Modal:
 # Surface
 
 ## Design choices
+
 - Pictures for the front and the back of the cards will be Pokemon-themed.  
-pictures for the pokemon were sourced through the pokemon API called PokeAPI.
+  pictures for the pokemon were sourced through the pokemon API called PokeAPI.
 
 - Colours to be picked from Pokemon logos, artworks and other Pokemon-themed items or ideas.  
-Colours were captured using image color picker on the main title. All colours have been tested for contrast and suitability.
+  Colours were captured using image color picker on the main title. All colours have been tested for contrast and suitability.
 
-- Fonts:  
-    1. Primary: the 'Pokemon' title font. Created images inspired directly form the pokemon main logo.  
-    2. Secondary: A clear and game themed font to descibe, 'gamepause' sans-serif.  
-    3. Tertiary: A clear font reminiscant of the pokemon banding for the calls to action. 
+- Fonts:
+  1. Primary: the 'Pokemon' title font. Created images inspired directly form the pokemon main logo.
+  2. Secondary: A clear and game themed font to descibe, 'gamepause' sans-serif.
+  3. Tertiary: A clear font reminiscant of the pokemon banding for the calls to action.
 
 - Simplistic, minimalist design for the board and scoreboard to make navigation easy and intuitive. this also keeps the game easy to understand.
 
 # Technologies used
+
 ## Languages
+
 HTML  
 CSS  
 JavaScript  
-PokeAPI  
+PokeAPI
 
 ## Libraries
+
 Google Fonts  
 Game Fonts  
-Favicon  
+Favicon
 
 ## Technologies
+
 PokeAPI  
 Google Gemini Image Creator  
 Adobe Express
 
 ## Practices
-Mobile first developement  
+
+Mobile first developement
 
 ## Tools
 
+https://www.justinmind.com/blog/best-number-fonts/
 
 # Testing
+
 Test user stories  
 Test business goals  
 Code validators  
 Lighthouse  
 Colour testing  
 Function tests structured:  
-    Expected: site is expected to do x when user does y  
-    Testing: tested the site by doing y  
-    Result: the site did not do as expected because of a, b, c OR site behaved as expected  
-    Fix: I did z to fix this issue  
+ Expected: site is expected to do x when user does y  
+ Testing: tested the site by doing y  
+ Result: the site did not do as expected because of a, b, c OR site behaved as expected  
+ Fix: I did z to fix this issue
 
 # Bugs:
+
 Cards keep overflowing out of the game board. It was due to the CSS Grid automatically applying min-height: auto; to the grid. I fixed this by setting min-height to 0 on the card wrapper to allow it to shrink.
 
 The game start buttons stopped working. I had placed an event listener that used a variable in a function before i had declared the variable globaly. This was a timing issue as javascript runs top to bottom.
@@ -262,6 +349,7 @@ Error counter is creating a list of ones rather than adding a up a total. Soluti
 As I am using random numbers to select the Pokemon it is possible for the same Pokemon to be picked more than once, e.g., Bulbasaur is picked 4 times and is every Pokemon in an eight-card grid.
 
 # Deployment
+
 Early deployment once I have acheived MVP. ADD STEPS OF DEPLOYMENT  
 How to run this project locally within a coding environment.  
-Document steps on how to clone, install and run code.   
+Document steps on how to clone, install and run code.
