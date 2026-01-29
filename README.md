@@ -73,8 +73,8 @@ The on-the-go player plays games while commuting, waiting between classes and in
 
 ### Business goals:
 
-1. **Create an interesting and engaging and interactive front-end game experience.**  
-Deliver a fun,playable memory game that encourages users to complete and replay rounds 
+1. **Create an interesting, engaging and interactive front-end game experience.**  
+Deliver a fun, playable memory game that encourages users to complete and replay rounds. 
 
 2. **Demonstrate front-end development skills**
 Showcase effective use of HTML, CSS and JavaScript to build interactive game logic, UI updates, and responsive layouts.
@@ -456,55 +456,79 @@ Test user stories
 
 ## Business Goal Testing
 
-### Business Goals 1 - Create an interesting and engaging and interactive front-end game experience.
-**Goal:**
-**scenario:**
-**expected:**
-**Testing:**
-**Result:**
-**Test Status:**
+### Business Goals 1 - Create an interesting, engaging and interactive front-end game experience.
+**Goal:** Deliver a fun, playable memory game that encourages users to complete and replay rounds.  
+**scenario:** A user play the game from start to finish and is encourageed to replay using visual feedbck, difficulty options and completion messaging.  
+**expected:** 
+  - Core gameplay functions smoothly
+  - Visual and audio feedback rewards corrcet actions
+  - layers are encouraged to replay the game  
 
-### Business Goals 
-**Goal:**
-**scenario:**
-**expected:**
-**Testing:**
-**Result:**
-**Test Status:**
+**Testing:** Played multiple full rounds across different difficulties and observed player flow and engagement  
+**Result:** Gameplay was smooth, visual and audio feedbakc was clear and replay options were easily accessible  
+**Test Status:** PASS
 
-### Business Goals 
-**Goal:**
-**scenario:**
+### Business Goals 2 - Demonstrate front-end development skills
+**Goal:** Showcase effective use of HTML, CSS and JavaScript to build interactive game logic, UI updates, and responsive layouts.  
+**scenario:** A hypothetical assesor is reviewing and marking the site's structure, styling and interactive features.
 **expected:**
-**Testing:**
-**Result:**
-**Test Status:**
+  - Clean semantic HTML structure
+  - Responsive layouts using CSS
+  - Game logic handled efficiently using JavaScript  
 
-### Business Goals 
-**Goal:**
-**scenario:**
+**Testing:** Reviewed codebase and validated HTML and CSS using online validators.
+**Result:** Code demonstrates effective use of tachnologies.
+**Test Status:** PASS
+
+### Business Goals 3 - Appeal to pokemon fans through nostalgc themeing
+**Goal:**Use generation one pokemon, recognisable visuals and pokemon inspired colours and styling to create a nostalgic experience.  
+**scenario:** A pokemon fan visits the site and recognises Generation one pokemon and familiar visual styles.
 **expected:**
-**Testing:**
-**Result:**
-**Test Status:**
+  - Use of Generation one pokemon 
+  - Pokemon inspired colours, fonts and imagery
+  - Consistent theme throughout the site  
 
-### Business Goals 
-**Goal:**
-**scenario:**
+**Testing:** Reviewed game visuals and pokemon selecrin during gameplay.  
+**Result:** Theme remainedd consistent and recognisable throughout the game.
+**Test Status:** PASS
+
+### Business Goals 4 - Create a visually appealing and intuitive used interface
+**Goal:** Ensure the game is easy to understand, visually consistent and intuitive to navigate for first time users.  
+**scenario:** A user first time user visits the site and attem,pts to start and play the game usinf only the on screen interface.  
+**expected:** 
+  - Clear instructions explaining how to play
+  - Clearly visible and intuitive controls/buttons
+  - Consistent visual design across all pages and models  
+
+**Testing:** Navigated through the home page and gameplay using only the provided interface elements.
+**Result:** The user was able to understand the game and navigate the interface without confusion, visual design remained consistent throughout.  
+**Test Status:** PASS
+
+### Business Goals 5 - Ensure responsive design and cross-device compatibility
+**Goal:** Make the game usable and functionL cross mobile, tablet, and desktop aswell as across a range of modern browsers.  
+**scenario:** A user accesses the game on different devices and broswers.  
 **expected:**
-**Testing:**
-**Result:**
-**Test Status:**
+  - Responsive layout
+  - No functional loss across screren sizes
+  - consistent behaviour across browsers  
 
-### Business Goals 
-**Goal:**
-**scenario:**
+**Testing:** Tested responsiveness on Google Chrome DevTools and different physical devices.  
+**Result:** Game remained fully functional across tested devices and browsers.
+**Test Status:** PASS
+
+### Business Goals 6 - Delivery good performance and fast load times
+**Goal:** Optimise Assets and code to ensure quick loading and smooth gameplay.  
+**scenario:** A user opens the site and starts a game without delay.  
 **expected:**
-**Testing:**
-**Result:**
-**Test Status:**
+  - Fast page load times
+  - Optimised assets
+  - Smooth gameplay performance  
 
-Test business goals  
+**Testing:** Ran lighthouse performance tests and manually observed loading behaviour.
+**Result:** Performance scores were in an acceptable range and gameplay was smooth.
+**Test Status:** PASS
+
+ 
 Code validators  
 Lighthouse  
 Colour testing  
