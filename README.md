@@ -98,7 +98,7 @@ Optimise Assets and code to ensure quick loading and smooth gameplay.
 ### User Stories
 
 **User Story 1 - Core Gameplay**  
-As a player, I want to play a pairs memory game so thqat I can enjoy a fun and engaging challange.
+As a player, I want to play a pairs memory game so that I can enjoy a fun and engaging challange.
 
 Acceptance criteria:
 
@@ -321,6 +321,7 @@ Favicon
 PokeAPI  
 Google Gemini Image Creator  
 Adobe Express
+https://imagecolorpicker.com/
 
 ## Practices
 
@@ -329,6 +330,7 @@ Mobile first developement
 ## Resources
 
 https://www.justinmind.com/blog/best-number-fonts/
+
 
 # Testing
 
@@ -531,28 +533,43 @@ Test user stories
  
 ## Code Validation Testing
 
-HTML code validation testing was performed using the [W3C Markup Validation Service](https://validator.w3.org/). It picked up one semantic error where I had gone from `h1` to `h3` without using a `h2` element. This was corrected and the HTML now passes code validation.  
-!pic of error  
-!pic of pass  
+HTML code validation testing was performed using the [W3C Markup Validation Service](https://validator.w3.org/). It picked up one semantic error where I had gone from `h1` to `h3` without using a `h2` element.  
+
+![HTML Validation error message](assets/images/html-validation-error.webp)  
+
+This was corrected and the HTML now passes code validation.  
+
+![HTML validation pass](assets/images/html-validation-complete.webp)
   
 CSS code validation testing was performed using the [W3C CSS Validaiton Service](https://jigsaw.w3.org/css-validator/). It did not pick up any errors and the CSS passes code validation.  
-!pic of pass
+
+![CSS Validation pass](assets/images/css-validation-complete.webp)
 
 
 
 ## Lighthouse Testing  
 
-Lighthouse testiung was performed on Google Chrome DevTools and each catagory has been given a score in the acceptable range.
-!Pic of summary  
+Lighthouse testiung was performed on Google Chrome DevTools and each catagory has been given a score in the acceptable range.  
+
+![Lighthouse pass summary](assets/images/lighthouse-score-one.webp)  
+
 Performance Overview:  
-!Perofrmance  
-Accessibility Overview:
-!Accessibility  
-Best Practises Overview:
-!Best practises
+
+![Performance overview](assets/images/performance-overview.webp)  
+
+Accessibility Overview:  
 
 
-## Colour Testing  
+![Accessibility Overview](assets/images/accessibility-overview.webp)  
+
+Best Practises Overview:  
+
+![Best Practises Overview](assets/images/best-practises-overview.webp)
+
+
+## Colour Testing 
+
+
 
 
 Function tests structured:  
