@@ -71,13 +71,27 @@ The on-the-go player plays games while commuting, waiting between classes and in
 - To enjoy a simple, easy-to-understand, game with different difficulties.
 - to feel rewarded and motivated through feedback and progress tracking.
 
-### Developer and business goals:
+### Business goals:
 
-- Create an interesting and engaging front-end game experience.
-- Create a visually appealing pokemon themed game with animation (and sound).
-- Create an appeal to Pokemon fans with a nostalgic Pokemon theme.
-- Demonstrate front-end development skills using HTML, CSS and JavaScript.
-- Ensure the game works well across multiple devices and browsers.
+1. **Create an interesting and engaging and interactive front-end game experience.**  
+Deliver a fun,playable memory game that encourages users to complete and replay rounds 
+
+2. **Demonstrate front-end development skills**
+Showcase effective use of HTML, CSS and JavaScript to build interactive game logic, UI updates, and responsive layouts.
+
+3. **Appeal to pokemon fans through nostalgc themeing**
+Use generation one pokemon, recognisable visuals and pokemon inspired colours and styling to create a nostalgic experience.
+
+4. **Create a visually appealing and intuitive used interface**
+Ensure the game is easy to understand, visually consistent and intuitive to navigate for first time users.
+
+5. **Ensure responsive design and cross-device compatibility** 
+Make the game usable and functionL cross mobile, tablet, and desktop aswell as across a range of modern browsers.
+
+6. **Delivery good performance and fast load times**
+Optimise Assets and code to ensure quick loading and smooth gameplay.
+
+
 
 ## Scope
 
@@ -439,6 +453,56 @@ Test user stories
   - **Testing:** Interact with the buttons in the modal
   - **Result:** Buttons funtioned correctly
   - **Test Status:** Passed
+
+## Business Goal Testing
+
+### Business Goals 1 - Create an interesting and engaging and interactive front-end game experience.
+**Goal:**
+**scenario:**
+**expected:**
+**Testing:**
+**Result:**
+**Test Status:**
+
+### Business Goals 
+**Goal:**
+**scenario:**
+**expected:**
+**Testing:**
+**Result:**
+**Test Status:**
+
+### Business Goals 
+**Goal:**
+**scenario:**
+**expected:**
+**Testing:**
+**Result:**
+**Test Status:**
+
+### Business Goals 
+**Goal:**
+**scenario:**
+**expected:**
+**Testing:**
+**Result:**
+**Test Status:**
+
+### Business Goals 
+**Goal:**
+**scenario:**
+**expected:**
+**Testing:**
+**Result:**
+**Test Status:**
+
+### Business Goals 
+**Goal:**
+**scenario:**
+**expected:**
+**Testing:**
+**Result:**
+**Test Status:**
 
 Test business goals  
 Code validators  
