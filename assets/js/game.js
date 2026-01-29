@@ -192,7 +192,7 @@ function hideCards(rows, cols) {
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       let card = document.getElementById(r.toString() + "-" + c.toString());
-      card.src = "assets/images/pokeball.png";
+      card.src = "assets/images/pokeball.webp";
     }
   }
 }
@@ -234,8 +234,8 @@ function update() {
   if (firstCard.alt != secondCard.alt) {
     //gives a look at the wrong cards before flipping them back over
     setTimeout(() => {
-      firstCard.src = "assets/images/pokeball.png";
-      secondCard.src = "assets/images/pokeball.png";
+      firstCard.src = "assets/images/pokeball.webp";
+      secondCard.src = "assets/images/pokeball.webp";
     }, 1000);
     //update errors and moves and matched pairs
     errors++;

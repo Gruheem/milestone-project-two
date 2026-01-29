@@ -274,16 +274,16 @@ Tests:
 
 Wireframes
 Mobile:
-![mobile wireframes](assets/images/mobile-wreframes.png)
+![mobile wireframes](assets/images/mobile-wreframes.webp)
 
 Tablet:
-![tablet wireframes](assets/images/tablet-wireframes.png)
+![tablet wireframes](assets/images/tablet-wireframes.webp)
 
 Desktop:
-![desktop wireframe](assets/images/desktop-wireframe.png)
+![desktop wireframe](assets/images/desktop-wireframe.webp)
 
 Victory Modal:
-![victory modal](assets/images/modal-wireframes.png)
+![victory modal](assets/images/modal-wireframes.webp)
 
 # Surface
 
@@ -529,9 +529,32 @@ Test user stories
 **Test Status:** PASS
 
  
-Code validators  
-Lighthouse  
-Colour testing  
+## Code Validation Testing
+
+HTML code validation testing was performed using the [W3C Markup Validation Service](https://validator.w3.org/). It picked up one semantic error where I had gone from `h1` to `h3` without using a `h2` element. This was corrected and the HTML now passes code validation.  
+!pic of error  
+!pic of pass  
+  
+CSS code validation testing was performed using the [W3C CSS Validaiton Service](https://jigsaw.w3.org/css-validator/). It did not pick up any errors and the CSS passes code validation.  
+!pic of pass
+
+
+
+## Lighthouse Testing  
+
+Lighthouse testiung was performed on Google Chrome DevTools and each catagory has been given a score in the acceptable range.
+!Pic of summary  
+Performance Overview:  
+!Perofrmance  
+Accessibility Overview:
+!Accessibility  
+Best Practises Overview:
+!Best practises
+
+
+## Colour Testing  
+
+
 Function tests structured:  
  Expected: site is expected to do x when user does y  
  Testing: tested the site by doing y  
