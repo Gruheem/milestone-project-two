@@ -288,14 +288,13 @@ Victory Modal:
 
 - Simplistic, minimalist design for the board and scoreboard to make navigation easy and intuitive. this also keeps the game easy to understand.
 
-# Technologies used
+# Technologies Used
 
 ## Languages
 
 HTML  
 CSS  
 JavaScript  
-PokeAPI
 
 ## Libraries
 
@@ -313,13 +312,134 @@ Adobe Express
 
 Mobile first developement
 
-## Tools
+## Resources
 
 https://www.justinmind.com/blog/best-number-fonts/
 
 # Testing
 
 Test user stories  
+
+## User Story Testing  
+
+### User Story 1 - Core Gameplay 
+**Test 1.1 - Game board loads with cards** 
+  - **Scenario:** Player selects a difficulty and starts the game
+  - **Expected:** 
+    - A board of cards loads 
+    - All the cards are face down
+  - **testing:** Started the game from the home page using a difficulty selction button
+  - **Result:** The board populates with the correct number of cards for the difficulty and they are all face down
+  - **Test Status:** Passed
+
+**Test 1.2 - Matched Cards stay flipped**
+  - **Scenario:** The player picks two of the same cards and makes a correct guess
+  - **Expected:** On a correct guess the cards will stay flipped over 
+  - **Testing:** Selected two mtching cards during the game
+  - **Result:** Cards stay flipped over and animation plays
+  - **Test Status:** Passed
+
+ **test 1.3 - Incorrect card match flip back**
+  - **Scenario:** The player picks two cards but they are different images
+  - **Expected:** Cards remain visib le for one second then reset to their 'back' state
+  - **Testing:** Selecting two different cards that don't match
+  - **Result:** The cards flip back after a short delay
+  - **Test Status:** Passed
+
+**test 1.4 - Victory Modal Presence**
+  - **Scenario:** The player completes the game by matching all the pairs
+  - **Expected:** When the player completes the game a victory modal will appear
+  - **Testing:** Completed the game by matching all crads
+  - **Result:** The victory modal appears when all cards are matched
+  - **Test Status:** Passed
+
+### User story 2 - Fast Game Start
+
+  **test 2.1 - Page Load Performance**
+  - **Scenario:** The player opens the games home page
+  - **Expected:** The page loads correctly without any missing elements or layout issues
+  - **Testing:** Performed Lighthouse Testing and manual refresh testing
+  - **Result:** The page loads in a timely manner and correctly displays its contents
+  - **Test Status:** Passed
+
+  **test - Start Game Call-to-action**
+  - **Scenario:** The player clicks on the difficulty select buttons to start the game
+  - **Expected:** The game begins immediately
+  - **Testing:** Pressed the start game buttons
+  - **Result:** Game starts as expected
+  - **Test Status:** Passed
+
+### User Story 3 - Difficulty Seleciton
+
+  **test 3.1 - Difficulty Selection Changes Layout**
+  - **Scenario:** Selecting different difficulties populates the board with different amount of cards
+  - **Expected:** The game board changes the amount of different cards depending on the difficulty
+  - **Testing:** started the game on each different difficulty
+  - **Result:** Grid size adjusted correctly for different difficulties
+  - **Test Status:** Passed
+
+  **test 3.2 - Difficulty can be changed during gameplay**
+  - **Scenario:** The player changes difficulty mid-way through a game
+  - **Expected:** The current game resets with the new difficulty settings
+  - **Testing:** Checged difficulty in game
+  - **Result:** The game reset and loaded the new difficulty
+  - **Test Status:** Passed
+
+  ### User story 4 - Performance Tracking
+
+  **test 4.1 - Move counter increments correctly**
+  - **Scenario:** The player completes a turn by selecting two cards
+  - **Expected:** The move counter increases by one
+  - **Testing:** Completed a move by selecting two cards
+  - **Result:** The card counter updated correctly by increasing by one
+  - **Test Status:** Passed
+
+  **test 4.2 - Timer Starts and Stops correctly**
+  - **Scenario:** A play starts and completes the game
+  - **Expected:** The timer starts on game start and stops when the game is completed
+  - **Testing:** Observed the timer during and after the game
+  - **Result:** The timer starts, keeps time, and stops correctly
+  - **Test Status:** Passed
+
+  **test 4.3 - Error Counter Increments Correctly**
+  - **Scenario:** A player selects two non matching cards
+  - **Expected:** The error counter increases by one
+  - **Testing:** Made an incorrect guess in game
+  - **Result:** Error counter updated cortrectly by increasing by one
+  - **Test Status:** Passed
+
+### User Story 7 - Cross-device Compatibility
+
+  **test 7.1 - Responsive Layout Across Different Devices**
+  - **Scenario:** A player accesses the game on mobile, tablet and desktop
+  - **Expected:** The layout adapts correctly to different screen sizes and remains functional
+  - **Testing:** used Chrome Dev Tools device emulator and multiple physical devices
+  - **Result:** Layout displayed correctly on all tested screen sizes
+  - **Test Status:** Passed
+
+**test 7.2 - Browser Compatibility**
+  - **Scenario:** A player accesses the game on different modern web browsers
+  - **Expected:** The game functions correctly across different browsers
+  - **Tesitng:** Opened the game on Chrome, Firefox, Edge and Safari
+  - **Result:** No functional issues arose
+  - **Test Status:** Passed
+
+### User Story 8 - Completion Feedback
+
+  **test 8.1 - Victory modal displays content correctly**
+  - **Scenario:** A player completes the game by matching all the piars
+  - **Expected:** A vitory modal appears with a congratulations message with game statistics
+  - **Testing:** Completed a game
+  - **Result:** Modal displays with correctly with the corrrect stats within it
+  - **Test Status:** Passed
+
+  **test 8.2 - Post game Actions Function Correctly**
+  - **Scenario:** The player interacts with the Restart Game and Select Difficulty buttons in the modal
+  - **Expected:** The game restarts and loads the selected difficulty
+  - **Testing:** Interact with the buttons in the modal
+  - **Result:** Buttons funtioned correctly
+  - **Test Status:** Passed
+
 Test business goals  
 Code validators  
 Lighthouse  
