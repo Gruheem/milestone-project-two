@@ -23,11 +23,11 @@
   --secondary-font: "gamepause", sans-serif;
   --easy-color: #006b3d;
   --easy-color-lowlight: #003D24;
-  --medium-color: #B68B16;
-  --medium-color-lowlight: #68500D;
+  --medium-color: #e09c3b;
+  --medium-color-lowlight: #ae711c;
   --pokeball-red: #f60101;
   --hard-color: #f60101;
-  --hard-color-lowlight: #811212;
+  --hard-color-lowlight: #790101;
   --dash-color: #3374ab;
   --border-line-color: #22345f;
   --shadow: #000;
@@ -89,7 +89,7 @@ P {
 .button {
   color: var(--background-color);
   font-family: pokefont, sans-serif;
-  font-size: clamp(0.8rem, 8vw, 5rem);
+  font-size: clamp(24px, 8vw, 5rem); /* absolute measurement used for WCAG compliance */
   padding: 1.5rem 3rem;
   border-radius: 49%;
   margin: 1rem;

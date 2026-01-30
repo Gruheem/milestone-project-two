@@ -289,13 +289,24 @@ Victory Modal:
 
 ## Design choices
 
-- Pictures for the front and the back of the cards will be Pokemon-themed.  
-  pictures for the pokemon were sourced through the pokemon API called PokeAPI.
+### Artwork
 
-- Colours to be picked from Pokemon logos, artworks and other Pokemon-themed items or ideas.  
-  Colours were captured using image color picker on the main title. All colours have been tested for contrast and suitability.
+Pictures for the front and the back of the cards are Pokemon-themed.  pictures for the pokemon were sourced through the pokemon API called PokeAPI.
 
-- Fonts:
+### Colour theme
+
+Colours were picked from Poke-pairs title and background image to ensure a consistent theme throughout.  
+
+![Colour Palette](assets/images/color-palette.webp)  
+
+Colours were captured using [image color picker](https://imagecolorpicker.com/).  
+All colours have been tested for contrast and suitability.  
+
+![Poke-pairs Title Colour Pick](assets/images/color-pick-title.webp)  
+![Background colour pick](assets/images/color-pick-pokeball-red.webp)  
+
+
+### Fonts
   1. Primary: the 'Pokemon' title font. Created images inspired directly form the pokemon main logo.
   2. Secondary: A clear and game themed font to descibe, 'gamepause' sans-serif.
   3. Tertiary: A clear font reminiscant of the pokemon banding for the calls to action.
@@ -322,6 +333,8 @@ PokeAPI
 Google Gemini Image Creator  
 Adobe Express
 https://imagecolorpicker.com/
+https://webaim.org/resources/contrastchecker/
+https://coolors.co/
 
 ## Practices
 
@@ -553,21 +566,40 @@ Lighthouse testiung was performed on Google Chrome DevTools and for each catagor
 
 ![Lighthouse pass summary](assets/images/lighthouse-score-one.webp)  
 
-Performance Overview:  
+Performance Overview 98/100:  
 
 ![Performance overview](assets/images/performance-overview.webp)  
 
-Accessibility Overview:  
+Accessibility Overview 98/100:  
 
 
 ![Accessibility Overview](assets/images/accessibility-overview.webp)  
 
-Best Practises Overview:  
+Best Practises Overview 100/100:  
 
 ![Best Practises Overview](assets/images/best-practises-overview.webp)
 
 
 ## Colour Testing 
+
+I have tested the colours chosen for my website to make sure that they are inline with Web Content Acciessibility Guidelines(WCAG). These tests highlighted two issues.  
+
+![Contrast Grid](assets/images/constrast-grid-dnp.webp)  
+
+Firstly, while checking colour contrast the medium button failed this test.  
+The fix was to darken the colour untill its contrast score was acceptable.
+
+Fail:  ![Medium Button Contrast Fail](assets/images/medium-button-contrast-fail.webp)  
+
+Pass:  ![Medium Button Contrast Pass](assets/images/medium-button-contrast-pass.webp)  
+
+Secondly, it highlighted that the font on the hard and mefium buttons is only suitable for large text. To ensure this is always the case I have used a `clamp()` property on font size to enure the font is always at least 24px.  
+
+Having addressed these two issues the site in now fully WCAG compliant.  
+
+![Contrast Grid Test Pass](assets/images/contrast-grid-pass.webp)  
+
+**Colour Test Status:** PASS
 
 
 
