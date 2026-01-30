@@ -18,9 +18,11 @@ The game is designed to be fun, nostalgic, and fully responsive across devices, 
 - Victory modal displaying round statistics and replay options
 
 ## Home Page
+
 ![Home Page](assets/images/home-page.webp)
 
 ## Game Page
+
 ![Game Page](assets/images/game-page.webp)
 
 # UX
@@ -29,35 +31,39 @@ The game is designed to be fun, nostalgic, and fully responsive across devices, 
 
 ### Project goals:
 
-- Build an interactive Pokémon-themed pairs memory game.  
+- Build an interactive Pokémon-themed pairs memory game.
 - Provide multiple levels of difficulty to suit player skill levels.
 - Ensure the game is responsive and accessible across different devices.
 - Demonstrate front-end development skills using HTML, CSS, and JavaScript.
 
 ### User Personas:
 
-#### The Casual Gamer:  
+#### The Casual Gamer:
+
 **Age:** 22  
 **Occupation:** University Student  
 **Device(s):** Mobile Phone, Laptop  
 **Gaming Experience:** Casual  
 The casual gamer enjoys quick games between lectures or in the evening to help relax and unwind. They want a simple, easy-to-understand game that loads quickly and is easy and intuitive to navigate.
 
-#### The Nostalgic Pokémon Fan:  
+#### The Nostalgic Pokémon Fan:
+
 **Age:** 33  
 **Occupation:** Office Worker  
 **Device(s):** Tablet, Laptop  
 **Gaming Experience:** Intermediate  
 The nostalgic Pokémon fan grew up watching Pokémon and playing the original games. They are drawn to nostalgic visuals and sounds and recognisable Pokémon from the original generation.
 
-#### The Competitive Gamer:  
+#### The Competitive Gamer:
+
 **Age:** 26  
 **Occupation:** Software Development  
 **Devices:** Laptop, Desktop  
 **Gaming Experience:** Experienced  
 The competitive player enjoys improving their performance and challenging themselves. They want to track their stats, increase the difficulty, and enjoy replaying the game to beat their previous score.
 
-#### The On-The-Go Player:  
+#### The On-The-Go Player:
+
 **Age:** 19  
 **Occupation:** College  
 **Devices:** Mobile, Tablet  
@@ -74,24 +80,22 @@ The on-the-go player plays games while commuting, waiting between classes and in
 ### Business goals:
 
 1. **Create an interesting, engaging and interactive front-end game experience.**  
-Deliver a fun, playable memory game that encourages users to complete and replay rounds. 
+   Deliver a fun, playable memory game that encourages users to complete and replay rounds.
 
 2. **Demonstrate front-end development skills**
-Showcase effective use of HTML, CSS and JavaScript to build interactive game logic, UI updates, and responsive layouts.
+   Showcase effective use of HTML, CSS and JavaScript to build interactive game logic, UI updates, and responsive layouts.
 
 3. **Appeal to Pokémon fans through nostalgic theming.**
-Use Generation One Pokémon, recognisable visuals, and Pokémon-inspired colours and styling to create a nostalgic experience.
+   Use Generation One Pokémon, recognisable visuals, and Pokémon-inspired colours and styling to create a nostalgic experience.
 
 4. **Create a visually appealing and intuitive user interface.**
-Ensure the game is easy to understand, visually consistent, and intuitive to navigate for first-time users.
+   Ensure the game is easy to understand, visually consistent, and intuitive to navigate for first-time users.
 
-5. **Ensure responsive design and cross-device compatibility** 
-Make the game usable and functional across mobile, tablet, and desktop devices, as well as across a range of modern browsers.
+5. **Ensure responsive design and cross-device compatibility**
+   Make the game usable and functional across mobile, tablet, and desktop devices, as well as across a range of modern browsers.
 
 6. **Deliver good performance and fast load times.**
-Optimise assets and code to ensure quick loading and smooth gameplay.
-
-
+   Optimise assets and code to ensure quick loading and smooth gameplay.
 
 ## Scope
 
@@ -115,7 +119,7 @@ Tasks:
 - Provide a quick and simple game reset option in the victory modal.
 
 **User Story 2 - Fast Game Start**
-As a player, I want the game to load quickly so I can start the game without losing interest. 
+As a player, I want the game to load quickly so I can start the game without losing interest.
 Acceptance criteria:
 
 - Ensure the game loads quickly.
@@ -249,7 +253,7 @@ Tests:
 - Reset Game Button: This allows the player to reset the game at any time during their existing game.
   ![Reset Game Button](assets/images/restart-game-button.webp)
 
-- Difficulty Select In-Game: This allows the player to increase or decrease their difficulty at any time in case they get stuck or want more of a challenge.
+- Difficulty Select In-Game: This allows the player to increase or decrease their difficulty at any time in case they get stuck or want more of a challenge.  
   ![Difficulty Select Button](assets/images/difficulty-select-button.webp)
 
 - Victory Modal: This congratulates the player on completing the game and presents information and new call to action buttons.  
@@ -295,23 +299,23 @@ Pictures for the front and back of the cards are Pokémon-themed. Pictures for t
 
 ### Colour theme
 
-Colours were picked from Poke-pairs title and background image to ensure a consistent theme throughout.  
+Colours were picked from Poke-pairs title and background image to ensure a consistent theme throughout.
 
-![Colour Palette](assets/images/color-palette.webp)  
+![Colour Palette](assets/images/color-palette.webp)
 
 Colours were captured using [image color picker](https://imagecolorpicker.com/).  
-All colours have been tested for contrast and suitability.  
+All colours have been tested for contrast and suitability.
 
 ![Poke-pairs Title Colour Pick](assets/images/color-pick-title.webp)  
-![Background colour pick](assets/images/color-pick-pokeball-red.webp)  
-
+![Background colour pick](assets/images/color-pick-pokeball-red.webp)
 
 ### Fonts
-  1. Primary: the 'Pokémon' title font — images inspired directly from the Pokémon main logo.
-  2. Secondary: a clear and game-themed font to describe, 'gamepause' sans-serif.
-  3. Tertiary: a clear font reminiscent of the Pokémon branding for calls to action.
 
-- Simplistic, minimalist design for the board and scoreboard to make navigation easy and intuitive. This also keeps the game easy to understand.
+1. Primary: the 'Pokémon' title font — images inspired directly from the Pokémon main logo.
+2. Secondary: a clear and game-themed font to describe, 'gamepause' sans-serif.
+3. Tertiary: a clear font reminiscent of the Pokémon branding for calls to action.
+
+Simplistic, minimalist design for the board and scoreboard to make navigation easy and intuitive. This also keeps the game easy to understand.
 
 # Technologies Used
 
@@ -319,315 +323,351 @@ All colours have been tested for contrast and suitability.
 
 HTML  
 CSS  
-JavaScript  
+JavaScript
 
 ## Libraries
 
 Google Fonts  
-Game Fonts  
-Favicon
+Game Fonts 
 
 ## Technologies
 
-PokeAPI  
-Google Gemini Image Creator  
-Adobe Express
-https://imagecolorpicker.com/
-https://webaim.org/resources/contrastchecker/
-https://coolors.co/
+PokeAPI    
+Adobe Express  
+https://imagecolorpicker.com/  
+https://webaim.org/resources/contrastchecker/  
+https://coolors.co/  
+https://chatgpt.com/  
+https://claude.ai/  
+https://gemini.google.com/  
 
 ## Practices
 
+UX  
 Mobile-first development
 
 ## Resources
 
 https://www.justinmind.com/blog/best-number-fonts/
-
+https://www.youtube.com/@KennyYipCoding
+https://www.youtube.com/@WebDevSimplified
+https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/
 
 # Testing
 
-Test user stories  
+## User Story Testing
 
-## User Story Testing  
+### User Story 1 - Core Gameplay
 
-### User Story 1 - Core Gameplay 
-**Test 1.1 - Game board loads with cards** 
-  - **Scenario:** Player selects a difficulty and starts the game
-  - **Expected:** 
-    - A board of cards loads 
-    - All the cards are face down
-  - **Testing:** Started the game from the home page using a difficulty selection button
-  - **Result:** The board populates with the correct number of cards for the difficulty and they are all face down
-  - **Test Status:** Passed
+**Test 1.1 - Game board loads with cards**
+
+- **Scenario:** Player selects a difficulty and starts the game
+- **Expected:**
+  - A board of cards loads
+  - All the cards are face down
+- **Testing:** Started the game from the home page using a difficulty selection button
+- **Result:** The board populates with the correct number of cards for the difficulty and they are all face down
+- **Test Status:** Passed
 
 **Test 1.2 - Matched Cards stay flipped**
-  - **Scenario:** The player picks two of the same cards and makes a correct guess
-  - **Expected:** On a correct guess the cards will stay flipped over 
-  - **Testing:** Selected two matching cards during the game
-  - **Result:** Cards stay flipped over and animation plays
-  - **Test Status:** Passed
 
- **Test 1.3 - Incorrect card match flip back**
-  - **Scenario:** The player picks two cards but they are different images
-  - **Expected:** Cards remain visible for one second then reset to their 'back' state
-  - **Testing:** Selecting two different cards that don't match
-  - **Result:** The cards flip back after a short delay
-  - **Test Status:** Passed
+- **Scenario:** The player picks two of the same cards and makes a correct guess
+- **Expected:** On a correct guess the cards will stay flipped over
+- **Testing:** Selected two matching cards during the game
+- **Result:** Cards stay flipped over and animation plays
+- **Test Status:** Passed
+
+**Test 1.3 - Incorrect card match flip back**
+
+- **Scenario:** The player picks two cards but they are different images
+- **Expected:** Cards remain visible for one second then reset to their 'back' state
+- **Testing:** Selecting two different cards that don't match
+- **Result:** The cards flip back after a short delay
+- **Test Status:** Passed
 
 **Test 1.4 - Victory Modal Presence**
-  - **Scenario:** The player completes the game by matching all the pairs
-  - **Expected:** When the player completes the game a victory modal will appear
-  - **Testing:** Completed the game by matching all cards
-  - **Result:** The victory modal appears when all cards are matched
-  - **Test Status:** Passed
+
+- **Scenario:** The player completes the game by matching all the pairs
+- **Expected:** When the player completes the game a victory modal will appear
+- **Testing:** Completed the game by matching all cards
+- **Result:** The victory modal appears when all cards are matched
+- **Test Status:** Passed
 
 ### User story 2 - Fast Game Start
 
-  **Test 2.1 - Page Load Performance**
-  - **Scenario:** The player opens the game's home page
-  - **Expected:** The page loads correctly without any missing elements or layout issues
-  - **Testing:** Performed Lighthouse Testing and manual refresh testing
-  - **Result:** The page loads in a timely manner and correctly displays its contents
-  - **Test Status:** Passed
+**Test 2.1 - Page Load Performance**
 
-  **test - Start Game Call-to-action**
-  - **Scenario:** The player clicks on the difficulty select buttons to start the game
-  - **Expected:** The game begins immediately
-  - **Testing:** Pressed the start game buttons
-  - **Result:** Game starts as expected
-  - **Test Status:** Passed
+- **Scenario:** The player opens the game's home page
+- **Expected:** The page loads correctly without any missing elements or layout issues
+- **Testing:** Performed Lighthouse Testing and manual refresh testing
+- **Result:** The page loads in a timely manner and correctly displays its contents
+- **Test Status:** Passed
+
+**test - Start Game Call-to-action**
+
+- **Scenario:** The player clicks on the difficulty select buttons to start the game
+- **Expected:** The game begins immediately
+- **Testing:** Pressed the start game buttons
+- **Result:** Game starts as expected
+- **Test Status:** Passed
 
 ### User Story 3 - Difficulty Seleciton
 
-  **test 3.1 - Difficulty Selection Changes Layout**
-  - **Scenario:** Selecting different difficulties populates the board with different amount of cards
-  - **Expected:** The game board changes the amount of different cards depending on the difficulty
-  - **Testing:** started the game on each different difficulty
-  - **Result:** Grid size adjusted correctly for different difficulties
-  - **Test Status:** Passed
+**test 3.1 - Difficulty Selection Changes Layout**
 
-  **test 3.2 - Difficulty can be changed during gameplay**
-  - **Scenario:** The player changes difficulty mid-way through a game
-  - **Expected:** The current game resets with the new difficulty settings
-  - **Testing:** Checged difficulty in game
-  - **Result:** The game reset and loaded the new difficulty
-  - **Test Status:** Passed
+- **Scenario:** Selecting different difficulties populates the board with different amount of cards
+- **Expected:** The game board changes the amount of different cards depending on the difficulty
+- **Testing:** started the game on each different difficulty
+- **Result:** Grid size adjusted correctly for different difficulties
+- **Test Status:** Passed
 
-  ### User story 4 - Performance Tracking
+**test 3.2 - Difficulty can be changed during gameplay**
 
-  **test 4.1 - Move counter increments correctly**
-  - **Scenario:** The player completes a turn by selecting two cards
-  - **Expected:** The move counter increases by one
-  - **Testing:** Completed a move by selecting two cards
-  - **Result:** The card counter updated correctly by increasing by one
-  - **Test Status:** Passed
+- **Scenario:** The player changes difficulty mid-way through a game
+- **Expected:** The current game resets with the new difficulty settings
+- **Testing:** Checged difficulty in game
+- **Result:** The game reset and loaded the new difficulty
+- **Test Status:** Passed
 
-  **test 4.2 - Timer Starts and Stops correctly**
-  - **Scenario:** A play starts and completes the game
-  - **Expected:** The timer starts on game start and stops when the game is completed
-  - **Testing:** Observed the timer during and after the game
-  - **Result:** The timer starts, keeps time, and stops correctly
-  - **Test Status:** Passed
+### User story 4 - Performance Tracking
 
-  **test 4.3 - Error Counter Increments Correctly**
-  - **Scenario:** A player selects two non matching cards
-  - **Expected:** The error counter increases by one
-  - **Testing:** Made an incorrect guess in game
-  - **Result:** Error counter updated cortrectly by increasing by one
-  - **Test Status:** Passed
+**test 4.1 - Move counter increments correctly**
+
+- **Scenario:** The player completes a turn by selecting two cards
+- **Expected:** The move counter increases by one
+- **Testing:** Completed a move by selecting two cards
+- **Result:** The card counter updated correctly by increasing by one
+- **Test Status:** Passed
+
+**test 4.2 - Timer Starts and Stops correctly**
+
+- **Scenario:** A play starts and completes the game
+- **Expected:** The timer starts on game start and stops when the game is completed
+- **Testing:** Observed the timer during and after the game
+- **Result:** The timer starts, keeps time, and stops correctly
+- **Test Status:** Passed
+
+**test 4.3 - Error Counter Increments Correctly**
+
+- **Scenario:** A player selects two non matching cards
+- **Expected:** The error counter increases by one
+- **Testing:** Made an incorrect guess in game
+- **Result:** Error counter updated cortrectly by increasing by one
+- **Test Status:** Passed
 
 ### User Story 7 - Cross-device Compatibility
 
-  **test 7.1 - Responsive Layout Across Different Devices**
-  - **Scenario:** A player accesses the game on mobile, tablet and desktop
-  - **Expected:** The layout adapts correctly to different screen sizes and remains functional
-  - **Testing:** used Chrome Dev Tools device emulator and multiple physical devices
-  - **Result:** Layout displayed correctly on all tested screen sizes
-  - **Test Status:** Passed
+**test 7.1 - Responsive Layout Across Different Devices**
+
+- **Scenario:** A player accesses the game on mobile, tablet and desktop
+- **Expected:** The layout adapts correctly to different screen sizes and remains functional
+- **Testing:** used Chrome Dev Tools device emulator and multiple physical devices
+- **Result:** Layout displayed correctly on all tested screen sizes
+- **Test Status:** Passed
 
 **test 7.2 - Browser Compatibility**
-  - **Scenario:** A player accesses the game on different modern web browsers
-  - **Expected:** The game functions correctly across different browsers
-  - **Tesitng:** Opened the game on Chrome, Firefox, Edge and Safari
-  - **Result:** No functional issues arose
-  - **Test Status:** Passed
+
+- **Scenario:** A player accesses the game on different modern web browsers
+- **Expected:** The game functions correctly across different browsers
+- **Tesitng:** Opened the game on Chrome, Firefox, Edge and Safari
+- **Result:** No functional issues arose
+- **Test Status:** Passed
 
 ### User Story 8 - Completion Feedback
 
-  **test 8.1 - Victory modal displays content correctly**
-  - **Scenario:** A player completes the game by matching all the piars
-  - **Expected:** A vitory modal appears with a congratulations message with game statistics
-  - **Testing:** Completed a game
-  - **Result:** Modal displays with correctly with the corrrect stats within it
-  - **Test Status:** Passed
+**test 8.1 - Victory modal displays content correctly**
 
-  **test 8.2 - Post game Actions Function Correctly**
-  - **Scenario:** The player interacts with the Restart Game and Select Difficulty buttons in the modal
-  - **Expected:** The game restarts and loads the selected difficulty
-  - **Testing:** Interact with the buttons in the modal
-  - **Result:** Buttons funtioned correctly
-  - **Test Status:** Passed
+- **Scenario:** A player completes the game by matching all the piars
+- **Expected:** A vitory modal appears with a congratulations message with game statistics
+- **Testing:** Completed a game
+- **Result:** Modal displays with correctly with the corrrect stats within it
+- **Test Status:** Passed
+
+**test 8.2 - Post game Actions Function Correctly**
+
+- **Scenario:** The player interacts with the Restart Game and Select Difficulty buttons in the modal
+- **Expected:** The game restarts and loads the selected difficulty
+- **Testing:** Interact with the buttons in the modal
+- **Result:** Buttons funtioned correctly
+- **Test Status:** Passed
 
 ## Business Goal Testing
 
 ### Business Goals 1 - Create an interesting, engaging and interactive front-end game experience.
+
 **Goal:** Deliver a fun, playable memory game that encourages users to complete and replay rounds.  
 **scenario:** A user play the game from start to finish and is encourageed to replay using visual feedbck, difficulty options and completion messaging.  
-**expected:** 
-  - Core gameplay functions smoothly
-  - Visual and audio feedback rewards corrcet actions
-  - layers are encouraged to replay the game  
+**expected:**
+
+- Core gameplay functions smoothly
+- Visual and audio feedback rewards corrcet actions
+- layers are encouraged to replay the game
 
 **Testing:** Played multiple full rounds across different difficulties and observed player flow and engagement  
 **Result:** Gameplay was smooth, visual and audio feedbakc was clear and replay options were easily accessible  
 **Test Status:** PASS
 
 ### Business Goals 2 - Demonstrate front-end development skills
+
 **Goal:** Showcase effective use of HTML, CSS and JavaScript to build interactive game logic, UI updates, and responsive layouts.  
 **Scenario:** A hypothetical assessor is reviewing and marking the site's structure, styling, and interactive features.
 **Expected:**
-  - Clean semantic HTML structure
-  - Responsive layouts using CSS
-  - Game logic handled efficiently using JavaScript  
+
+- Clean semantic HTML structure
+- Responsive layouts using CSS
+- Game logic handled efficiently using JavaScript
 
 **Testing:** Reviewed codebase and validated HTML and CSS using online validators.
 **Result:** Code demonstrates effective use of technologies.
 **Test Status:** PASS
 
 ### Business Goals 3 - Appeal to Pokémon fans through nostalgic theming
+
 **Goal:** Use Generation One Pokémon, recognisable visuals, and Pokémon-inspired colours and styling to create a nostalgic experience.  
 **Scenario:** A Pokémon fan visits the site and recognises Generation One Pokémon and familiar visual styles.
 **Expected:**
-  - Use of Generation One Pokémon
-  - Pokémon-inspired colours, fonts, and imagery
-  - Consistent theme throughout the site  
+
+- Use of Generation One Pokémon
+- Pokémon-inspired colours, fonts, and imagery
+- Consistent theme throughout the site
 
 **Testing:** Reviewed game visuals and Pokémon selection during gameplay.  
 **Result:** Theme remained consistent and recognisable throughout the game.
 **Test Status:** PASS
 
 ### Business Goals 4 - Create a visually appealing and intuitive used interface
+
 **Goal:** Ensure the game is easy to understand, visually consistent and intuitive to navigate for first time users.  
 **scenario:** A user first time user visits the site and attem,pts to start and play the game usinf only the on screen interface.  
-**expected:** 
-  - Clear instructions explaining how to play
-  - Clearly visible and intuitive controls/buttons
-  - Consistent visual design across all pages and models  
+**expected:**
+
+- Clear instructions explaining how to play
+- Clearly visible and intuitive controls/buttons
+- Consistent visual design across all pages and models
 
 **Testing:** Navigated through the home page and gameplay using only the provided interface elements.
 **Result:** The user was able to understand the game and navigate the interface without confusion, visual design remained consistent throughout.  
 **Test Status:** PASS
 
 ### Business Goals 5 - Ensure responsive design and cross-device compatibility
+
 **Goal:** Make the game usable and functionL cross mobile, tablet, and desktop aswell as across a range of modern browsers.  
 **scenario:** A user accesses the game on different devices and broswers.  
 **expected:**
-  - Responsive layout
-  - No functional loss across screren sizes
-  - consistent behaviour across browsers  
+
+- Responsive layout
+- No functional loss across screren sizes
+- consistent behaviour across browsers
 
 **Testing:** Tested responsiveness on Google Chrome DevTools and different physical devices.  
 **Result:** Game remained fully functional across tested devices and browsers.
 **Test Status:** PASS
 
 ### Business Goals 6 - Delivery good performance and fast load times
+
 **Goal:** Optimise Assets and code to ensure quick loading and smooth gameplay.  
 **scenario:** A user opens the site and starts a game without delay.  
 **expected:**
-  - Fast page load times
-  - Optimised assets
-  - Smooth gameplay performance  
+
+- Fast page load times
+- Optimised assets
+- Smooth gameplay performance
 
 **Testing:** Ran lighthouse performance tests and manually observed loading behaviour.
 **Result:** Performance scores were in an acceptable range and gameplay was smooth.
 **Test Status:** PASS
 
- 
 ## Code Validation Testing
 
-HTML code validation testing was performed using the [W3C Markup Validation Service](https://validator.w3.org/). It picked up one semantic error where I had gone from `h1` to `h3` without using a `h2` element.  
+HTML code validation testing was performed using the [W3C Markup Validation Service](https://validator.w3.org/). It picked up one semantic error where I had gone from `h1` to `h3` without using a `h2` element.
 
-![HTML Validation error message](assets/images/html-validation-error.webp)  
+![HTML Validation error message](assets/images/html-validation-error.webp)
 
-This was corrected and the HTML now passes code validation.  
+This was corrected and the HTML now passes code validation.
 
 ![HTML validation pass](assets/images/html-validation-complete.webp)
-  
-CSS code validation testing was performed using the [W3C CSS Validaiton Service](https://jigsaw.w3.org/css-validator/). It did not pick up any errors and the CSS passes code validation.  
+
+CSS code validation testing was performed using the [W3C CSS Validaiton Service](https://jigsaw.w3.org/css-validator/). It did not pick up any errors and the CSS passes code validation.
 
 ![CSS Validation pass](assets/images/css-validation-complete.webp)
 
+## Lighthouse Testing
 
+### Final Score
 
-## Lighthouse Testing  
+**Performance:** 100  
+**Accessibility:** 100  
+**Best Practices** 100
 
-Lighthouse testiung was performed on Google Chrome DevTools and for each catagory has been given a score in the acceptable range.  
+### Testing
 
-![Lighthouse pass summary](assets/images/lighthouse-score-one.webp)  
+Lighthouse testiung was performed on Google Chrome DevTools and for each catagory has been given a score in the acceptable range.
 
-Performance Overview 98/100:  
+![Lighthouse pass summary](assets/images/lighthouse-score-one.webp)
 
-![Performance overview](assets/images/performance-overview.webp)  
+Performance Overview 98/100:
 
-Accessibility Overview 98/100:  
+![Performance overview](assets/images/performance-overview.webp)
 
+Accessibility Overview 98/100:
 
-![Accessibility Overview](assets/images/accessibility-overview.webp)  
+![Accessibility Overview](assets/images/accessibility-overview.webp)
 
-Best Practises Overview 100/100:  
+Best Practises Overview 100/100:
 
 ![Best Practises Overview](assets/images/best-practises-overview.webp)
 
+By adding a 'landmark' to my HTML for screen readers and testing directly from the live sight now I have increased my lighthouse score to max score.
 
-## Colour Testing 
+![Lighthouse Final Score](assets/images/lighthouse-final-score.webp)
 
-I have tested the colours chosen for my website to make sure that they are inline with Web Content Acciessibility Guidelines(WCAG). These tests highlighted two issues.  
+## Colour Testing
 
-![Contrast Grid](assets/images/constrast-grid-dnp.webp)  
+I have tested the colours chosen for my website to make sure that they are inline with Web Content Acciessibility Guidelines(WCAG). These tests highlighted two issues.
+
+![Contrast Grid](assets/images/constrast-grid-dnp.webp)
 
 Firstly, while checking colour contrast the medium button failed this test.  
 The fix was to darken the colour untill its contrast score was acceptable.
 
-Fail:  ![Medium Button Contrast Fail](assets/images/medium-button-contrast-fail.webp)  
+Fail: ![Medium Button Contrast Fail](assets/images/medium-button-contrast-fail.webp)
 
-Pass:  ![Medium Button Contrast Pass](assets/images/medium-button-contrast-pass.webp)  
+Pass: ![Medium Button Contrast Pass](assets/images/medium-button-contrast-pass.webp)
 
-Secondly, it highlighted that the font on the hard and mefium buttons is only suitable for large text. To ensure this is always the case I have used a `clamp()` property on font size to enure the font is always at least 24px.  
+Secondly, it highlighted that the font on the hard and mefium buttons is only suitable for large text. To ensure this is always the case I have used a `clamp()` property on font size to enure the font is always at least 24px.
 
-Having addressed these two issues the site in now fully WCAG compliant.  
+Having addressed these two issues the site in now fully WCAG compliant.
 
-![Contrast Grid Test Pass](assets/images/contrast-grid-pass.webp)  
+![Contrast Grid Test Pass](assets/images/contrast-grid-pass.webp)
 
-**Colour Test Status:** PASS  
-
+**Colour Test Status:** PASS
 
 ## Function Testing
 
-Manual functional testing was carried out to ensure that Poke-Pairs behaves as expected from a user’s perspective. The purpose of this testing was to verify that all core gameplay features function correctly when interacted with through the user interface. The tests flow through the path of the user playing the game. 
+Manual functional testing was carried out to ensure that Poke-Pairs behaves as expected from a user’s perspective. The purpose of this testing was to verify that all core gameplay features function correctly when interacted with through the user interface. The tests flow through the path of the user playing the game.
 
 **1. Start Game**  
 **Expected:** When the easy, medium and hard buttons are clicked the game board loads with 8, 16 and 32 cards respectively. The error counter, move counter and timer should read 0. The cards should be face up for one second before they 'turn' and the timer starts.  
 **Testing:** Clicked on all three buttons and waited to see result  
 **Result:** The game loaded the correct amount of cards and the statistics reset correctly. The cards turned over after one second and the timer started correctly.  
 **Fix:** N/A  
-**Status:** PASS  
+**Status:** PASS
 
 **2. Card flip on single click**  
 **Expected:** Clicking on a face-down card should reveal the image of a Pokémon.  
 **Testing:** Clicked on a single card while all cards were face down.  
 **Result:** The card flipped over; moves and errors remained unchanged.  
 **Fix:** N/A  
-**Status:** PASS  
+**Status:** PASS
 
 **3. Two Nonmatching Cards**  
 **Expected:** When two non-matching cards are selected they should remain visible for one second then flip back over. The move counter and the error counter should increase by one.  
-**Testing:** Clicked on two cards with different Pokémon images.   
+**Testing:** Clicked on two cards with different Pokémon images.  
 **Result:** They flipped back after a short delay and the move counter and error counter increased by one.  
 **Fix:** N/A  
-**Status:** PASS  
- 
-**4. Two matching cards**   
+**Status:** PASS
+
+**4. Two matching cards**  
 **Expected:** Upon selecting a second correct card a short animation should play and the cards should remain face up. Only the move counter should increase.  
 **Testing:** Selected two cards with the same Pokémon image.  
 **Result:** An animation played and the move counter went up by one. The cards remained face up.  
@@ -656,7 +696,7 @@ Manual functional testing was carried out to ensure that Poke-Pairs behaves as e
 **Status:** PASS
 
 **8 - Difficulty Select Button**
-**Expected:**  Pressing the chenge difficulty button should bring the player back to the home page where they are instrusted to select their difficulty. The game should load with the new correct number of cards.
+**Expected:** Pressing the chenge difficulty button should bring the player back to the home page where they are instrusted to select their difficulty. The game should load with the new correct number of cards.
 **Testing:** Clicked Select difficulty having completed an easy game and chose medium difficulty
 **Result:** The game took me back to the home page then loaded the new difficulty with the correct amount of cards. The timer, error counter and move counter all reset.
 **Fix:** N/A
@@ -665,7 +705,7 @@ Manual functional testing was carried out to ensure that Poke-Pairs behaves as e
 # Known Bugs and Fixes:
 
 **1. Card Overflow Issue:**  
-Cards were overflowing out of the game board. It was due to the CSS Grid automatically applying `min-height: auto;` to the grid.   
+Cards were overflowing out of the game board. It was due to the CSS Grid automatically applying `min-height: auto;` to the grid.  
 **- Fix:**  
 I fixed this by setting `min-height` to `0` on the card wrapper to allow it to shrink.
 
@@ -677,7 +717,7 @@ I delared the variable `let difficulty;`at the start of the javascript file befo
 **3. Modal Visibility Issue:**  
 Modal wasn't appearing after resetting the game using the victory modal. The source of the problem was that I was mixing two different ways of hiding it when not in use: `modal.classList.add("hidden");` and `modal.display = "none";`  
 **- Fix:**  
-I fixed this issue by sticking to one method of adding and removing the `.hidden` class to achieve the desired visibility state.  
+I fixed this issue by sticking to one method of adding and removing the `.hidden` class to achieve the desired visibility state.
 
 **4. Error Counter Logic Issue:**
 The error counter was creating a list of ones rather than adding up a total. The problem was that I wasn't declaring the `errors` variable globally; it was only in the start game function so it couldn't be accessed by the update function.  
@@ -691,23 +731,24 @@ I created an array of `usedIds` and a `do...while` statement to continue picking
 
 # Deployment
 
-This project was deployed using GitHub Pages.  
+This project was deployed using GitHub Pages.
 
 I took the approach of using **early deployment** so I can start observing the desired and undesired outcomes of my code across different devices as soon as possible.
-  
+
 ## Steps to Deploy
+
 1. Navigate to the repository on GitHub
-2. Open **settings** got to **pages**  
+2. Open **settings** got to **pages**
 3. Select the 'main' branch and root directory
 4. Save changes
-5. The live site link appears after deployment ([Deployed Site](https://gruheem.github.io/milestone-project-two/)) 
+5. The live site link appears after deployment ([Deployed Site](https://gruheem.github.io/milestone-project-two/))
 
 ## How to run Locally
-1. Clone the repository, replacing 'your-username' with your GitHub username and 'your-repo-name' with the name of your repository.  
-Bash: `git clone https://github.com/your-username/your-repo-name.git`  
-2. Navigate to the directory, obnce again replacing 'your-repo-name' with the name of your repository.  
-Bash: `cd your-repo-name`  
-3. Launch the project.
-    - Open the project folder in your preffered IDE (e.g. VS Code)
-    - Open `index.html` directly in your browser, or use an extension like **Live Server** to open the page
 
+1. Clone the repository, replacing 'your-username' with your GitHub username and 'your-repo-name' with the name of your repository.  
+   Bash: `git clone https://github.com/your-username/your-repo-name.git`
+2. Navigate to the directory, obnce again replacing 'your-repo-name' with the name of your repository.  
+   Bash: `cd your-repo-name`
+3. Launch the project.
+   - Open the project folder in your preffered IDE (e.g. VS Code)
+   - Open `index.html` directly in your browser, or use an extension like **Live Server** to open the page
