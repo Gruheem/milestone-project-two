@@ -549,7 +549,7 @@ CSS code validation testing was performed using the [W3C CSS Validaiton Service]
 
 ## Lighthouse Testing  
 
-Lighthouse testiung was performed on Google Chrome DevTools and each catagory has been given a score in the acceptable range.  
+Lighthouse testiung was performed on Google Chrome DevTools and for each catagory has been given a score in the acceptable range.  
 
 ![Lighthouse pass summary](assets/images/lighthouse-score-one.webp)  
 
