@@ -68,8 +68,12 @@ P {
 
 #muteBtn {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 1rem;
+  top: 1rem;
+  background: var(--modal-background-color);
+  color: var(--shadow);
+  border-radius: 50%;
+  z-index: 1;
 }
 
 #seldef {
@@ -368,6 +372,11 @@ P {
   #noOfMoves,
   #errorCount {
     font-size: 0.6rem;
+  }
+
+  #muteBtn {
+    right:0.5rem;
+    top: 0.5rem;
   }
 }
 
