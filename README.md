@@ -31,10 +31,30 @@ The game is designed to be fun, nostalgic, and fully responsive across devices, 
 
 ### Project goals:
 
-- Build an interactive Pokémon-themed pairs memory game.
-- Provide multiple levels of difficulty to suit player skill levels.
-- Ensure the game is responsive and accessible across different devices.
-- Demonstrate front-end development skills using HTML, CSS, and JavaScript.
+- Design and develope an interactive Pokémon-themed pairs memory game.
+- Implement multiple levels of difficulty to suit different players skill levels.
+- Ensure the game is responsive and accessible across a variety of different devices.
+- Demonstrate front-end development skills through the effective use of HTML, CSS, and JavaScript.
+
+### Business goals:
+
+1. **Create an interesting, engaging and interactive front-end game experience.**  
+   Deliver a fun, playable memory game that encourages users to complete and replay rounds.
+
+2. **Demonstrate front-end development skills**
+   Showcase effective use of HTML, CSS and JavaScript to build interactive game logic, UI updates, and responsive layouts.
+
+3. **Appeal to Pokémon fans through nostalgic theming.**
+   Use Generation One Pokémon, recognisable visuals, and Pokémon-inspired colours and styling to create a nostalgic experience.
+
+4. **Create a visually appealing and intuitive user interface.**
+   Ensure the game is easy to understand, visually consistent, and intuitive to navigate for first-time users.
+
+5. **Ensure responsive design and cross-device compatibility**
+   Make the game usable and functional across mobile, tablet, and desktop devices, as well as across a range of modern browsers.
+
+6. **Deliver good performance and fast load times.**
+   Optimise assets and code to ensure quick loading and smooth gameplay.
 
 ### User Personas:
 
@@ -77,25 +97,7 @@ The on-the-go player plays games while commuting, waiting between classes and in
 - To enjoy a simple, easy-to-understand game with different difficulties.
 - To feel rewarded and motivated through feedback and progress tracking.
 
-### Business goals:
 
-1. **Create an interesting, engaging and interactive front-end game experience.**  
-   Deliver a fun, playable memory game that encourages users to complete and replay rounds.
-
-2. **Demonstrate front-end development skills**
-   Showcase effective use of HTML, CSS and JavaScript to build interactive game logic, UI updates, and responsive layouts.
-
-3. **Appeal to Pokémon fans through nostalgic theming.**
-   Use Generation One Pokémon, recognisable visuals, and Pokémon-inspired colours and styling to create a nostalgic experience.
-
-4. **Create a visually appealing and intuitive user interface.**
-   Ensure the game is easy to understand, visually consistent, and intuitive to navigate for first-time users.
-
-5. **Ensure responsive design and cross-device compatibility**
-   Make the game usable and functional across mobile, tablet, and desktop devices, as well as across a range of modern browsers.
-
-6. **Deliver good performance and fast load times.**
-   Optimise assets and code to ensure quick loading and smooth gameplay.
 
 ## Scope
 
@@ -134,7 +136,7 @@ Tasks:
 - Create start game button on the home screen.
 
 **User story 3 - Difficulty Selection**  
-As a player, I want to change the game difficulty so that I can adjust the challenge to match my skill.
+As a player, I want to change the game difficulty so that I can adjust the challenge to match my skill.  
 Acceptance criteria:
 
 - Have different difficulties available to the user.
@@ -148,7 +150,8 @@ Tasks:
 - Create difficulty select button on victory modal.
 
 **User story 4 - Performance Tracking**  
-As a player, I want to see my time, moves, and errors so I can track my performance during the game.
+As a player, I want to see my time, moves, and errors so I can track my performance during the game.  
+Acceptance criteria:
 
 - Have a functioning move counter always visible during the game and on all difficulties.
 - Have a functioning timer counting how long the player has spent on that particular round.
@@ -163,7 +166,8 @@ Tasks:
 - Have error counter update after every turn.
 
 **User story 5 - Player Feedback**  
-As a player, I want visual feedback for correct matches so that I feel motivated to complete the game.
+As a player, I want visual feedback for correct matches so that I feel motivated to complete the game.  
+Acceptance criteria:
 
 - Have visual feedback for a correct guess (e.g., pop and jiggle animation).
 
@@ -174,7 +178,8 @@ Tasks:
 - Play an animation on a correct guess.
 
 **User story 6 - Visual Theme**  
-As a player, I want Pokémon-themed visual design so that the game feels nostalgic and engaging.
+As a player, I want Pokémon-themed visual design so that the game feels nostalgic and engaging.  
+Acceptance criteria:
 
 - Use original Pokémon artwork.
 - Select Pokémon from the original 151 (Generation One).
@@ -187,7 +192,8 @@ Tasks:
 - Ensure colours, images, and font styles used are taken from Pokémon branding.
 
 **User story 7 - Cross Device Compatibility**  
-As a player, I want the game to work on different devices so I can play wherever I am.
+As a player, I want the game to work on different devices so I can play wherever I am.  
+Acceptance criteria:
 
 - Ensure the game is responsive.
 - Ensure the game works on different browsers.
@@ -203,7 +209,8 @@ Tasks:
 - Test game on different browsers.
 
 **User story 8 - Completion Feedback**  
-As a player, I want to receive a completion message and game summary so that I feel rewarded for finishing the game.
+As a player, I want to receive a completion message and game summary so that I feel rewarded for finishing the game.  
+Acceptance criteria:
 
 - Have a victory modal appear on completion with a nice message.
 - Have a round summary in the victory modal.
@@ -223,70 +230,70 @@ Tests:
 
 **Persistant Features:**
 
-- Mute/Unmute Button: This allows the player to mute and unmute the game sounds. This is fixed at the top right for visibility.  
+- **Mute/Unmute Button:** This allows the player to mute and unmute the game sounds. This is fixed at the top right for visibility.  
   ![Mute/Unmute Button](assets/images/mute-button.webp)
 
-- Author Information: This is a link to the authors GitHub Page. This is fixed at the bootom right to be read last.  
+- **Author Information:** This is a link to the authors GitHub Page. This is fixed at the bootom right to be read last.  
   ![Author link](assets/images/g-logo-screenshot.webp)
 
 **Home Page:**
 
-- Title: The title is in a Pokémon theme, stating the name of the game.  
+- **Title:** The title is in a Pokémon theme, stating the name of the game.  
   ![Game Title](assets/images/title.webp)
 
-- Instructions: These tell the player exactly how to play the game in one simple, short sentence.  
+- **Instructions:** These tell the player exactly how to play the game in one simple, short sentence.  
   ![Game Instructions](assets/images/instructions.webp)
 
-- Call-to-action: This invites the player to start the game and instructs them what they must do.  
+- **Call-to-action:** This invites the player to start the game and instructs them what they must do.  
   ![Call to action](assets/images/call-to-action.webp)
 
-- Difficulty Select section: This allows the player to choose their desired level of challenge.  
+- **Difficulty Select section:** This allows the player to choose their desired level of challenge.  
   ![Difficulty select section](assets/images/difficulty-select-section.webp)
 
 **Game Page:**
 
-- Game Timer: This lets the player know how long their current game has lasted so far. It updates in real time.  
+- **Game Timer:** This lets the player know how long their current game has lasted so far. It updates in real time.  
   ![Game Timer](assets/images/timer.webp)
 
-- Move Counter: This lets the player know how many moves they have made so far. It updates in real time.  
+- **Move Counter:** This lets the player know how many moves they have made so far. It updates in real time.  
   ![Move Counter](assets/images/move-counter.webp)
 
-- Error Counter: This lets the player know how many errors they have made in their current game.  
+- **Error Counter:** This lets the player know how many errors they have made in their current game.  
   ![Error Counter](assets/images/error-counter.webp)
 
-- Pokémon cards: These are the cards the player will select to progress the game. The back is a Poké Ball and the front is a randomly selected Pokémon from Generation One.  
+- **Pokémon cards:** These are the cards the player will select to progress the game. The back is a Poké Ball and the front is a randomly selected Pokémon from Generation One.  
   Back:  
   ![Back of Game Card](assets/images/card-back.webp)  
   Front:  
   ![Front of Game Card](assets/images/card-front-example.webp)
 
-- Reset Game Button: This allows the player to reset the game at any time during their existing game.
+- **Reset Game Button:** This allows the player to reset the game at any time during their existing game.
   ![Reset Game Button](assets/images/restart-game-button.webp)
 
-- Difficulty Select In-Game: This allows the player to increase or decrease their difficulty at any time in case they get stuck or want more of a challenge.  
+- **Difficulty Select In-Game:** This allows the player to increase or decrease their difficulty at any time in case they get stuck or want more of a challenge.  
   ![Difficulty Select Button](assets/images/difficulty-select-button.webp)
 
-- Victory Modal: This congratulates the player on completing the game and presents information and new call to action buttons.  
+- **Victory Modal:** This congratulates the player on completing the game and presents information and new call to action buttons.  
   ![Victory Modal](assets/images/victory-modal.webp)
 
-- Stat Summary in Victory Modal: This lets the player know how well they have done in the round they have just played by presenting their game statistics, their game time, move count and error count.  
+- **Stat Summary in Victory Modal:** This lets the player know how well they have done in the round they have just played by presenting their game statistics, their game time, move count and error count.  
   ![Game Stats Summary](assets/images/modal-stat-summary.webp)
 
-- Reset from Modal: this allows the player to play again on their current level of difficulty with a new set of cards.  
+- **Reset from Modal:** this allows the player to play again on their current level of difficulty with a new set of cards.  
   ![Modal Reset Button](assets/images/modal-restart.webp)
 
-- Difficulty select from modal: this allows the player to change their difficulty after completing the game allowing them to increase or decrease the challange.  
+- **Difficulty select from modal:** this allows the player to change their difficulty after completing the game allowing them to increase or decrease the challange.  
   ![Modal Difficulty Select Button](assets/images/modal-difficulty-select.webp)
 
-- Show Cards at Start: Players get a one second look at the cards face up before they flip and the game timer starts. This adds an element of skill to game that allows players to get better without relying on chance to get them started.
+- **Show Cards at Start:** Players get a one second look at the cards face up before they flip and the game timer starts. This adds an element of skill to game that allows players to get better without relying on chance to get them started.
 
-- Correct Guess Animation: This animation provides visual feedback on a correct guess to reward and stimulate the player into making more guesses.
+- **Correct Guess Animation:** This animation provides visual feedback on a correct guess to reward and stimulate the player into making more guesses.
 
-- Author information: This provides information on who wrote the game and a link to their GitHub page.
+- **Author information:** This provides information on who wrote the game and a link to their GitHub page.
 
 ## Skeleton
 
-Wireframes were created using balsamiq.
+Wireframes were created using [balsamiq](https://balsamiq.com/).
 
 Mobile:
 ![mobile wireframes](assets/images/mobile-wreframes.webp)
@@ -330,28 +337,28 @@ All colours have been tested for contrast and suitability.
 2. Secondary: a clear and game-themed font to inspire nostalgia for the generation one games and to describe instructions and actions, ['gamepause'](https://www.fontspace.com/game-paused-font-f102167) sans-serif.
 3. Tertiary: a clear font that has been rated excellent for displaying numbers by [Just In Mind's Blog](https://www.justinmind.com/blog/best-number-fonts/), 'bungee', sans-serif.
 
-Simplistic, minimalist design for the board and scoreboard to make navigation easy and intuitive. This also keeps the game easy to understand.
+Simplistic, minimalist design for the instructions, start buttons and stat trackers to make navigation easy and intuitive. This also keeps the game easy to understand.
 
 ### Audio
 
-For a good user experience the audio to the game is muted by default. The audio files used have had their volume levels reduced between 60-80% using JavaScript for player comfort.
+The audio files were gathered from [Pixabay](https://pixabay.com/sound-effects/). For a good user experience the audio to the game is muted by default. The audio files used have had their volume levels reduced between 60-80% using JavaScript for player comfort.
 
 # Accessibility
 
-This website is designed with accessibility in mind and follows WCAG (Web Content Accessibility Guidelines) best practices. Semantic HTML is used throughout to ensure content is meaningful and navigable for assistive technologies. ARIA labels and roles are applied where necessary to provide clear context for screen readers.
+This website is designed with accessibility in mind and follows [WCAG (Web Content Accessibility Guidelines)](https://www.w3.org/WAI/standards-guidelines/wcag/) best practices. Semantic HTML is used throughout to ensure content is meaningful and navigable for assistive technologies. [ARIA labels and roles](https://www.w3schools.com/accessibility/accessibility_labels.php) are applied where necessary to provide clear context for screen readers.
 
 # Technologies Used
 
 ## Languages
 
-HTML  
-CSS  
-JavaScript
+[HTML](https://www.w3schools.com/html/)  
+[CSS](https://www.w3schools.com/css/)  
+[JavaScript](https://www.w3schools.com/js/)
 
 ## Libraries
 
 [Font Space](https://www.fontspace.com/)  
-[Pixabay Sound Effects]https://pixabay.com/sound-effects/
+[Pixabay Sound Effects](https://pixabay.com/sound-effects/)
 
 ## Technologies
 
@@ -364,6 +371,7 @@ JavaScript
 [Chat GPT](https://chatgpt.com/)  
 [claude](https://claude.ai/)  
 [Gemini](https://gemini.google.com/)  
+[Balsamiq Wireframes](https://balsamiq.com/)
 
 ## Practices
 
@@ -373,12 +381,22 @@ WCAG
 
 ## Resources
 
-https://www.justinmind.com/blog/best-number-fonts/  
-https://www.youtube.com/@KennyYipCoding   
-https://www.youtube.com/@WebDevSimplified  
-https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/  
+[Best Number Font Glog Post](https://www.justinmind.com/blog/best-number-fonts/)  
+[Kenny Yip Coding](https://www.youtube.com/@KennyYipCoding)   
+[Web Dev Simplified](https://www.youtube.com/@WebDevSimplified)  
+[Fisher Yates Shuffle](https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/)  
 
 # Testing
+
+This Project has been thoroughly tested over a number of different metrics and standards and the tests, evidence and finding are below.  
+
+The decision was made to focus on manual testing rather than creat automated test. This decision was made based on the nature of the project, as the focus was on: 
+- **Usability testing** - Evaluating user experience and interface intuitiveness  
+- **Visual testing** - Checking Layout, responsiveness and visual (and audio) feedback  
+- **Exploratory testing** - Finding unexpected bugs through real world usage
+- **Learning outcomes** - Manual testing allowed me to thoroughly understand how each component works and interacts with the user interface.  
+
+Automated testing would be deployed if there were a need for things like regression testing with things changing the games logic regularly, large scale or repetative task where large amounts of functions need regular chekcing. Automated testing meets the needs for managing deployment pipelines and continuos integration when there are multiple developers working on projects.
 
 ## User Story Testing
 
@@ -656,7 +674,9 @@ CSS code validation testing was performed using the [W3C CSS Validaiton Service]
 
 ## Lighthouse Testing
 
-### Final Score
+### Final Score  
+
+![Lighthouse Final Score](assets/images/lighthouse-final-score.webp)
 
 **Performance:** 100  
 **Accessibility:** 100  
@@ -682,7 +702,7 @@ Best Practises Overview 100/100:
 
 By adding a 'landmark' to my HTML for screen readers and testing directly from the live sight now I have increased my lighthouse score to max score.
 
-![Lighthouse Final Score](assets/images/lighthouse-final-score.webp)
+
 
 ## Colour Testing
 
