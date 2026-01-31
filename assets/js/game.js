@@ -29,6 +29,8 @@ const sounds = {
   correctGuessSound: new Audio("assets/audio/guess-correct.wav"),
   incorrectGuessSound: new Audio("assets/audio/guess-incorrect.wav"),
   gameComplete: new Audio("assets/audio/game-complete.wav"),
+  cardFlip: new Audio("assets/audio/card-flip.wav"),
+  startGameSound: new Audio("assets/audio/start-game.mp3")
 };
 
 let isMuted = true;
@@ -38,6 +40,8 @@ Object.values(sounds).forEach((sound) => {
   sound.volume = 0.3; // decrease volume for user experience
   sound.muted = isMuted; // mutes the sounds as default
 });
+
+sounds.cardFlip.volume = 0.2
 
 // mute button event listener
 document.getElementById("muteBtn").addEventListener("click", () => {
@@ -200,9 +204,15 @@ function startGame() {
       boardArray.push(row); // Add to JS Array
     }
     // console.log(boardArray);
+    setTimeout(() => {
+      sounds.startGameSound.currentTime = 0
+    sounds.startGameSound.play()
+    }, 500);
+    
     // arrow syntax allows us to pass arguments after the delay
     setTimeout(() => {
       hideCards(rows, cols);
+     
       startTimer();
     }, 1000);
   });
@@ -213,7 +223,13 @@ function hideCards(rows, cols) {
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       let card = document.getElementById(r.toString() + "-" + c.toString());
-      card.src = "assets/images/pokeball.webp";
+      //animation
+      card.classList.add("flipped");
+      // delay in source switch for animation
+      setTimeout(() => {
+        card.src = "assets/images/pokeball.webp";
+      }, 150);
+      
     }
   }
 }
@@ -228,10 +244,14 @@ function selectCard() {
       let r = imageLocation[0];
       let c = imageLocation[1];
 
-      setTimeout(() => {
+      setTimeout(() => { // changes image halfway through the flip
         cardOne.src = boardArray[r][c].image; // retrieves image from boardArray using coordinates from the id
       }, 150);
-      cardOne.classList.add("flipped"); // flip animation change at 90 degrees
+      //flips and plays sound
+      sounds.cardFlip.currentTime = 0;
+      sounds.cardFlip.play()
+      cardOne.classList.remove("flipped"); 
+
     } else if (!cardTwo && this != cardOne) {
       cardTwo = this;
       // console.log(cardTwo);
@@ -241,7 +261,7 @@ function selectCard() {
       let r = imageLocation[0];
       let c = imageLocation[1];
 
-      cardTwo.classList.add("flipped");
+      cardTwo.classList.remove("flipped");
       setTimeout(() => {
         cardTwo.src = boardArray[r][c].image;
         update();
@@ -262,8 +282,8 @@ function update() {
       firstCard.src = "assets/images/pokeball.webp";
       secondCard.src = "assets/images/pokeball.webp";
 
-      firstCard.classList.remove("flipped");
-      secondCard.classList.remove("flipped");
+      firstCard.classList.add("flipped");
+      secondCard.classList.add("flipped");
     }, 1000);
     //update errors and moves and matched pairs
     errors++;
