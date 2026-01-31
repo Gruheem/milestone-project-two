@@ -98,7 +98,7 @@ P {
 
 .button {
   color: var(--background-color);
-  font-family: pokefont, sans-serif;
+  font-family: gamepause, sans-serif;
   font-size: clamp(24px, 8vw, 5rem); /* absolute measurement used for WCAG compliance */
   padding: 1.5rem 3rem;
   border-radius: 49%;
@@ -141,9 +141,9 @@ P {
   min-width: 0;
   color: var(--background-color);
   background-color: var(--pokeball-red);
-  font-family: pokefont, sans-serif;
+  font-family: gamepause, sans-serif;
   font-size: clamp(1rem, 4vw, 3rem);
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 49%;
   margin: 0.5rem;
   box-shadow:
@@ -156,9 +156,9 @@ P {
   min-width: 0;
   color: var(--background-color);
   background-color: var(--pokeball-red);
-  font-family: pokefont, sans-serif;
+  font-family: gamepause, sans-serif;
   font-size: clamp(1rem, 4vw, 3rem);
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 49%;
   margin: 0.5rem;
   box-shadow:
@@ -195,6 +195,8 @@ P {
 
 .border {
   padding: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
   background: var(--background-color);
   border: 0.1875rem dashed var(--dash-color); /* dash colour and size */
   box-shadow:
