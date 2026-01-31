@@ -221,7 +221,15 @@ Tests:
 
 ### Implemented Features:
 
-**'Home Page':**
+**Persistant Features:**
+
+- Mute/Unmute Button: This allows the player to mute and unmute the game sounds. This is fixed at the top right for visibility.  
+  ![Mute/Unmute Button](assets/images/mute-button.webp)
+
+- Author Information: This is a link to the authors GitHub Page. This is fixed at the bootom right to be read last.  
+  ![Author link](assets/images/g-logo-screenshot.webp)
+
+**Home Page:**
 
 - Title: The title is in a Pokémon theme, stating the name of the game.  
   ![Game Title](assets/images/title.webp)
@@ -235,7 +243,7 @@ Tests:
 - Difficulty Select section: This allows the player to choose their desired level of challenge.  
   ![Difficulty select section](assets/images/difficulty-select-section.webp)
 
-**'Game Page':**
+**Game Page:**
 
 - Game Timer: This lets the player know how long their current game has lasted so far. It updates in real time.  
   ![Game Timer](assets/images/timer.webp)
@@ -247,8 +255,10 @@ Tests:
   ![Error Counter](assets/images/error-counter.webp)
 
 - Pokémon cards: These are the cards the player will select to progress the game. The back is a Poké Ball and the front is a randomly selected Pokémon from Generation One.  
-  Back: ![Back of Game Card](assets/images/card-back.webp)  
-  Front: ![Front of Game Card](assets/images/card-front-example.webp)
+  Back:  
+  ![Back of Game Card](assets/images/card-back.webp)  
+  Front:  
+  ![Front of Game Card](assets/images/card-front-example.webp)
 
 - Reset Game Button: This allows the player to reset the game at any time during their existing game.
   ![Reset Game Button](assets/images/restart-game-button.webp)
@@ -276,7 +286,7 @@ Tests:
 
 ## Skeleton
 
-Wireframes were created using balsamiq.  
+Wireframes were created using balsamiq.
 
 Mobile:
 ![mobile wireframes](assets/images/mobile-wreframes.webp)
@@ -318,8 +328,7 @@ All colours have been tested for contrast and suitability.
 
 Simplistic, minimalist design for the board and scoreboard to make navigation easy and intuitive. This also keeps the game easy to understand.
 
-# Accessibility  
-
+# Accessibility
 
 # Technologies Used
 
@@ -332,12 +341,12 @@ JavaScript
 ## Libraries
 
 Google Fonts  
-Game Fonts 
+Game Fonts
 https://pixabay.com/sound-effects/
 
 ## Technologies
 
-PokeAPI    
+PokeAPI  
 Adobe Express  
 https://imagecolorpicker.com/  
 https://webaim.org/resources/contrastchecker/  
@@ -345,7 +354,7 @@ https://contrast-grid.eightshapes.com/
 https://coolors.co/  
 https://chatgpt.com/  
 https://claude.ai/  
-https://gemini.google.com/  
+https://gemini.google.com/
 
 ## Practices
 
@@ -758,6 +767,5 @@ I took the approach of using **early deployment** so I can start observing the d
 3. Launch the project.
    - Open the project folder in your preffered IDE (e.g. VS Code)
    - Open `index.html` directly in your browser, or use an extension like **Live Server** to open the page
-
 
 # Thanks to...
