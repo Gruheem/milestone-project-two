@@ -23,16 +23,30 @@ const home = document.getElementById("home");
 const errorBox = document.getElementById("errors");
 const movesBox = document.getElementById("moves");
 const timeBox = document.getElementById("time");
-// Audio elements
+
+// Audio 
 const sounds = {
   correctGuessSound: new Audio("assets/audio/guess-correct.wav"),
   incorrectGuessSound: new Audio("assets/audio/guess-incorrect.wav"),
   gameComplete: new Audio("assets/audio/game-complete.wav")
 }
 
-sounds.correctGuessSound.volume = 0.3
+let isMuted = true
+muteBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>'
 
-// incorrectGuessSound.volume = 0.5
+Object.values(sounds).forEach(sound => {
+  sound.volume = 0.3; // decrease volume for user experience
+  sound.muted = isMuted; // mutes the sounds as default
+});
+
+// mute button event listener
+document.getElementById("muteBtn").addEventListener("click", () => {
+  isMuted = !isMuted // Switches mute state true/false
+  Object.values(sounds).forEach(sound => {
+    sound.muted = isMuted // Applies new isMuted value
+  }) 
+  muteBtn.innerHTML = isMuted ? '<i class="fa-solid fa-volume-xmark"></i>' : '<i class="fa-solid fa-volume-high"></i>' // condition ? if true : if false
+})
 
 // Start game button event listeners
 document.getElementById("easyBtn").addEventListener("click", () => {
