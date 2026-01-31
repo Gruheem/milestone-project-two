@@ -23,6 +23,16 @@ const home = document.getElementById("home");
 const errorBox = document.getElementById("errors");
 const movesBox = document.getElementById("moves");
 const timeBox = document.getElementById("time");
+// Audio elements
+const sounds = {
+  correctGuessSound: new Audio("assets/audio/guess-correct.wav"),
+  incorrectGuessSound: new Audio("assets/audio/guess-incorrect.wav"),
+  gameComplete: new Audio("assets/audio/game-complete.wav")
+}
+
+sounds.correctGuessSound.volume = 0.3
+
+// incorrectGuessSound.volume = 0.5
 
 // Start game button event listeners
 document.getElementById("easyBtn").addEventListener("click", () => {
@@ -237,10 +247,16 @@ function update() {
     errorBox.innerText = errors;
     moves++;
     movesBox.innerText = moves;
+    // Incorrect guess audio
+    sounds.incorrectGuessSound.currentTime = 0 // resets  the audio
+    sounds.incorrectGuessSound.play()
   } else if (cardOne.alt === cardTwo.alt) {
     moves++;
     movesBox.innerText = moves;
     matchedPairs++;
+    // Correct guess audio
+    sounds.correctGuessSound.currentTime = 0
+    sounds.correctGuessSound.play()
     // Keyframe Animation on correct pair
     cardOne.classList.add("matched");
     cardTwo.classList.add("matched");
@@ -311,6 +327,8 @@ function displayModal() {
   document.getElementById("modalErrors").innerText = `${errors}`;
   document.getElementById("modalTime").innerText = `${finalTime}`;
   modal.classList.remove("hidden");
+  sounds.gameComplete.currentTime = 0
+  sounds.gameComplete.play()
 }
 
 function closeModal() {

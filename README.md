@@ -329,6 +329,7 @@ JavaScript
 
 Google Fonts  
 Game Fonts 
+https://pixabay.com/sound-effects/
 
 ## Technologies
 
@@ -336,6 +337,7 @@ PokeAPI
 Adobe Express  
 https://imagecolorpicker.com/  
 https://webaim.org/resources/contrastchecker/  
+https://contrast-grid.eightshapes.com/  
 https://coolors.co/  
 https://chatgpt.com/  
 https://claude.ai/  
