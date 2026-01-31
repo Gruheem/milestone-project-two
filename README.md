@@ -318,6 +318,9 @@ All colours have been tested for contrast and suitability.
 
 Simplistic, minimalist design for the board and scoreboard to make navigation easy and intuitive. This also keeps the game easy to understand.
 
+# Accessibility  
+
+
 # Technologies Used
 
 ## Languages

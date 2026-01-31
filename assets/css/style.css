@@ -38,7 +38,7 @@
 
 /* Styling */
 
-.error-message {
+#error-message {
   text-align: center;
   margin: auto;
   max-width: 500px;
