@@ -31,8 +31,8 @@ The game is designed to be fun, nostalgic, and fully responsive across devices, 
 
 ### Project goals:
 
-- Design and develope an interactive Pokémon-themed pairs memory game.
-- Implement multiple levels of difficulty to suit different players skill levels.
+- Design and develop an interactive Pokémon-themed pairs memory game.
+- Implement multiple levels of difficulty to suit different players' skill levels.
 - Ensure the game is responsive and accessible across a variety of different devices.
 - Demonstrate front-end development skills through the effective use of HTML, CSS, and JavaScript.
 
@@ -96,8 +96,6 @@ The on-the-go player plays games while commuting, waiting between classes and in
 - To be able to play the game on different devices.
 - To enjoy a simple, easy-to-understand game with different difficulties.
 - To feel rewarded and motivated through feedback and progress tracking.
-
-
 
 ## Scope
 
@@ -170,6 +168,7 @@ As a player, I want visual feedback for correct matches so that I feel motivated
 Acceptance criteria:
 
 - Have visual feedback for a correct guess (e.g., pop and jiggle animation).
+- Have audio feedback for correct and incorrect guesses
 
 Tasks:
 
@@ -228,12 +227,12 @@ Tests:
 
 ### Implemented Features:
 
-**Persistant Features:**
+**Persistent Features:**
 
 - **Mute/Unmute Button:** This allows the player to mute and unmute the game sounds. This is fixed at the top right for visibility.  
   ![Mute/Unmute Button](assets/images/mute-button.webp)
 
-- **Author Information:** This is a link to the authors GitHub Page. This is fixed at the bootom right to be read last.  
+- **Author Information:** A link to the author's GitHub page; fixed at the bottom right.  
   ![Author link](assets/images/g-logo-screenshot.webp)
 
 **Home Page:**
@@ -282,7 +281,7 @@ Tests:
 - **Reset from Modal:** this allows the player to play again on their current level of difficulty with a new set of cards.  
   ![Modal Reset Button](assets/images/modal-restart.webp)
 
-- **Difficulty select from modal:** this allows the player to change their difficulty after completing the game allowing them to increase or decrease the challange.  
+- **Difficulty select from modal:** This allows the player to change their difficulty after completing the game, allowing them to increase or decrease the challenge.  
   ![Modal Difficulty Select Button](assets/images/modal-difficulty-select.webp)
 
 - **Show Cards at Start:** Players get a one second look at the cards face up before they flip and the game timer starts. This adds an element of skill to game that allows players to get better without relying on chance to get them started.
@@ -296,7 +295,7 @@ Tests:
 Wireframes were created using [balsamiq](https://balsamiq.com/).
 
 Mobile:
-![mobile wireframes](assets/images/mobile-wreframes.webp)
+![mobile wireframes](assets/images/mobile-wireframes.webp)
 
 Tablet:
 ![tablet wireframes](assets/images/tablet-wireframes.webp)
@@ -313,9 +312,9 @@ Victory Modal:
 
 ### Artwork
 
-Pictures for the front and back of the cards are Pokémon-themed. Pictures for the Pokémon were sourced through the [PokeAPI](https://pokeapi.co/), this artwork was originally created by [Ken Sugimori](https://en.wikipedia.org/wiki/Ken_Sugimori).  
+Pictures for the front and back of the cards are Pokémon-themed. Pictures for the Pokémon were sourced through the [PokeAPI](https://pokeapi.co/), this artwork was originally created by [Ken Sugimori](https://en.wikipedia.org/wiki/Ken_Sugimori).
 
-The main title and the modal title were generated using [gemini](https://gemini.google.com/).  
+The main title and the modal title were generated using [gemini](https://gemini.google.com/).
 
 The background image came from [The Pokemon Company](https://corporate.pokemon.com/en-us/) celebrating their 20th anniversary.
 
@@ -375,30 +374,94 @@ This website is designed with accessibility in mind and follows [WCAG (Web Conte
 
 ## Practices
 
-UX  
-Mobile-first development
-WCAG
+[UX](https://en.wikipedia.org/wiki/User_experience_design)  
+[Mobile-first development](https://developer.mozilla.org/en-US/docs/Glossary/Mobile_First)
+[WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)
 
 ## Resources
 
-[Best Number Font Glog Post](https://www.justinmind.com/blog/best-number-fonts/)  
-[Kenny Yip Coding](https://www.youtube.com/@KennyYipCoding)   
+[Best Number Font Blog Post](https://www.justinmind.com/blog/best-number-fonts/)  
+[Kenny Yip Coding](https://www.youtube.com/@KennyYipCoding)  
 [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified)  
-[Fisher Yates Shuffle](https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/)  
+[Fisher Yates Shuffle](https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/)
+
+# Deployment
+
+This project was deployed using GitHub Pages.
+
+I took the approach of using **early deployment** so I can start observing the desired and undesired outcomes of my code across different devices as soon as possible.
+
+## Steps to Deploy
+
+1. Navigate to the repository on GitHub
+2. Open **settings** got to **pages**
+3. Select the 'main' branch and root directory
+4. Save changes
+5. The live site link appears after deployment ([Deployed Site](https://gruheem.github.io/milestone-project-two/))
+
+## How to run Locally
+
+1. Clone the repository, replacing 'your-username' with your GitHub username and 'your-repo-name' with the name of your repository.  
+   Bash: `git clone https://github.com/your-username/your-repo-name.git`
+2. Navigate to the directory, once again replacing 'your-repo-name' with the name of your repository.  
+   Bash: `cd your-repo-name`
+3. Launch the project.
+   - Open the project folder in your preferred IDE (e.g. VS Code)
+   - Open `index.html` directly in your browser, or use an extension like **Live Server** to open the page
+
+# Known Bugs and Fixes:
+
+**1. Card Overflow Issue:**  
+Cards were overflowing out of the game board. It was due to the CSS Grid automatically applying `min-height: auto;` to the grid.  
+**- Fix:**  
+I fixed this by setting `min-height` to `0` on the card wrapper to allow it to shrink.
+
+**2. Variable Scope Declaration and Timing Issue:**  
+The game start buttons stopped working. I had placed an event listener that used a variable in a function before I had declared the variable globally. This was a timing issue as JavaScript runs top to bottom.  
+**- Fix:**  
+I declared the variable `let difficulty;` at the start of the JavaScript file before any functions are executed.
+
+**3. Modal Visibility Issue:**  
+Modal wasn't appearing after resetting the game using the victory modal. The source of the problem was that I was mixing two different ways of hiding it when not in use: `modal.classList.add("hidden");` and `modal.display = "none";`  
+**- Fix:**  
+I fixed this issue by sticking to one method of adding and removing the `.hidden` class to achieve the desired visibility state.
+
+**4. Error Counter Logic Issue:**
+The error counter was creating a list of ones rather than adding up a total. The problem was that I wasn't declaring the `errors` variable globally; it was only in the start game function so it couldn't be accessed by the update function.  
+**- Fix:**  
+Declared the `errors` variable `let errors = 0` at the start of the document before any functions are read.
+
+**5. Duplicate Pokémon Selection Issue:**  
+As I used random numbers to select Pokémon, the same Pokémon could be picked multiple times (e.g., Bulbasaur appearing four times in an eight-card grid).  
+**- Fix:**  
+I created an array of `usedIds` and a `do...while` statement to continue picking IDs until the proposed ID does not exist in the `usedIds` array.
+
+# Code Attribution
+
+All HTML, CSS, and JavaScript code for game logic, UI interactions, and styling was written by me specifically for this project.
+
+The [Fisher-Yates-Shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle) was adapted from a [geeksforgeeks](https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/) article.
+
+The code for the timer functions was adapted from code [Chat GPT](https://chatgpt.com/) wrote.
+
+The idea to iterate through the rows and columns to populate the game board and javascript array, along with how I could structure the matching logic, was inspired by [Kenny Yip Coding](https://www.youtube.com/@KennyYipCoding)'s YouTube video tutorial on [making a pairs game](https://www.youtube.com/watch?v=wz9jeI9M9hI&list=LL&index=2).
 
 # Testing
 
-This Project has been thoroughly tested over a number of different metrics and standards and the tests, evidence and finding are below.  
+This project has been thoroughly tested across a number of metrics and standards; the tests, evidence, and findings are below.
 
-The decision was made to focus on manual testing rather than creat automated test. This decision was made based on the nature of the project, as the focus was on: 
-- **Usability testing** - Evaluating user experience and interface intuitiveness  
-- **Visual testing** - Checking Layout, responsiveness and visual (and audio) feedback  
+The decision was made to focus on manual testing rather than create automated tests. This decision was made based on the nature of the project, as the focus was on:
+
+- **Usability testing** - Evaluating user experience and interface intuitiveness
+- **Visual testing** - Checking Layout, responsiveness and visual (and audio) feedback
 - **Exploratory testing** - Finding unexpected bugs through real world usage
-- **Learning outcomes** - Manual testing allowed me to thoroughly understand how each component works and interacts with the user interface.  
+- **Learning outcomes** - Manual testing allowed me to thoroughly understand how each component works and interacts with the user interface.
 
-Automated testing would be deployed if there were a need for things like regression testing with things changing the games logic regularly, large scale or repetative task where large amounts of functions need regular chekcing. Automated testing meets the needs for managing deployment pipelines and continuos integration when there are multiple developers working on projects.
+Automated testing would be deployed if there were a need for regression testing (for example, when the game's logic changes regularly), large-scale or repetitive tasks requiring frequent checks, or when multiple developers are working on the project. Automated testing supports managing deployment pipelines and continuous integration.
 
 ## User Story Testing
+
+The following user story and business goal tests are used as the basis for testing the Project and Player Goals of the Pokémon pairs memory game. Each story defines a specific user requirement and is supported by test scenarios to verify that the game behaves as expected. This approach ensures that core features and responsive behaviour can be systematically tested and validated against user needs.
 
 ### User Story 1 - Core Gameplay
 
@@ -410,7 +473,7 @@ Automated testing would be deployed if there were a need for things like regress
   - All the cards are face down
 - **Testing:** Started the game from the home page using a difficulty selection button
 - **Result:** The board populates with the correct number of cards for the difficulty and they are all face down
-- **Test Status:** PASS  
+- **Test Status:** PASS
 
 Easy:  
 ![Easy Board](assets/images/test-1-1-easy.webp)  
@@ -425,9 +488,9 @@ Hard:
 - **Expected:** On a correct guess the cards will stay flipped over
 - **Testing:** Selected two matching cards during the game
 - **Result:** Cards stay flipped over and animation plays
-- **Test Status:** PASS  
+- **Test Status:** PASS
 
-![Mtched Cards Stay Flipped](assets/images/test-1-2.webp)
+![Matched Cards Stay Flipped](assets/images/test-1-2.webp)
 
 **Test 1.3 - Incorrect card match flip back**
 
@@ -435,7 +498,7 @@ Hard:
 - **Expected:** Cards remain visible for one second then reset to their 'back' state
 - **Testing:** Selecting two different cards that don't match
 - **Result:** The cards flip back after a short delay
-- **Test Status:** PASS  
+- **Test Status:** PASS
 
 **Test 1.4 - Victory Modal Presence**
 
@@ -443,7 +506,7 @@ Hard:
 - **Expected:** When the player completes the game a victory modal will appear
 - **Testing:** Completed the game by matching all cards
 - **Result:** The victory modal appears when all cards are matched
-- **Test Status:** PASS  
+- **Test Status:** PASS
 
 ### User story 2 - Fast Game Start
 
@@ -453,9 +516,9 @@ Hard:
 - **Expected:** The page loads correctly without any missing elements or layout issues
 - **Testing:** Performed Lighthouse Testing and manual refresh testing
 - **Result:** The page loads in a timely manner and correctly displays its contents
-- **Test Status:** PASS   
+- **Test Status:** PASS
 
-![Lighthouse Test](assets/images/test-2-1.webp)  
+![Lighthouse Test](assets/images/test-2-1.webp)
 
 **test - Start Game Call-to-action**
 
@@ -463,7 +526,7 @@ Hard:
 - **Expected:** The game begins immediately
 - **Testing:** Pressed the start game buttons
 - **Result:** Game starts as expected
-- **Test Status:** PASS  
+- **Test Status:** PASS
 
 ### User Story 3 - Difficulty Seleciton
 
@@ -481,7 +544,7 @@ Hard:
 - **Expected:** The current game resets with the new difficulty settings
 - **Testing:** Changed difficulty in game
 - **Result:** The game reset and loaded the new difficulty
-- **Test Status:** PASS  
+- **Test Status:** PASS
 
 ### User story 4 - Performance Tracking
 
@@ -491,7 +554,7 @@ Hard:
 - **Expected:** The move counter increases by one
 - **Testing:** Completed a move by selecting two cards
 - **Result:** The card counter updated correctly by increasing by one
-- **Test Status:** Passed  
+- **Test Status:** Passed
 
 Before:  
 ![Move Counter Before](assets/images/test-4-1.webp)  
@@ -511,14 +574,13 @@ After:
 - **Scenario:** A player selects two non matching cards
 - **Expected:** The error counter increases by one
 - **Testing:** Made an incorrect guess in game
-- **Result:** Error counter updated cortrectly by increasing by one
-- **Test Status:** Passed  
+- **Result:** Error counter updated correctly by increasing by one
+- **Test Status:** Passed
 
 Before:  
 ![Error Counter Before](assets/images/test-4-3.webp)  
 After:  
-![Error Counter After](assets/images/test-4-3-1.webp)  
-
+![Error Counter After](assets/images/test-4-3-1.webp)
 
 ### User Story 7 - Cross-device Compatibility
 
@@ -528,23 +590,22 @@ After:
 - **Expected:** The layout adapts correctly to different screen sizes and remains functional
 - **Testing:** used Chrome Dev Tools device emulator and multiple physical devices
 - **Result:** Layout displayed correctly on all tested screen sizes
-- **Test Status:** Passed  
+- **Test Status:** Passed
 
 Home Screen small:  
 ![Home Screen Mobile](assets/images/test-7-1-2.webp)  
 Home Screen Large:  
-![Home Screen Large](assets/images/test-7-1-3.webp)  
+![Home Screen Large](assets/images/test-7-1-3.webp)
 
-Game Screen Small:
-![Game Screen Small](assets/images/test-7-1.webp)
+Game Screen Small:  
+![Game Screen Small](assets/images/test-7-1.webp)  
 Game Screen Large:  
-![Game Screen Large](assets/images/test-7-1-1.webp)  
+![Game Screen Large](assets/images/test-7-1-1.webp)
 
 Victory Modal Small:  
 ![Victory Modal Small](assets/images/test-7-1-4.webp)
-Victory Modla Large:  
-![Victory Modla Large](assets/images/test-7-1-5.webp)
-
+Victory Modal Large:  
+![Victory Modal Large](assets/images/test-7-1-5.webp)
 
 **test 7.2 - Browser Compatibility**
 
@@ -558,10 +619,10 @@ Victory Modla Large:
 
 **test 8.1 - Victory modal displays content correctly**
 
-- **Scenario:** A player completes the game by matching all the piars
-- **Expected:** A vitory modal appears with a congratulations message with game statistics
+- **Scenario:** A player completes the game by matching all the pairs
+- **Expected:** A victory modal appears with a congratulations message and game statistics
 - **Testing:** Completed a game
-- **Result:** Modal displays with correctly with the corrrect stats within it
+- **Result:** Modal displays correctly with the correct stats within it
 - **Test Status:** Passed
 
 **test 8.2 - Post game Actions Function Correctly**
@@ -569,7 +630,7 @@ Victory Modla Large:
 - **Scenario:** The player interacts with the Restart Game and Select Difficulty buttons in the modal
 - **Expected:** The game restarts and loads the selected difficulty
 - **Testing:** Interact with the buttons in the modal
-- **Result:** Buttons funtioned correctly
+- **Result:** Buttons functioned correctly
 - **Test Status:** Passed
 
 ## Business Goal Testing
@@ -577,11 +638,11 @@ Victory Modla Large:
 ### Business Goals 1 - Create an interesting, engaging and interactive front-end game experience.
 
 **Goal:** Deliver a fun, playable memory game that encourages users to complete and replay rounds.  
-**scenario:** A user play the game from start to finish and is encourageed to replay using visual feedbck, difficulty options and completion messaging.  
+**Scenario:** A user plays the game from start to finish and is encouraged to replay using visual feedback, difficulty options, and completion messaging.  
 **expected:**
 
 - Core gameplay functions smoothly
-- Visual and audio feedback rewards corrcet actions
+- Visual and audio feedback reward correct actions
 - layers are encouraged to replay the game
 
 **Testing:** Played multiple full rounds across different difficulties and observed player flow and engagement  
@@ -618,8 +679,8 @@ Victory Modla Large:
 
 ### Business Goals 4 - Create a visually appealing and intuitive used interface
 
-**Goal:** Ensure the game is easy to understand, visually consistent and intuitive to navigate for first time users.  
-**scenario:** A user first time user visits the site and attem,pts to start and play the game usinf only the on screen interface.  
+**Goal:** Ensure the game is easy to understand, visually consistent, and intuitive to navigate for first-time users.  
+**Scenario:** A first-time user visits the site and attempts to start and play the game using only the on-screen interface.  
 **expected:**
 
 - Clear instructions explaining how to play
@@ -632,19 +693,19 @@ Victory Modla Large:
 
 ### Business Goals 5 - Ensure responsive design and cross-device compatibility
 
-**Goal:** Make the game usable and functionL cross mobile, tablet, and desktop aswell as across a range of modern browsers.  
-**scenario:** A user accesses the game on different devices and broswers.  
-**expected:**
+**Goal:** Make the game usable and functional across mobile, tablet, and desktop devices, as well as across a range of modern browsers.  
+**Scenario:** A user accesses the game on different devices and browsers.  
+**Expected:**
 
 - Responsive layout
-- No functional loss across screren sizes
-- consistent behaviour across browsers
+- No functional loss across screen sizes
+- Consistent behavior across browsers
 
 **Testing:** Tested responsiveness on Google Chrome DevTools and different physical devices.  
 **Result:** Game remained fully functional across tested devices and browsers.
 **Test Status:** PASS
 
-### Business Goals 6 - Delivery good performance and fast load times
+### Business Goals 6 - Deliver good performance and fast load times
 
 **Goal:** Optimise Assets and code to ensure quick loading and smooth gameplay.  
 **scenario:** A user opens the site and starts a game without delay.  
@@ -668,13 +729,13 @@ This was corrected and the HTML now passes code validation.
 
 ![HTML validation pass](assets/images/html-validation-complete.webp)
 
-CSS code validation testing was performed using the [W3C CSS Validaiton Service](https://jigsaw.w3.org/css-validator/). It did not pick up any errors and the CSS passes code validation.
+CSS code validation testing was performed using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/). It did not pick up any errors and the CSS passes code validation.
 
 ![CSS Validation pass](assets/images/css-validation-complete.webp)
 
 ## Lighthouse Testing
 
-### Final Score  
+### Final Score
 
 ![Lighthouse Final Score](assets/images/lighthouse-final-score.webp)
 
@@ -684,7 +745,7 @@ CSS code validation testing was performed using the [W3C CSS Validaiton Service]
 
 ### Testing
 
-Lighthouse testiung was performed on Google Chrome DevTools and for each catagory has been given a score in the acceptable range.
+Lighthouse testing was performed on Google Chrome DevTools and for each category has been given a score in the acceptable range.
 
 ![Lighthouse pass summary](assets/images/lighthouse-score-one.webp)
 
@@ -700,24 +761,22 @@ Best Practises Overview 100/100:
 
 ![Best Practises Overview](assets/images/best-practises-overview.webp)
 
-By adding a 'landmark' to my HTML for screen readers and testing directly from the live sight now I have increased my lighthouse score to max score.
-
-
+By adding a 'landmark' to my HTML for screen readers and testing directly from the live site, I have increased my Lighthouse score to the maximum.
 
 ## Colour Testing
 
-I have tested the colours chosen for my website to make sure that they are inline with Web Content Acciessibility Guidelines(WCAG). These tests highlighted two issues.
+I have tested the colours chosen for my website to make sure that they are in line with the Web Content Accessibility Guidelines (WCAG). These tests highlighted two issues.
 
-![Contrast Grid](assets/images/constrast-grid-dnp.webp)
+![Contrast Grid](assets/images/contrast-grid-dnp.webp)
 
 Firstly, while checking colour contrast the medium button failed this test.  
-The fix was to darken the colour untill its contrast score was acceptable.
+The fix was to darken the colour until its contrast score was acceptable.
 
 Fail: ![Medium Button Contrast Fail](assets/images/medium-button-contrast-fail.webp)
 
 Pass: ![Medium Button Contrast Pass](assets/images/medium-button-contrast-pass.webp)
 
-Secondly, it highlighted that the font on the hard and mefium buttons is only suitable for large text. To ensure this is always the case I have used a `clamp()` property on font size to enure the font is always at least 24px.
+Secondly, it highlighted that the font on the hard and medium buttons is only suitable for large text. To ensure this is always the case I have used a `clamp()` property on font size to ensure the font is always at least 24px.
 
 Having addressed these two issues the site in now fully WCAG compliant.
 
@@ -758,7 +817,7 @@ Manual functional testing was carried out to ensure that Poke-Pairs behaves as e
 **Status:** PASS
 
 **5. Clicking the same card twice**  
-**Expected:** After clicking the card once and it turning face up, nothing should hapopen wheni click it twice.
+**Expected:** After clicking the card once and it turning face up, nothing should happen when I click it twice.
 **Testing:** Clicked the face of the card I had just revealed.
 **Result:** The game cards, error counter and move counter remain unchanged.
 **Fix:** N/A
@@ -779,61 +838,8 @@ Manual functional testing was carried out to ensure that Poke-Pairs behaves as e
 **Status:** PASS
 
 **8 - Difficulty Select Button**
-**Expected:** Pressing the chenge difficulty button should bring the player back to the home page where they are instrusted to select their difficulty. The game should load with the new correct number of cards.
+**Expected:** Pressing the change difficulty button should bring the player back to the home page where they are instructed to select their difficulty. The game should load with the new correct number of cards.
 **Testing:** Clicked Select difficulty having completed an easy game and chose medium difficulty
 **Result:** The game took me back to the home page then loaded the new difficulty with the correct amount of cards. The timer, error counter and move counter all reset.
 **Fix:** N/A
 **Status:** PASS
-
-# Known Bugs and Fixes:
-
-**1. Card Overflow Issue:**  
-Cards were overflowing out of the game board. It was due to the CSS Grid automatically applying `min-height: auto;` to the grid.  
-**- Fix:**  
-I fixed this by setting `min-height` to `0` on the card wrapper to allow it to shrink.
-
-**2. Variable Scope Declaration and Timing Issue:**  
-The game start buttons stopped working. I had placed an event listener that used a variable in a function before I had declared the variable globaly. This was a timing issue as javascript runs top to bottom.  
-**- Fix:**  
-I delared the variable `let difficulty;`at the start of the javascript file before any functions are read.
-
-**3. Modal Visibility Issue:**  
-Modal wasn't appearing after resetting the game using the victory modal. The source of the problem was that I was mixing two different ways of hiding it when not in use: `modal.classList.add("hidden");` and `modal.display = "none";`  
-**- Fix:**  
-I fixed this issue by sticking to one method of adding and removing the `.hidden` class to achieve the desired visibility state.
-
-**4. Error Counter Logic Issue:**
-The error counter was creating a list of ones rather than adding up a total. The problem was that I wasn't declaring the `errors` variable globally; it was only in the start game function so it couldn't be accessed by the update function.  
-**- Fix:**  
-Declared the `errors` variable `let errors = 0` at the start of the document before any functions are read.
-
-**5. Duplicate Pokémon Selection Issue:**  
-As I am using random numbers to select the Pokémon it is possible for the same Pokémon to be picked more than once, e.g., Bulbasaur is picked four times and is every Pokémon in an eight-card grid.  
-**- Fix:**  
-I created an array of `usedIds` and a `do...while` statement to continue picking IDs until the proposed ID does not exist in the `usedIds` array.
-
-# Deployment
-
-This project was deployed using GitHub Pages.
-
-I took the approach of using **early deployment** so I can start observing the desired and undesired outcomes of my code across different devices as soon as possible.
-
-## Steps to Deploy
-
-1. Navigate to the repository on GitHub
-2. Open **settings** got to **pages**
-3. Select the 'main' branch and root directory
-4. Save changes
-5. The live site link appears after deployment ([Deployed Site](https://gruheem.github.io/milestone-project-two/))
-
-## How to run Locally
-
-1. Clone the repository, replacing 'your-username' with your GitHub username and 'your-repo-name' with the name of your repository.  
-   Bash: `git clone https://github.com/your-username/your-repo-name.git`
-2. Navigate to the directory, obnce again replacing 'your-repo-name' with the name of your repository.  
-   Bash: `cd your-repo-name`
-3. Launch the project.
-   - Open the project folder in your preffered IDE (e.g. VS Code)
-   - Open `index.html` directly in your browser, or use an extension like **Live Server** to open the page
-
-# Thanks to...
