@@ -66,6 +66,16 @@ P {
   margin-bottom: 0.5em;
 }
 
+.logo {
+  position: absolute;
+  max-height: 2rem;
+  width: auto;
+  top: 0.5rem;
+  left: 0.5rem;
+  border-radius: 50%;
+  z-index: 1;
+}
+
 #muteBtn {
   position: absolute;
   right: 1rem;
@@ -386,6 +396,10 @@ P {
   #muteBtn {
     right:0.5rem;
     top: 0.5rem;
+  }
+
+  #poke-pairs {
+    margin-top: 2rem;
   }
 }
 

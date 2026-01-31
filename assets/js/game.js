@@ -30,7 +30,7 @@ const sounds = {
   incorrectGuessSound: new Audio("assets/audio/guess-incorrect.wav"),
   gameComplete: new Audio("assets/audio/game-complete.wav"),
   cardFlip: new Audio("assets/audio/card-flip.wav"),
-  startGameSound: new Audio("assets/audio/start-game.mp3")
+  startGameSound: new Audio("assets/audio/start-game.wav")
 };
 
 let isMuted = true;
