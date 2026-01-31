@@ -306,7 +306,11 @@ Victory Modal:
 
 ### Artwork
 
-Pictures for the front and back of the cards are Pokémon-themed. Pictures for the Pokémon were sourced through the PokeAPI. Artwork was created by Ken Sugimori.
+Pictures for the front and back of the cards are Pokémon-themed. Pictures for the Pokémon were sourced through the [PokeAPI](https://pokeapi.co/), this artwork was originally created by [Ken Sugimori](https://en.wikipedia.org/wiki/Ken_Sugimori).  
+
+The main title and the modal title were generated using [gemini](https://gemini.google.com/).  
+
+The background image came from [The Pokemon Company](https://corporate.pokemon.com/en-us/) celebrating their 20th anniversary.
 
 ### Colour theme
 
@@ -323,12 +327,18 @@ All colours have been tested for contrast and suitability.
 ### Fonts
 
 1. Primary: the 'Pokémon' title font — images inspired directly from the Pokémon main logo.
-2. Secondary: a clear and game-themed font to inspire nostalgia for the generation one games and to describe instructions and actions, 'gamepause' sans-serif.
-3. Tertiary: a clear font that has been rated excellent for displaying numbers by Just In Mind's Blog, 'bungee', sans-serif.
+2. Secondary: a clear and game-themed font to inspire nostalgia for the generation one games and to describe instructions and actions, ['gamepause'](https://www.fontspace.com/game-paused-font-f102167) sans-serif.
+3. Tertiary: a clear font that has been rated excellent for displaying numbers by [Just In Mind's Blog](https://www.justinmind.com/blog/best-number-fonts/), 'bungee', sans-serif.
 
 Simplistic, minimalist design for the board and scoreboard to make navigation easy and intuitive. This also keeps the game easy to understand.
 
+### Audio
+
+For a good user experience the audio to the game is muted by default. The audio files used have had their volume levels reduced between 60-80% using JavaScript for player comfort.
+
 # Accessibility
+
+This website is designed with accessibility in mind and follows WCAG (Web Content Accessibility Guidelines) best practices. Semantic HTML is used throughout to ensure content is meaningful and navigable for assistive technologies. ARIA labels and roles are applied where necessary to provide clear context for screen readers.
 
 # Technologies Used
 
@@ -340,33 +350,33 @@ JavaScript
 
 ## Libraries
 
-Google Fonts  
-Game Fonts
-https://pixabay.com/sound-effects/
+[Font Space](https://www.fontspace.com/)  
+[Pixabay Sound Effects]https://pixabay.com/sound-effects/
 
 ## Technologies
 
-PokeAPI  
-Adobe Express  
-https://imagecolorpicker.com/  
-https://webaim.org/resources/contrastchecker/  
-https://contrast-grid.eightshapes.com/  
-https://coolors.co/  
-https://chatgpt.com/  
-https://claude.ai/  
-https://gemini.google.com/
+[PokeAPI](https://pokeapi.co/)  
+[Adobe Express](https://www.adobe.com/uk/express/)  
+[Image Color Picker](https://imagecolorpicker.com/)  
+[Web Aim Contrast Checker](https://webaim.org/resources/contrastchecker/)  
+[Eight Shapes Contrast Grid](https://contrast-grid.eightshapes.com/)  
+[Coolers](https://coolors.co/)  
+[Chat GPT](https://chatgpt.com/)  
+[claude](https://claude.ai/)  
+[Gemini](https://gemini.google.com/)  
 
 ## Practices
 
 UX  
 Mobile-first development
+WCAG
 
 ## Resources
 
-https://www.justinmind.com/blog/best-number-fonts/
-https://www.youtube.com/@KennyYipCoding
-https://www.youtube.com/@WebDevSimplified
-https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/
+https://www.justinmind.com/blog/best-number-fonts/  
+https://www.youtube.com/@KennyYipCoding   
+https://www.youtube.com/@WebDevSimplified  
+https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/  
 
 # Testing
 
@@ -382,7 +392,14 @@ https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuff
   - All the cards are face down
 - **Testing:** Started the game from the home page using a difficulty selection button
 - **Result:** The board populates with the correct number of cards for the difficulty and they are all face down
-- **Test Status:** Passed
+- **Test Status:** PASS  
+
+Easy:  
+![Easy Board](assets/images/test-1-1-easy.webp)  
+Medium  
+![medium Board](assets/images/test-1-1-medium.webp)  
+Hard:  
+![Hard Board](assets/images/test-1-1-hard.webp)
 
 **Test 1.2 - Matched Cards stay flipped**
 
@@ -390,7 +407,9 @@ https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuff
 - **Expected:** On a correct guess the cards will stay flipped over
 - **Testing:** Selected two matching cards during the game
 - **Result:** Cards stay flipped over and animation plays
-- **Test Status:** Passed
+- **Test Status:** PASS  
+
+![Mtched Cards Stay Flipped](assets/images/test-1-2.webp)
 
 **Test 1.3 - Incorrect card match flip back**
 
@@ -398,7 +417,7 @@ https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuff
 - **Expected:** Cards remain visible for one second then reset to their 'back' state
 - **Testing:** Selecting two different cards that don't match
 - **Result:** The cards flip back after a short delay
-- **Test Status:** Passed
+- **Test Status:** PASS  
 
 **Test 1.4 - Victory Modal Presence**
 
@@ -406,7 +425,7 @@ https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuff
 - **Expected:** When the player completes the game a victory modal will appear
 - **Testing:** Completed the game by matching all cards
 - **Result:** The victory modal appears when all cards are matched
-- **Test Status:** Passed
+- **Test Status:** PASS  
 
 ### User story 2 - Fast Game Start
 
@@ -416,7 +435,9 @@ https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuff
 - **Expected:** The page loads correctly without any missing elements or layout issues
 - **Testing:** Performed Lighthouse Testing and manual refresh testing
 - **Result:** The page loads in a timely manner and correctly displays its contents
-- **Test Status:** Passed
+- **Test Status:** PASS   
+
+![Lighthouse Test](assets/images/test-2-1.webp)  
 
 **test - Start Game Call-to-action**
 
@@ -424,7 +445,7 @@ https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuff
 - **Expected:** The game begins immediately
 - **Testing:** Pressed the start game buttons
 - **Result:** Game starts as expected
-- **Test Status:** Passed
+- **Test Status:** PASS  
 
 ### User Story 3 - Difficulty Seleciton
 
@@ -434,15 +455,15 @@ https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuff
 - **Expected:** The game board changes the amount of different cards depending on the difficulty
 - **Testing:** started the game on each different difficulty
 - **Result:** Grid size adjusted correctly for different difficulties
-- **Test Status:** Passed
+- **Test Status:** PASS
 
 **test 3.2 - Difficulty can be changed during gameplay**
 
 - **Scenario:** The player changes difficulty mid-way through a game
 - **Expected:** The current game resets with the new difficulty settings
-- **Testing:** Checged difficulty in game
+- **Testing:** Changed difficulty in game
 - **Result:** The game reset and loaded the new difficulty
-- **Test Status:** Passed
+- **Test Status:** PASS  
 
 ### User story 4 - Performance Tracking
 
@@ -452,7 +473,12 @@ https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuff
 - **Expected:** The move counter increases by one
 - **Testing:** Completed a move by selecting two cards
 - **Result:** The card counter updated correctly by increasing by one
-- **Test Status:** Passed
+- **Test Status:** Passed  
+
+Before:  
+![Move Counter Before](assets/images/test-4-1.webp)  
+After:  
+![Move Counter After](assets/images/test-4-1-1.webp)
 
 **test 4.2 - Timer Starts and Stops correctly**
 
@@ -468,7 +494,13 @@ https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuff
 - **Expected:** The error counter increases by one
 - **Testing:** Made an incorrect guess in game
 - **Result:** Error counter updated cortrectly by increasing by one
-- **Test Status:** Passed
+- **Test Status:** Passed  
+
+Before:  
+![Error Counter Before](assets/images/test-4-3.webp)  
+After:  
+![Error Counter After](assets/images/test-4-3-1.webp)  
+
 
 ### User Story 7 - Cross-device Compatibility
 
@@ -478,7 +510,23 @@ https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuff
 - **Expected:** The layout adapts correctly to different screen sizes and remains functional
 - **Testing:** used Chrome Dev Tools device emulator and multiple physical devices
 - **Result:** Layout displayed correctly on all tested screen sizes
-- **Test Status:** Passed
+- **Test Status:** Passed  
+
+Home Screen small:  
+![Home Screen Mobile](assets/images/test-7-1-2.webp)  
+Home Screen Large:  
+![Home Screen Large](assets/images/test-7-1-3.webp)  
+
+Game Screen Small:
+![Game Screen Small](assets/images/test-7-1.webp)
+Game Screen Large:  
+![Game Screen Large](assets/images/test-7-1-1.webp)  
+
+Victory Modal Small:  
+![Victory Modal Small](assets/images/test-7-1-4.webp)
+Victory Modla Large:  
+![Victory Modla Large](assets/images/test-7-1-5.webp)
+
 
 **test 7.2 - Browser Compatibility**
 
