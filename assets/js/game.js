@@ -35,6 +35,8 @@ const sounds = {
 
 let isMuted = true;
 muteBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+// Dynamic aria-label on mute bbutton
+muteBtn.setAttribute("aria-label", isMuted ? "Unmute Game Sounds" : "Mute Game Sounds")
 
 Object.values(sounds).forEach((sound) => {
   sound.volume = 0.3; // decrease volume for user experience
@@ -194,6 +196,7 @@ function startGame() {
         card.src = cardImg.image;
         card.alt = cardImg.name;
         card.classList.add("card");
+        card.setAttribute("aria-label", `Card showing ${cardImg.name}`)
         card.addEventListener("click", selectCard); // calls function 'selectCard()' on click
 
         // append card to wrapper and wrapper to board

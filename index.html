@@ -16,8 +16,13 @@
     ></script>
   </head>
   <body>
-    <a href="https://github.com/Gruheem/" target="_blank"><img class="logo" src="assets/images/g-logo-two.webp" alt="Gruheem Logo"></a>
-    <button id="muteBtn"></button>
+    <a
+      href="https://github.com/Gruheem/"
+      target="_blank"
+      aria-label="Visit Gruheem's GitHub"
+      ><img class="logo" src="assets/images/g-logo-two.webp" alt="Gruheem Logo"
+    /></a>
+    <button id="muteBtn" aria-label="Unmute Button"></button>
 
     <div>
       <h1 class="hidden">Poke-Pairs a pokemon memory game</h1>
@@ -36,9 +41,9 @@
         <p class="border">Select your difficulty</p>
       </div>
       <div id="difficulty-select" class="button-div">
-        <button id="easyBtn" class="button easyBtn">EASY</button>
-        <button id="mediumBtn" class="button mediumBtn">MEDIUM</button>
-        <button id="hardBtn" class="button hardBtn">HARD</button>
+        <button id="easyBtn" class="button easyBtn" aria-label="Select Easy Button">EASY</button>
+        <button id="mediumBtn" class="button mediumBtn" aria-label="Select Easy Button">MEDIUM</button>
+        <button id="hardBtn" class="button hardBtn" aria-label="Select Easy Button">HARD</button>
       </div>
       <div class="home-instructions">
         <div class="instructions border">
@@ -52,11 +57,11 @@
     <!-- Game Board -->
     <div id="game" class="hidden">
       <div id="stats" class="stats">
-        <p id="timeCounter" class="border">
+        <p id="timeCounter" class="border" aria-live="polite">
           TIME: <span id="time">00:00</span>
         </p>
-        <p id="noOfMoves" class="border">MOVES: <span id="moves"></span></p>
-        <p id="errorCount" class="border">ERRORS: <span id="errors"></span></p>
+        <p id="noOfMoves" class="border" aria-live="polite">MOVES: <span id="moves"></span></p>
+        <p id="errorCount" class="border" aria-live="polite">ERRORS: <span id="errors"></span></p>
       </div>
 
       <div id="game-board" class="game-board">
@@ -74,11 +79,11 @@
       </div>
     </div>
     <!-- Modal -->
-    <div id="myModal" class="modal hidden">
+    <div id="myModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal-content border">
         <div class="modal-header">
-          <span id="close" class="close">&times;</span>
-          <h2 class="hidden">Congratulations!!!</h2>
+          <span id="close" class="close" role="button" aria-label="Close modal">&times;</span>
+          <h2 id="modalTitle"class="hidden">Congratulations!!!</h2>
           <div>
             <img
               src="assets/images/congratulations-image.webp"
@@ -96,10 +101,10 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button id="reset" class="resetGame modal-button">
+          <button id="reset" class="resetGame modal-button" aria-label="Restart game">
             RESTART GAME
           </button>
-          <button id="diffSelect" class="modal-button">
+          <button id="diffSelect" class="modal-button" aria-label="Select difficulty again">
             SELECT DIFFICULTY
           </button>
         </div>
