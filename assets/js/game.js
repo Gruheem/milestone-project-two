@@ -24,29 +24,31 @@ const errorBox = document.getElementById("errors");
 const movesBox = document.getElementById("moves");
 const timeBox = document.getElementById("time");
 
-// Audio 
+// Audio
 const sounds = {
   correctGuessSound: new Audio("assets/audio/guess-correct.wav"),
   incorrectGuessSound: new Audio("assets/audio/guess-incorrect.wav"),
-  gameComplete: new Audio("assets/audio/game-complete.wav")
-}
+  gameComplete: new Audio("assets/audio/game-complete.wav"),
+};
 
-let isMuted = true
-muteBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>'
+let isMuted = true;
+muteBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
 
-Object.values(sounds).forEach(sound => {
+Object.values(sounds).forEach((sound) => {
   sound.volume = 0.3; // decrease volume for user experience
   sound.muted = isMuted; // mutes the sounds as default
 });
 
 // mute button event listener
 document.getElementById("muteBtn").addEventListener("click", () => {
-  isMuted = !isMuted // Switches mute state true/false
-  Object.values(sounds).forEach(sound => {
-    sound.muted = isMuted // Applies new isMuted value
-  }) 
-  muteBtn.innerHTML = isMuted ? '<i class="fa-solid fa-volume-xmark"></i>' : '<i class="fa-solid fa-volume-high"></i>' // condition ? if true : if false
-})
+  isMuted = !isMuted; // Switches mute state true/false
+  Object.values(sounds).forEach((sound) => {
+    sound.muted = isMuted; // Applies new isMuted value
+  });
+  muteBtn.innerHTML = isMuted
+    ? '<i class="fa-solid fa-volume-xmark"></i>'
+    : '<i class="fa-solid fa-volume-high"></i>'; // condition ? if true : if false
+});
 
 // Start game button event listeners
 document.getElementById("easyBtn").addEventListener("click", () => {
@@ -223,11 +225,13 @@ function selectCard() {
       // console.log(cardOne);
 
       let imageLocation = cardOne.id.split("-"); // turns id into coordinates for boardArray
-      // console.log(imageLocation);
       let r = imageLocation[0];
       let c = imageLocation[1];
 
-      cardOne.src = boardArray[r][c].image; // retrieves image from boardArray using coordinates from the id
+      setTimeout(() => {
+        cardOne.src = boardArray[r][c].image; // retrieves image from boardArray using coordinates from the id
+      }, 150);
+      cardOne.classList.add("flipped"); // flip animation change at 90 degrees
     } else if (!cardTwo && this != cardOne) {
       cardTwo = this;
       // console.log(cardTwo);
@@ -237,9 +241,11 @@ function selectCard() {
       let r = imageLocation[0];
       let c = imageLocation[1];
 
-      cardTwo.src = boardArray[r][c].image;
-
-      update();
+      cardTwo.classList.add("flipped");
+      setTimeout(() => {
+        cardTwo.src = boardArray[r][c].image;
+        update();
+      }, 150);
     }
   }
 }
@@ -247,14 +253,17 @@ function selectCard() {
 // update moves, errors, and check for win condition
 function update() {
   // store cards so they are not forgotton after the setTimeout
-  const firstCard = cardOne
-  const secondCard = cardTwo
+  const firstCard = cardOne;
+  const secondCard = cardTwo;
 
   if (firstCard.alt != secondCard.alt) {
     //gives a look at the wrong cards before flipping them back over
     setTimeout(() => {
       firstCard.src = "assets/images/pokeball.webp";
       secondCard.src = "assets/images/pokeball.webp";
+
+      firstCard.classList.remove("flipped");
+      secondCard.classList.remove("flipped");
     }, 1000);
     //update errors and moves and matched pairs
     errors++;
@@ -262,18 +271,24 @@ function update() {
     moves++;
     movesBox.innerText = moves;
     // Incorrect guess audio
-    sounds.incorrectGuessSound.currentTime = 0 // resets  the audio
-    sounds.incorrectGuessSound.play()
+    sounds.incorrectGuessSound.currentTime = 0; // resets  the audio
+    sounds.incorrectGuessSound.play();
   } else if (cardOne.alt === cardTwo.alt) {
     moves++;
     movesBox.innerText = moves;
     matchedPairs++;
-    // Correct guess audio
-    sounds.correctGuessSound.currentTime = 0
-    sounds.correctGuessSound.play()
-    // Keyframe Animation on correct pair
-    cardOne.classList.add("matched");
-    cardTwo.classList.add("matched");
+
+    sounds.correctGuessSound.currentTime = 0;
+    sounds.correctGuessSound.play();
+    // Slight delay to give the pokeball time to reveal pokemon
+    setTimeout(() => {
+      // Correct guess audio
+      const wrapperOne = firstCard.parentElement 
+      const wrapperTwo = secondCard.parentElement
+      // Keyframe Animation on correct pair
+      wrapperOne.classList.add("matched");
+      wrapperTwo.classList.add("matched");
+    }, 50);
   }
   // check for the victory condition
   if (matchedPairs === (difficulty[0] * difficulty[1]) / 2) {
@@ -281,7 +296,7 @@ function update() {
     setTimeout(displayModal, 500);
   }
   // reset so we can select more cards
-  cardOne = null; 
+  cardOne = null;
   cardTwo = null;
 }
 
@@ -341,8 +356,8 @@ function displayModal() {
   document.getElementById("modalErrors").innerText = `${errors}`;
   document.getElementById("modalTime").innerText = `${finalTime}`;
   modal.classList.remove("hidden");
-  sounds.gameComplete.currentTime = 0
-  sounds.gameComplete.play()
+  sounds.gameComplete.currentTime = 0;
+  sounds.gameComplete.play();
 }
 
 function closeModal() {

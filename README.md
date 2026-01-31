@@ -276,7 +276,8 @@ Tests:
 
 ## Skeleton
 
-Wireframes
+Wireframes were created using balsamiq.  
+
 Mobile:
 ![mobile wireframes](assets/images/mobile-wreframes.webp)
 
@@ -295,7 +296,7 @@ Victory Modal:
 
 ### Artwork
 
-Pictures for the front and back of the cards are Pokémon-themed. Pictures for the Pokémon were sourced through the PokeAPI.
+Pictures for the front and back of the cards are Pokémon-themed. Pictures for the Pokémon were sourced through the PokeAPI. Artwork was created by Ken Sugimori.
 
 ### Colour theme
 
@@ -312,8 +313,8 @@ All colours have been tested for contrast and suitability.
 ### Fonts
 
 1. Primary: the 'Pokémon' title font — images inspired directly from the Pokémon main logo.
-2. Secondary: a clear and game-themed font to describe, 'gamepause' sans-serif.
-3. Tertiary: a clear font reminiscent of the Pokémon branding for calls to action.
+2. Secondary: a clear and game-themed font to inspire nostalgia for the generation one games and to describe instructions and actions, 'gamepause' sans-serif.
+3. Tertiary: a clear font that has been rated excellent for displaying numbers by Just In Mind's Blog, 'bungee', sans-serif.
 
 Simplistic, minimalist design for the board and scoreboard to make navigation easy and intuitive. This also keeps the game easy to understand.
 
@@ -754,3 +755,6 @@ I took the approach of using **early deployment** so I can start observing the d
 3. Launch the project.
    - Open the project folder in your preffered IDE (e.g. VS Code)
    - Open `index.html` directly in your browser, or use an extension like **Live Server** to open the page
+
+
+# Thanks to...
