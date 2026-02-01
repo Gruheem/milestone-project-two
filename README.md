@@ -1,4 +1,7 @@
-# Milestone Project Two
+# Milestone Project Two Poke-PAIRS
+
+## Contents:
+- 
 
 # Poke-PAIRS
 
@@ -119,7 +122,8 @@ Tasks:
 - Provide a quick and simple game reset option in the victory modal.
 
 **User Story 2 - Fast Game Start**
-As a player, I want the game to load quickly so I can start the game without losing interest.
+As a player, I want the game to load quickly so I can start the game without losing interest.  
+
 Acceptance criteria:
 
 - Ensure the game loads quickly.
@@ -135,6 +139,7 @@ Tasks:
 
 **User story 3 - Difficulty Selection**  
 As a player, I want to change the game difficulty so that I can adjust the challenge to match my skill.  
+
 Acceptance criteria:
 
 - Have different difficulties available to the user.
@@ -149,6 +154,7 @@ Tasks:
 
 **User story 4 - Performance Tracking**  
 As a player, I want to see my time, moves, and errors so I can track my performance during the game.  
+
 Acceptance criteria:
 
 - Have a functioning move counter always visible during the game and on all difficulties.
@@ -165,6 +171,7 @@ Tasks:
 
 **User story 5 - Player Feedback**  
 As a player, I want visual feedback for correct matches so that I feel motivated to complete the game.  
+
 Acceptance criteria:
 
 - Have visual feedback for a correct guess (e.g., pop and jiggle animation).
@@ -178,6 +185,7 @@ Tasks:
 
 **User story 6 - Visual Theme**  
 As a player, I want Pokémon-themed visual design so that the game feels nostalgic and engaging.  
+
 Acceptance criteria:
 
 - Use original Pokémon artwork.
@@ -192,6 +200,7 @@ Tasks:
 
 **User story 7 - Cross Device Compatibility**  
 As a player, I want the game to work on different devices so I can play wherever I am.  
+
 Acceptance criteria:
 
 - Ensure the game is responsive.
@@ -209,6 +218,7 @@ Tasks:
 
 **User story 8 - Completion Feedback**  
 As a player, I want to receive a completion message and game summary so that I feel rewarded for finishing the game.  
+
 Acceptance criteria:
 
 - Have a victory modal appear on completion with a nice message.
@@ -266,7 +276,7 @@ Tests:
   Front:  
   ![Front of Game Card](assets/images/card-front-example.webp)
 
-- **Reset Game Button:** This allows the player to reset the game at any time during their existing game.
+- **Reset Game Button:** This allows the player to reset the game at any time during their existing game.  
   ![Reset Game Button](assets/images/restart-game-button.webp)
 
 - **Difficulty Select In-Game:** This allows the player to increase or decrease their difficulty at any time in case they get stuck or want more of a challenge.  
@@ -287,6 +297,8 @@ Tests:
 - **Show Cards at Start:** Players get a one second look at the cards face up before they flip and the game timer starts. This adds an element of skill to game that allows players to get better without relying on chance to get them started.
 
 - **Correct Guess Animation:** This animation provides visual feedback on a correct guess to reward and stimulate the player into making more guesses.
+
+- **Card Flip Animation:** The Cards have a flip animation when they change which side is facing up. This improves the player experience by creating a smoother game play experience
 
 - **Author information:** This provides information on who wrote the game and a link to their GitHub page.
 
@@ -371,6 +383,7 @@ This website is designed with accessibility in mind and follows [WCAG (Web Conte
 [claude](https://claude.ai/)  
 [Gemini](https://gemini.google.com/)  
 [Balsamiq Wireframes](https://balsamiq.com/)
+[GitHub Pages](https://docs.github.com/en/pages)
 
 ## Practices
 
@@ -387,7 +400,7 @@ This website is designed with accessibility in mind and follows [WCAG (Web Conte
 
 # Deployment
 
-This project was deployed using GitHub Pages.
+This project was deployed using [GitHub Pages](https://docs.github.com/en/pages).
 
 I took the approach of using **early deployment** so I can start observing the desired and undesired outcomes of my code across different devices as soon as possible.
 

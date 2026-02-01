@@ -399,8 +399,8 @@ P {
     top: 0.5rem;
   }
 
-  #poke-pairs {
-    margin-top: 2rem;
+  p {
+    font-size: 1rem;
   }
 }
 
