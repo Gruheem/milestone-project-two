@@ -855,6 +855,68 @@ Having addressed these two issues the site in now fully WCAG compliant.
 
 **Colour Test Status:** *PASS*
 
+# Responsiveness testing
+
+This project was tested on a variety of different devices to ensure responsiveness behaved smoothly and correctly. Here are the results:   
+
+## Mobile:
+
+Samsung A52, this image also demstrates that the game adapts to dark mode well:  
+![Samsung A52](assets/images/res-test-2.webp)  
+
+Sanmsung S20 Ultra:  
+![Samsung S20 Ultra](assets/images/res-test-1.webp)  
+
+iphone 13 Pro:  
+![Iphone 13Pro Home](assets/images/res-test-iphone.webp)  
+
+![Iphone 13 Pro Game](assets/images/res-test-iphone-2.webp)
+
+## Tablet:
+
+Samsung S10+:  
+![Samsung 210+](assets/images/res-test-3.webp)  
+
+![Samsung 210+](assets/images/res-test-4.webp)  
+
+Ipad Pro:  
+![Ipad Pro](assets/images/res-test-ipad-1.webp)  
+
+![Ipad Pro](assets/images/res-test-ipad-2.webp)  
+
+![Ipad Pro](assets/images/res-test-ipad-3.webp)  
+
+![Ipad Pro](assets/images/res-test-ipad-4.webp)  
+
+## Laptop:  
+
+Macbook Pro:  
+![macbook pro](assets/images/res-test-macbook.webp)  
+
+![macbook pro](assets/images/res-test-macbook-1.webp)
+
+## Desktop:
+
+1080p:  
+![Windows Desktop](assets/images/res-test-desktop.webp)  
+
+![Windows Desktop](assets/images/res-test-desktop-2.webp)
+
+1440p:  
+![Windows Desktop Top Large](assets/images/res-test-desktop-large.webp)  
+
+![Windows Desktop Top Large](assets/images/res-test-desktop-large-2.webp)
+
+
+
+
+
+
+
+
+
+
+
 ## Function Testing
 
 Manual functional testing was carried out to ensure that Poke-Pairs behaves as expected from a user’s perspective. The purpose of this testing was to verify that all core gameplay features function correctly when interacted with through the user interface. The tests flow through the path of the user playing the game.
