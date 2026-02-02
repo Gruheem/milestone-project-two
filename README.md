@@ -23,9 +23,10 @@ The game is designed to be fun, nostalgic, and fully responsive across devices, 
 
 ## Game Page
 
-![Game Page](assets/images/game-page.webp)  
+![Game Page](assets/images/game-page.webp)
 
 # Contents:
+
 - [UX](#ux)
   - [Strategy](#strategy)
     - [Project Goals](#project-goals)
@@ -50,8 +51,8 @@ The game is designed to be fun, nostalgic, and fully responsive across devices, 
   - [Practices](#practices)
   - [Resources](#resources)
 - [Deployment](#deployment)
- - [Steps to Deploy](#steps-to-deploy)
- - [How to Run Locally](#how-to-run-locally)
+- [Steps to Deploy](#steps-to-deploy)
+- [How to Run Locally](#how-to-run-locally)
 - [Known Bugs and Fixes](#known-bugs-and-fixes)
 - [Code Attribution](#code-attribution)
 - [Testing](#testing)
@@ -156,7 +157,7 @@ Tasks:
 - Provide a quick and simple game reset option in the victory modal.
 
 **User Story 2 - Fast Game Start**
-As a player, I want the game to load quickly so I can start the game without losing interest.  
+As a player, I want the game to load quickly so I can start the game without losing interest.
 
 Acceptance criteria:
 
@@ -172,7 +173,7 @@ Tasks:
 - Create start game button on the home screen.
 
 **User story 3 - Difficulty Selection**  
-As a player, I want to change the game difficulty so that I can adjust the challenge to match my skill.  
+As a player, I want to change the game difficulty so that I can adjust the challenge to match my skill.
 
 Acceptance criteria:
 
@@ -187,7 +188,7 @@ Tasks:
 - Create difficulty select button on victory modal.
 
 **User story 4 - Performance Tracking**  
-As a player, I want to see my time, moves, and errors so I can track my performance during the game.  
+As a player, I want to see my time, moves, and errors so I can track my performance during the game.
 
 Acceptance criteria:
 
@@ -204,7 +205,7 @@ Tasks:
 - Have error counter update after every turn.
 
 **User story 5 - Player Feedback**  
-As a player, I want visual feedback for correct matches so that I feel motivated to complete the game.  
+As a player, I want visual feedback for correct matches so that I feel motivated to complete the game.
 
 Acceptance criteria:
 
@@ -218,7 +219,7 @@ Tasks:
 - Play an animation on a correct guess.
 
 **User story 6 - Visual Theme**  
-As a player, I want Pokémon-themed visual design so that the game feels nostalgic and engaging.  
+As a player, I want Pokémon-themed visual design so that the game feels nostalgic and engaging.
 
 Acceptance criteria:
 
@@ -233,7 +234,7 @@ Tasks:
 - Ensure colours, images, and font styles used are taken from Pokémon branding.
 
 **User story 7 - Cross Device Compatibility**  
-As a player, I want the game to work on different devices so I can play wherever I am.  
+As a player, I want the game to work on different devices so I can play wherever I am.
 
 Acceptance criteria:
 
@@ -251,7 +252,7 @@ Tasks:
 - Test game on different browsers.
 
 **User story 8 - Completion Feedback**  
-As a player, I want to receive a completion message and game summary so that I feel rewarded for finishing the game.  
+As a player, I want to receive a completion message and game summary so that I feel rewarded for finishing the game.
 
 Acceptance criteria:
 
@@ -394,7 +395,7 @@ All audio files stored locally were converted to [.wav](https://en.wikipedia.org
 
 # Accessibility
 
-This website is designed with accessibility in mind and follows [WCAG (Web Content Accessibility Guidelines)](https://www.w3.org/WAI/standards-guidelines/wcag/) best practices. Semantic HTML is used throughout to ensure content is meaningful and navigable for assistive technologies. [ARIA labels and roles](https://www.w3schools.com/accessibility/accessibility_labels.php) are applied where necessary, and made dynamic on elements that need it change,to provide clear context for screen readers. 
+This website is designed with accessibility in mind and follows [WCAG (Web Content Accessibility Guidelines)](https://www.w3.org/WAI/standards-guidelines/wcag/) best practices. Semantic HTML is used throughout to ensure content is meaningful and navigable for assistive technologies. [ARIA labels and roles](https://www.w3schools.com/accessibility/accessibility_labels.php) are applied where necessary, and made dynamic on elements that need it change,to provide clear context for screen readers.
 
 # Technologies Used
 
@@ -495,6 +496,11 @@ I created an array of `usedIds` and a `do...while` statement to continue picking
 When playing the game I can click more than two cards at once. This sometimes leads to a card remaining face up when they should be face down.
 **- fix**
 I created a `boardLock` variable and an `if` statement to exit the function `selectCard()` if the `boardLock` state is `true`.
+
+**7. Images Too Big in Markdown File**
+some of the screenshots i had captured were displaying too large for the file to be readable.
+**- Fix:**
+instead of using the traditional `![Windows Desktop Top Large](assets/images/res-test-desktop-large-2.webp)` to create an image I have used the HTML tag `<img>` which has allowed me to add a `max-height:` property to them. e.g `<img src="assets/images/res-test-2.webp" alt="Windows Desktop Top Large" style="max-height: 300px">`
 
 # Code Attribution
 
@@ -693,7 +699,7 @@ Victory Modal Large:
 - **Result:** Buttons functioned correctly
 - **Test Status:** Passed
 
-**User Story Test Status:** *PASS*
+**User Story Test Status:** _PASS_
 
 ## Business Goal Testing
 
@@ -781,7 +787,7 @@ Victory Modal Large:
 **Result:** Performance scores were in an acceptable range and gameplay was smooth.
 **Test Status:** PASS
 
-**Business Goal Test Status:** *PASS*
+**Business Goal Test Status:** _PASS_
 
 ## Code Validation Testing
 
@@ -797,7 +803,7 @@ CSS code validation testing was performed using the [W3C CSS Validation Service]
 
 ![CSS Validation pass](assets/images/css-validation-complete.webp)
 
-**Code Validation Test Status:** *PASS*
+**Code Validation Test Status:** _PASS_
 
 ## Lighthouse Testing
 
@@ -806,9 +812,9 @@ CSS code validation testing was performed using the [W3C CSS Validation Service]
 ![Lighthouse Final Score](assets/images/lighthouse-final-score.webp)
 
 **Performance:** 100  
-![Final Performance Metrics](assets/images/final-performance-metrics.webp)  
+![Final Performance Metrics](assets/images/final-performance-metrics.webp)
 
-**Accessibility:** 100  
+**Accessibility:** 100
 
 **Best Practices** 100
 
@@ -832,7 +838,7 @@ Best Practises Overview 100/100:
 
 By adding a 'landmark' to my HTML for screen readers and testing directly from the live site, I have increased my Lighthouse score to the maximum.
 
-**Lighthouse Test Status:** *PASS*
+**Lighthouse Test Status:** _PASS_
 
 ## Colour Testing
 
@@ -853,69 +859,59 @@ Having addressed these two issues the site in now fully WCAG compliant.
 
 ![Contrast Grid Test Pass](assets/images/contrast-grid-pass.webp)
 
-**Colour Test Status:** *PASS*
+**Colour Test Status:** _PASS_
 
 # Responsiveness testing
 
-This project was tested on a variety of different devices to ensure responsiveness behaved smoothly and correctly. Here are the results:   
+This project was tested on a variety of different devices to ensure responsiveness behaved smoothly and correctly. Here are the results:
 
 ## Mobile:
 
 Samsung A52, this image also demstrates that the game adapts to dark mode well:  
-![Samsung A52](assets/images/res-test-2.webp)  
+<img src="assets/images/res-test-2.webp" alt="Samsung A52" style="max-height: 300px">
 
 Sanmsung S20 Ultra:  
-![Samsung S20 Ultra](assets/images/res-test-1.webp)  
+<img src="assets/images/res-test-1.webp" alt="Samsung S20 Ultra" style="max-height: 300px">
 
 iphone 13 Pro:  
-![Iphone 13Pro Home](assets/images/res-test-iphone.webp)  
+<img src="assets/images/res-test-iphone.webp" alt="Iphone 13Pro Home" style="max-height: 300px">
 
-![Iphone 13 Pro Game](assets/images/res-test-iphone-2.webp)
+<img src="assets/images/res-test-iphone-2.webp" alt="Iphone 13 Pro Game" style="max-height: 300px">
 
 ## Tablet:
 
 Samsung S10+:  
-![Samsung 210+](assets/images/res-test-3.webp)  
+<img src="assets/images/res-test-3.webp" alt="Samsung 210+" style="max-height: 300px">
 
-![Samsung 210+](assets/images/res-test-4.webp)  
+<img src="assets/images/res-test-4.webp" alt="Samsung 210+" style="max-height: 300px">
 
 Ipad Pro:  
-![Ipad Pro](assets/images/res-test-ipad-1.webp)  
+<img src="assets/images/res-test-ipad-1.webp" alt="Ipad Pro" style="max-height: 300px">
 
-![Ipad Pro](assets/images/res-test-ipad-2.webp)  
+<img src="assets/images/res-test-ipad-2.webp" alt="Ipad Pro" style="max-height: 300px">
 
-![Ipad Pro](assets/images/res-test-ipad-3.webp)  
+<img src="assets/images/res-test-ipad-3.webp" alt="Ipad Pro" style="max-height: 300px">
 
-![Ipad Pro](assets/images/res-test-ipad-4.webp)  
+<img src="assets/images/res-test-ipad-4.webp" alt="Ipad Pro" style="max-height: 300px">
 
-## Laptop:  
+## Laptop:
 
 Macbook Pro:  
-![macbook pro](assets/images/res-test-macbook.webp)  
+<img src="assets/images/res-test-macbook.webp" alt="macbook pro" style="max-height: 300px">
 
-![macbook pro](assets/images/res-test-macbook-1.webp)
+<img src="assets/images/res-test-macbook-1.webp" alt="macbook pro" style="max-height: 300px">
 
 ## Desktop:
 
 1080p:  
-![Windows Desktop](assets/images/res-test-desktop.webp)  
+<img src="assets/images/res-test-desktop.webp" alt="Windows Desktop" style="max-height: 300px">
 
-![Windows Desktop](assets/images/res-test-desktop-2.webp)
+<img src="assets/images/res-test-desktop-2.webp" alt="Windows Desktop" style="max-height: 300px">
 
 1440p:  
-![Windows Desktop Top Large](assets/images/res-test-desktop-large.webp)  
+<img src="assets/images/res-test-desktop-large.webp" alt="Samsung A52" style="max-height: 300px">
 
-![Windows Desktop Top Large](assets/images/res-test-desktop-large-2.webp)
-
-
-
-
-
-
-
-
-
-
+<img src="assets/images/res-test-desktop-large-2.webp" alt="Windows Desktop Top Large" style="max-height: 300px">
 
 ## Function Testing
 
@@ -977,14 +973,14 @@ Manual functional testing was carried out to ensure that Poke-Pairs behaves as e
 **Fix:** N/A
 **Status:** PASS
 
-**Function Test Status:** *PASS*
+**Function Test Status:** _PASS_
 
 # Conclusion
 
-In conclusion, this project demonstrates the use of JavaScript to crate an interactive front-end developement project. It was used to manage game logic, user interaction, and dynamic updates to the DOM. Building this memory game helped to learn such concepts as event handling, state management, and asynchronous behavior, while also highlighting the importance of user experience through implementing animations, sound, and accessibility features. 
+In conclusion, this project demonstrates the use of JavaScript to crate an interactive front-end developement project. It was used to manage game logic, user interaction, and dynamic updates to the DOM. Building this memory game helped to learn such concepts as event handling, state management, and asynchronous behavior, while also highlighting the importance of user experience through implementing animations, sound, and accessibility features.
 
 In the future, if I was to continue developement on this game, I would like to add a persistent scoreboard so that players can see their rank at different difficulty levels.
 
-I want to thank my mentor Simen Dehlin for support at the start of the project and my assesor Manuel Perez Romero  for support towards the end of the project.
+I want to thank my mentor Simen Dehlin for support at the start of the project and my assesor Manuel Perez Romero for support towards the end of the project.
 
 I hope you enjoy this project as much as I enjoyed creating it.
