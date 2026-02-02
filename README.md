@@ -464,6 +464,8 @@ I took the approach of using **early deployment** so I can start observing the d
 
 # Known Bugs and Fixes:
 
+I encountered several bugs along the developement road. this section highlights some of them and what I did to fix them.
+
 **1. Card Overflow Issue:**  
 Cards were overflowing out of the game board. It was due to the CSS Grid automatically applying `min-height: auto;` to the grid.  
 **- Fix:**  
@@ -691,6 +693,8 @@ Victory Modal Large:
 - **Result:** Buttons functioned correctly
 - **Test Status:** Passed
 
+**User Story Test Status:** *PASS*
+
 ## Business Goal Testing
 
 ### Business Goals 1 - Create an interesting, engaging and interactive front-end game experience.
@@ -777,6 +781,8 @@ Victory Modal Large:
 **Result:** Performance scores were in an acceptable range and gameplay was smooth.
 **Test Status:** PASS
 
+**Business Goal Test Status:** *PASS*
+
 ## Code Validation Testing
 
 HTML code validation testing was performed using the [W3C Markup Validation Service](https://validator.w3.org/). It picked up one semantic error where I had gone from `h1` to `h3` without using a `h2` element.
@@ -791,6 +797,8 @@ CSS code validation testing was performed using the [W3C CSS Validation Service]
 
 ![CSS Validation pass](assets/images/css-validation-complete.webp)
 
+**Code Validation Test Status:** *PASS*
+
 ## Lighthouse Testing
 
 ### Final Score
@@ -798,10 +806,13 @@ CSS code validation testing was performed using the [W3C CSS Validation Service]
 ![Lighthouse Final Score](assets/images/lighthouse-final-score.webp)
 
 **Performance:** 100  
+![Final Performance Metrics](assets/images/final-performance-metrics.webp)  
+
 **Accessibility:** 100  
+
 **Best Practices** 100
 
-### Testing
+### Previous Lighthouse Testing
 
 Lighthouse testing was performed on Google Chrome DevTools and for each category has been given a score in the acceptable range.
 
@@ -820,6 +831,8 @@ Best Practises Overview 100/100:
 ![Best Practises Overview](assets/images/best-practises-overview.webp)
 
 By adding a 'landmark' to my HTML for screen readers and testing directly from the live site, I have increased my Lighthouse score to the maximum.
+
+**Lighthouse Test Status:** *PASS*
 
 ## Colour Testing
 
@@ -840,7 +853,7 @@ Having addressed these two issues the site in now fully WCAG compliant.
 
 ![Contrast Grid Test Pass](assets/images/contrast-grid-pass.webp)
 
-**Colour Test Status:** PASS
+**Colour Test Status:** *PASS*
 
 ## Function Testing
 
@@ -901,3 +914,15 @@ Manual functional testing was carried out to ensure that Poke-Pairs behaves as e
 **Result:** The game took me back to the home page then loaded the new difficulty with the correct amount of cards. The timer, error counter and move counter all reset.
 **Fix:** N/A
 **Status:** PASS
+
+**Function Test Status:** *PASS*
+
+# Conclusion
+
+In conclusion, this project demonstrates the use of JavaScript to crate an interactive front-end developement project. It was used to manage game logic, user interaction, and dynamic updates to the DOM. Building this memory game helped to learn such concepts as event handling, state management, and asynchronous behavior, while also highlighting the importance of user experience through implementing animations, sound, and accessibility features. 
+
+In the future, if I was to continue developement on this game, I would like to add a persistent scoreboard so that players can see their rank at different difficulty levels.
+
+I want to thank my mentor Simen Dehlin for support at the start of the project and my assesor Manuel Perez Romero  for support towards the end of the project.
+
+I hope you enjoy this project as much as I enjoyed creating it.
