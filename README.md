@@ -61,6 +61,7 @@ The game is designed to be fun, nostalgic, and fully responsive across devices, 
   - [Code Validation Testing](#code-validation-testing)
   - [Lighthouse Testing](#lighthouse-testing)
   - [Colour Testing](#colour-testing)
+  - [Responsiveness Testing](#responsiveness-testing)
   - [Function Testing](#function-testing)
 
 # UX
@@ -397,6 +398,8 @@ All audio files stored locally were converted to [.wav](https://en.wikipedia.org
 
 This website is designed with accessibility in mind and follows [WCAG (Web Content Accessibility Guidelines)](https://www.w3.org/WAI/standards-guidelines/wcag/) best practices. Semantic HTML is used throughout to ensure content is meaningful and navigable for assistive technologies. [ARIA labels and roles](https://www.w3schools.com/accessibility/accessibility_labels.php) are applied where necessary, and made dynamic on elements that need it change,to provide clear context for screen readers.
 
+The Site also responds well to darkmode on samsung devices as evidenced in the [responsiveness testing section](#responsiveness-testing)
+
 # Technologies Used
 
 ## Languages
@@ -424,6 +427,7 @@ This website is designed with accessibility in mind and follows [WCAG (Web Conte
 [Balsamiq Wireframes](https://balsamiq.com/)
 [GitHub Pages](https://docs.github.com/en/pages)
 [File Type Converter](https://cloudconvert.com/)
+[Device Mock Up](https://techsini.com/multi-mockup/index.php)
 
 ## Practices
 
@@ -863,7 +867,11 @@ Having addressed these two issues the site in now fully WCAG compliant.
 
 # Responsiveness testing
 
-This project was tested on a variety of different devices to ensure responsiveness behaved smoothly and correctly. Here are the results:
+This project was tested on a variety of different devices to ensure responsiveness behaved smoothly and correctly. Initially I used a virtual mock up to see what it looked like:  
+
+![Responsiveness Mock Up](assets/images/res-test-device-mockup.webp)
+  
+Here are the results for the physical tests:
 
 ## Mobile:
 
