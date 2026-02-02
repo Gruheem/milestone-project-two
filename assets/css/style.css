@@ -96,7 +96,7 @@ P {
   width: 100%;
   max-width: 37.5rem;
   filter: drop-shadow(0 0 0.3125rem var(--shadow));
-  margin: 1rem auto 1rem auto;
+  margin: 1rem auto 0 auto;
 }
 
 .button-div {

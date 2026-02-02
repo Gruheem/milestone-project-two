@@ -364,6 +364,8 @@ The main title and the modal title were generated using [gemini](https://gemini.
 
 The background image came from [The Pokemon Company](https://corporate.pokemon.com/en-us/) celebrating their 20th anniversary.
 
+All images stored locally were converted to ['.WebP'](https://en.wikipedia.org/wiki/WebP) file types for optimisation.
+
 ### Colour theme
 
 Colours were picked from Poke-pairs title and background image to ensure a consistent theme throughout.
@@ -387,6 +389,8 @@ Simplistic, minimalist design for the instructions, start buttons and stat track
 ### Audio
 
 The audio files were gathered from [Pixabay](https://pixabay.com/sound-effects/). For a good user experience the audio to the game is muted by default. The audio files used have had their volume levels reduced between 60-80% using JavaScript for player comfort.
+
+All audio files stored locally were converted to [.wav](https://en.wikipedia.org/wiki/WAV) file type for optimisation.
 
 # Accessibility
 
@@ -418,12 +422,14 @@ This website is designed with accessibility in mind and follows [WCAG (Web Conte
 [Gemini](https://gemini.google.com/)  
 [Balsamiq Wireframes](https://balsamiq.com/)
 [GitHub Pages](https://docs.github.com/en/pages)
+[File Type Converter](https://cloudconvert.com/)
 
 ## Practices
 
 [UX](https://en.wikipedia.org/wiki/User_experience_design)  
 [Mobile-first development](https://developer.mozilla.org/en-US/docs/Glossary/Mobile_First)
 [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)
+[Asset Optimisation](https://cloudconvert.com/png-to-webp)
 
 ## Resources
 
