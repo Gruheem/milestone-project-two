@@ -23,6 +23,8 @@ const home = document.getElementById("home");
 const errorBox = document.getElementById("errors");
 const movesBox = document.getElementById("moves");
 const timeBox = document.getElementById("time");
+// Board lock
+let boardLock = false;
 
 // Audio
 const sounds = {
@@ -238,6 +240,8 @@ function hideCards(rows, cols) {
 }
 
 function selectCard() {
+  if (boardLock) return; // checks to see if board is loakced and exits funstion if it true
+
   if (this.src.includes("pokeball")) {
     if (!cardOne) {
       cardOne = this; // assign cardOne to an img element
@@ -257,6 +261,8 @@ function selectCard() {
 
     } else if (!cardTwo && this != cardOne) {
       cardTwo = this;
+
+      boardLock = true; // Locks board while the game updates
       // console.log(cardTwo);
 
       let imageLocation = cardTwo.id.split("-"); // turns id into coordinates for boardArray
@@ -287,6 +293,8 @@ function update() {
 
       firstCard.classList.add("flipped");
       secondCard.classList.add("flipped");
+
+      boardLock = false // unlocks board after wrong guess
     }, 1000);
     //update errors and moves and matched pairs
     errors++;
@@ -311,6 +319,8 @@ function update() {
       // Keyframe Animation on correct pair
       wrapperOne.classList.add("matched");
       wrapperTwo.classList.add("matched");
+
+      boardLock = false; // unlocks board after correct guess
     }, 50);
   }
   // check for the victory condition
