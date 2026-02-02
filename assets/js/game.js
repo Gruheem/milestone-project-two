@@ -102,12 +102,12 @@ async function getPokemonData(id) {
   // fetches pokemon data from pokeapi
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
   const data = await response.json();
-  // console.log(data);
+  
   const pokemonData = {
     name: data.name,
     image: data.sprites.other["official-artwork"].front_default,
   };
-  // console.log("fetched pokemon:", pokemonData);
+  
   return pokemonData;
 }
 
@@ -132,13 +132,10 @@ async function createGameArray() {
     const pokemon = await getPokemonData(randomId);
     pokemonArray.push(pokemon);
   }
-  // console.log("pokemon array:", pokemonArray);
 
   const gameArray = pokemonArray.concat(pokemonArray);
-  // console.log("game array:", gameArray);
 
   shuffle(gameArray);
-  // console.log("game array:", gameArray);
 
   return gameArray;
 }
@@ -205,10 +202,10 @@ function startGame() {
         wrapper.appendChild(card);
         board.appendChild(wrapper);
       }
-      // console.log(row);
+      
       boardArray.push(row); // Add to JS Array
     }
-    // console.log(boardArray);
+    
     setTimeout(() => {
       sounds.startGameSound.currentTime = 0
     sounds.startGameSound.play()
@@ -245,7 +242,6 @@ function selectCard() {
   if (this.src.includes("pokeball")) {
     if (!cardOne) {
       cardOne = this; // assign cardOne to an img element
-      // console.log(cardOne);
 
       let imageLocation = cardOne.id.split("-"); // turns id into coordinates for boardArray
       let r = imageLocation[0];
@@ -263,10 +259,8 @@ function selectCard() {
       cardTwo = this;
 
       boardLock = true; // Locks board while the game updates
-      // console.log(cardTwo);
 
       let imageLocation = cardTwo.id.split("-"); // turns id into coordinates for boardArray
-      // console.log(imageLocation);
       let r = imageLocation[0];
       let c = imageLocation[1];
 

@@ -396,9 +396,9 @@ All audio files stored locally were converted to [.wav](https://en.wikipedia.org
 
 # Accessibility
 
-This website is designed with accessibility in mind and follows [WCAG (Web Content Accessibility Guidelines)](https://www.w3.org/WAI/standards-guidelines/wcag/) best practices. Semantic HTML is used throughout to ensure content is meaningful and navigable for assistive technologies. [ARIA labels and roles](https://www.w3schools.com/accessibility/accessibility_labels.php) are applied where necessary, and made dynamic on elements that need it change,to provide clear context for screen readers.
+This website is designed with accessibility in mind and follows [WCAG (Web Content Accessibility Guidelines)](https://www.w3.org/WAI/standards-guidelines/wcag/) best practices. Semantic HTML is used throughout to ensure content is meaningful and navigable for assistive technologies. [ARIA labels and roles](https://www.w3schools.com/accessibility/accessibility_labels.php) are applied where necessary, and made dynamic on elements that need it change, to provide clear context for screen readers.
 
-The Site also responds well to darkmode on samsung devices as evidenced in the [responsiveness testing section](#responsiveness-testing)
+The site also responds well to dark mode on Samsung devices as evidenced in the [Responsiveness testing section](#responsiveness-testing)
 
 # Technologies Used
 
@@ -420,9 +420,9 @@ The Site also responds well to darkmode on samsung devices as evidenced in the [
 [Image Color Picker](https://imagecolorpicker.com/)  
 [Web Aim Contrast Checker](https://webaim.org/resources/contrastchecker/)  
 [Eight Shapes Contrast Grid](https://contrast-grid.eightshapes.com/)  
-[Coolers](https://coolors.co/)  
-[Chat GPT](https://chatgpt.com/)  
-[claude](https://claude.ai/)  
+[Coolers](https://coolors.co/)
+[ChatGPT](https://chatgpt.com/)
+[claude](https://claude.ai/)
 [Gemini](https://gemini.google.com/)  
 [Balsamiq Wireframes](https://balsamiq.com/)
 [GitHub Pages](https://docs.github.com/en/pages)
@@ -442,6 +442,7 @@ The Site also responds well to darkmode on samsung devices as evidenced in the [
 [Kenny Yip Coding](https://www.youtube.com/@KennyYipCoding)  
 [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified)  
 [Fisher Yates Shuffle](https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/)
+[Border Inspiration](https://codepen.io/blindingstars/pen/XGxPOP)
 
 # Deployment
 
@@ -452,7 +453,7 @@ I took the approach of using **early deployment** so I can start observing the d
 ## Steps to Deploy
 
 1. Navigate to the repository on GitHub
-2. Open **settings** got to **pages**
+2. Open **Settings**, go to **Pages**
 3. Select the 'main' branch and root directory
 4. Save changes
 5. The live site link appears after deployment ([Deployed Site](https://gruheem.github.io/milestone-project-two/))
@@ -469,7 +470,7 @@ I took the approach of using **early deployment** so I can start observing the d
 
 # Known Bugs and Fixes:
 
-I encountered several bugs along the developement road. this section highlights some of them and what I did to fix them.
+I encountered several bugs along the development road. This section highlights some of them and what I did to fix them.
 
 **1. Card Overflow Issue:**  
 Cards were overflowing out of the game board. It was due to the CSS Grid automatically applying `min-height: auto;` to the grid.  
@@ -497,14 +498,14 @@ As I used random numbers to select Pokémon, the same Pokémon could be picked m
 I created an array of `usedIds` and a `do...while` statement to continue picking IDs until the proposed ID does not exist in the `usedIds` array.
 
 **6. Cards remaining face up**
-When playing the game I can click more than two cards at once. This sometimes leads to a card remaining face up when they should be face down.
-**- fix**
+When playing the game I can click more than two cards at once. This sometimes leads to a card remaining face up when it should be face down.
+**- Fix:**  
 I created a `boardLock` variable and an `if` statement to exit the function `selectCard()` if the `boardLock` state is `true`.
 
 **7. Images Too Big in Markdown File**
-some of the screenshots i had captured were displaying too large for the file to be readable.
-**- Fix:**
-instead of using the traditional `![Windows Desktop Top Large](assets/images/res-test-desktop-large-2.webp)` to create an image I have used the HTML tag `<img>` which has allowed me to add a `max-height:` property to them. e.g `<img src="assets/images/res-test-2.webp" alt="Windows Desktop Top Large" style="max-height: 300px">`
+Some of the screenshots I had captured were displaying too large to be readable.
+**- Fix:**  
+Instead of using the traditional `![Windows Desktop Top Large](assets/images/res-test-desktop-large-2.webp)` to create an image, I have used the HTML tag `<img>` which has allowed me to add a `max-height:` property to them, e.g. `<img src="assets/images/res-test-2.webp" alt="Windows Desktop Top Large" style="max-height: 300px">`
 
 # Code Attribution
 
@@ -512,9 +513,11 @@ All HTML, CSS, and JavaScript code for game logic, UI interactions, and styling 
 
 The [Fisher-Yates-Shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle) was adapted from a [geeksforgeeks](https://www.geeksforgeeks.org/dsa/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/) article.
 
-The code for the timer functions was adapted from code [Chat GPT](https://chatgpt.com/) wrote.
+The code for the timer functions was adapted from code [ChatGPT](https://chatgpt.com/) wrote.
 
-The idea to iterate through the rows and columns to populate the game board and javascript array, along with how I could structure the matching logic, was inspired by [Kenny Yip Coding](https://www.youtube.com/@KennyYipCoding)'s YouTube video tutorial on [making a pairs game](https://www.youtube.com/watch?v=wz9jeI9M9hI&list=LL&index=2).
+The idea to iterate through the rows and columns to populate the game board and JavaScript array, along with how I could structure the matching logic, was inspired by [Kenny Yip Coding](https://www.youtube.com/@KennyYipCoding)'s YouTube video tutorial on [making a pairs game](https://www.youtube.com/watch?v=wz9jeI9M9hI&list=LL&index=2).
+
+The dashed border effect was inspired by [this code](https://codepen.io/blindingstars/pen/XGxPOP) I found online. I had to translate it from SCSS and adapt it to suit my own style.  
 
 # Testing
 
@@ -681,7 +684,7 @@ Victory Modal Large:
 
 - **Scenario:** A player accesses the game on different modern web browsers
 - **Expected:** The game functions correctly across different browsers
-- **Tesitng:** Opened the game on Chrome, Firefox, Edge and Safari
+- **Testing:** Opened the game on Chrome, Firefox, Edge and Safari
 - **Result:** No functional issues arose
 - **Test Status:** Passed
 
@@ -715,10 +718,10 @@ Victory Modal Large:
 
 - Core gameplay functions smoothly
 - Visual and audio feedback reward correct actions
-- layers are encouraged to replay the game
+- players are encouraged to replay the game
 
 **Testing:** Played multiple full rounds across different difficulties and observed player flow and engagement  
-**Result:** Gameplay was smooth, visual and audio feedbakc was clear and replay options were easily accessible  
+**Result:** Gameplay was smooth, visual and audio feedback was clear and replay options were easily accessible  
 **Test Status:** PASS
 
 ### Business Goals 2 - Demonstrate front-end development skills
@@ -749,7 +752,7 @@ Victory Modal Large:
 **Result:** Theme remained consistent and recognisable throughout the game.
 **Test Status:** PASS
 
-### Business Goals 4 - Create a visually appealing and intuitive used interface
+### Business Goals 4 - Create a visually appealing and intuitive user interface
 
 **Goal:** Ensure the game is easy to understand, visually consistent, and intuitive to navigate for first-time users.  
 **Scenario:** A first-time user visits the site and attempts to start and play the game using only the on-screen interface.  
@@ -836,9 +839,9 @@ Accessibility Overview 98/100:
 
 ![Accessibility Overview](assets/images/accessibility-overview.webp)
 
-Best Practises Overview 100/100:
+Best Practices Overview 100/100:
 
-![Best Practises Overview](assets/images/best-practises-overview.webp)
+![Best Practices Overview](assets/images/best-practises-overview.webp)
 
 By adding a 'landmark' to my HTML for screen readers and testing directly from the live site, I have increased my Lighthouse score to the maximum.
 
@@ -859,7 +862,7 @@ Pass: ![Medium Button Contrast Pass](assets/images/medium-button-contrast-pass.w
 
 Secondly, it highlighted that the font on the hard and medium buttons is only suitable for large text. To ensure this is always the case I have used a `clamp()` property on font size to ensure the font is always at least 24px.
 
-Having addressed these two issues the site in now fully WCAG compliant.
+Having addressed these two issues the site is now fully WCAG compliant.
 
 ![Contrast Grid Test Pass](assets/images/contrast-grid-pass.webp)
 
@@ -875,16 +878,16 @@ Here are the results for the physical tests:
 
 ## Mobile:
 
-Samsung A52, this image also demstrates that the game adapts to dark mode well:  
+Samsung A52, this image also demonstrates that the game adapts to dark mode well:  
 <img src="assets/images/res-test-2.webp" alt="Samsung A52" style="max-height: 300px">
 
-Sanmsung S20 Ultra:  
+Samsung S20 Ultra:  
 <img src="assets/images/res-test-1.webp" alt="Samsung S20 Ultra" style="max-height: 300px">
 
-iphone 13 Pro:  
-<img src="assets/images/res-test-iphone.webp" alt="Iphone 13Pro Home" style="max-height: 300px">
+iPhone 13 Pro:
+<img src="assets/images/res-test-iphone.webp" alt="iPhone 13 Pro Home" style="max-height: 300px">
 
-<img src="assets/images/res-test-iphone-2.webp" alt="Iphone 13 Pro Game" style="max-height: 300px">
+<img src="assets/images/res-test-iphone-2.webp" alt="iPhone 13 Pro Game" style="max-height: 300px">
 
 ## Tablet:
 
@@ -893,21 +896,21 @@ Samsung S10+:
 
 <img src="assets/images/res-test-4.webp" alt="Samsung 210+" style="max-height: 300px">
 
-Ipad Pro:  
-<img src="assets/images/res-test-ipad-1.webp" alt="Ipad Pro" style="max-height: 300px">
+iPad Pro:  
+<img src="assets/images/res-test-ipad-1.webp" alt="iPad Pro" style="max-height: 300px">
 
-<img src="assets/images/res-test-ipad-2.webp" alt="Ipad Pro" style="max-height: 300px">
+<img src="assets/images/res-test-ipad-2.webp" alt="iPad Pro" style="max-height: 300px">
 
-<img src="assets/images/res-test-ipad-3.webp" alt="Ipad Pro" style="max-height: 300px">
+<img src="assets/images/res-test-ipad-3.webp" alt="iPad Pro" style="max-height: 300px">
 
-<img src="assets/images/res-test-ipad-4.webp" alt="Ipad Pro" style="max-height: 300px">
+<img src="assets/images/res-test-ipad-4.webp" alt="iPad Pro" style="max-height: 300px">
 
 ## Laptop:
 
-Macbook Pro:  
-<img src="assets/images/res-test-macbook.webp" alt="macbook pro" style="max-height: 300px">
+MacBook Pro:  
+<img src="assets/images/res-test-macbook.webp" alt="MacBook Pro" style="max-height: 300px">
 
-<img src="assets/images/res-test-macbook-1.webp" alt="macbook pro" style="max-height: 300px">
+<img src="assets/images/res-test-macbook-1.webp" alt="MacBook Pro" style="max-height: 300px">
 
 ## Desktop:
 
@@ -985,10 +988,10 @@ Manual functional testing was carried out to ensure that Poke-Pairs behaves as e
 
 # Conclusion
 
-In conclusion, this project demonstrates the use of JavaScript to crate an interactive front-end developement project. It was used to manage game logic, user interaction, and dynamic updates to the DOM. Building this memory game helped to learn such concepts as event handling, state management, and asynchronous behavior, while also highlighting the importance of user experience through implementing animations, sound, and accessibility features.
+In conclusion, this project demonstrates the use of JavaScript to create an interactive front-end development project. It was used to manage game logic, user interaction, and dynamic updates to the DOM. Building this memory game helped to learn such concepts as event handling, state management, and asynchronous behavior, while also highlighting the importance of user experience through implementing animations, sound, and accessibility features.
 
-In the future, if I was to continue developement on this game, I would like to add a persistent scoreboard so that players can see their rank at different difficulty levels.
+In the future, if I were to continue development on this game, I would like to add a persistent scoreboard so that players can see their rank at different difficulty levels.
 
-I want to thank my mentor Simen Dehlin for support at the start of the project and my assesor Manuel Perez Romero for support towards the end of the project.
+I want to thank my mentor Simen Dehlin for support at the start of the project and my assessor Manuel Perez Romero for support towards the end of the project.
 
 I hope you enjoy this project as much as I enjoyed creating it.
