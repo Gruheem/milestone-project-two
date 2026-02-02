@@ -1,7 +1,4 @@
-# Milestone Project Two Poke-PAIRS
-
-## Contents:
-- 
+# Milestone Project - Two Poke-PAIRS
 
 # Poke-PAIRS
 
@@ -26,7 +23,44 @@ The game is designed to be fun, nostalgic, and fully responsive across devices, 
 
 ## Game Page
 
-![Game Page](assets/images/game-page.webp)
+![Game Page](assets/images/game-page.webp)  
+
+# Contents:
+- [UX](#ux)
+  - [Strategy](#strategy)
+    - [Project Goals](#project-goals)
+    - [Business Goals](#business-goals)
+    - [Player Goals](#player-goals)
+  - [Scope](#scope)
+    - [User Personas](#user-personas)
+  - [Structure](#structure)
+    - [Implemented Features](#implemented-features)
+  - [Skeleton](#skeleton)
+  - [Surface](#surface)
+    - [Design Choices](#design-choices)
+      - [Artwork](#artwork)
+      - [Colour Theme](#colour-testing)
+      - [Fonts](#fonts)
+      - [Audio](#audio)
+- [Accessibility](#accessibility)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Libraries](#libraries)
+  - [Tools](#tools)
+  - [Practices](#practices)
+  - [Resources](#resources)
+- [Deployment](#deployment)
+ - [Steps to Deploy](#steps-to-deploy)
+ - [How to Run Locally](#how-to-run-locally)
+- [Known Bugs and Fixes](#known-bugs-and-fixes)
+- [Code Attribution](#code-attribution)
+- [Testing](#testing)
+  - [User Story Testing](#user-story-testing)
+  - [Business Goal Testing](#business-goal-testing)
+  - [Code Validation Testing](#code-validation-testing)
+  - [Lighthouse Testing](#lighthouse-testing)
+  - [Colour Testing](#colour-testing)
+  - [Function Testing](#function-testing)
 
 # UX
 
@@ -356,7 +390,7 @@ The audio files were gathered from [Pixabay](https://pixabay.com/sound-effects/)
 
 # Accessibility
 
-This website is designed with accessibility in mind and follows [WCAG (Web Content Accessibility Guidelines)](https://www.w3.org/WAI/standards-guidelines/wcag/) best practices. Semantic HTML is used throughout to ensure content is meaningful and navigable for assistive technologies. [ARIA labels and roles](https://www.w3schools.com/accessibility/accessibility_labels.php) are applied where necessary to provide clear context for screen readers.
+This website is designed with accessibility in mind and follows [WCAG (Web Content Accessibility Guidelines)](https://www.w3.org/WAI/standards-guidelines/wcag/) best practices. Semantic HTML is used throughout to ensure content is meaningful and navigable for assistive technologies. [ARIA labels and roles](https://www.w3schools.com/accessibility/accessibility_labels.php) are applied where necessary, and made dynamic on elements that need it change,to provide clear context for screen readers. 
 
 # Technologies Used
 
@@ -371,7 +405,7 @@ This website is designed with accessibility in mind and follows [WCAG (Web Conte
 [Font Space](https://www.fontspace.com/)  
 [Pixabay Sound Effects](https://pixabay.com/sound-effects/)
 
-## Technologies
+## Tools
 
 [PokeAPI](https://pokeapi.co/)  
 [Adobe Express](https://www.adobe.com/uk/express/)  
@@ -412,7 +446,7 @@ I took the approach of using **early deployment** so I can start observing the d
 4. Save changes
 5. The live site link appears after deployment ([Deployed Site](https://gruheem.github.io/milestone-project-two/))
 
-## How to run Locally
+## How to Run Locally
 
 1. Clone the repository, replacing 'your-username' with your GitHub username and 'your-repo-name' with the name of your repository.  
    Bash: `git clone https://github.com/your-username/your-repo-name.git`
