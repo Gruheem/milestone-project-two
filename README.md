@@ -483,6 +483,11 @@ As I used random numbers to select Pokémon, the same Pokémon could be picked m
 **- Fix:**  
 I created an array of `usedIds` and a `do...while` statement to continue picking IDs until the proposed ID does not exist in the `usedIds` array.
 
+**6. Cards remaining face up**
+When playing the game I can click more than two cards at once. This sometimes leads to a card remaining face up when they should be face down.
+**- fix**
+I created a `boardLock` variable and an `if` statement to exit the function `selectCard()` if the `boardLock` state is `true`.
+
 # Code Attribution
 
 All HTML, CSS, and JavaScript code for game logic, UI interactions, and styling was written by me specifically for this project.
